@@ -1,0 +1,240 @@
+---
+layout: course
+base: /teaching/math20d_summer1_2015
+---
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Instructions</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+There will be two homework projects. These involve several related questions, applying the theory of the course to real world problems, comprising a complete solution of the given problem. Each part can be done somewhat independently of the others (so you can just treat the homework like a list of separate questions, but will not learn as much compared to when looked at as cohesive whole). Some questions require the results of previous questions. If you are unable to complete one part, you may still assume the result of that part in subsequent questions.
+</p>
+
+<p>
+There are also weekly homework problems available online <a href="https://webwork.ucsd.edu/webwork2/math20d-Bryan-s115/">https://webwork.ucsd.edu/webwork2/math20d-Bryan-s115/</a>. See <i>Online Exercises</i> below for more details.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Homework Projects</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">Homework Project 1</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Due 4pm Friday 17th July in the dropbox in the AP&amp;M basement. 
+</p>
+</div>
+
+<div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1">Millikan-Fletcher Oil drop experiment</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Reference: <a href="https://en.wikipedia.org/wiki/Oil_drop_experiment">https://en.wikipedia.org/wiki/Oil_drop_experiment</a>
+</p>
+
+<p>
+This problem is based on Boyce-DePrima question 27 from section 2.3.
+</p>
+
+<p>
+A body falling in a relatively dense fluid, oil for example, is acted on by three forces: a resistive force \(R\), a buoyant force \(B\), and its weight \(W\) due to gravity. 
+</p>
+
+<p>
+Archimedes' principal states that the buoyant force is equal to the weight of the fluid displaced by the object. <b>Warning</b>: Weight is a force (not the mass!) of magnitude equal to the mass times the gravitational constant, \(g \simeq 9.8 m/s^2\).
+</p>
+
+<p>
+For a slowly moving spherical body of radius \(a\), the resistive force is given by Stokes' law, \(R = -6\pi\mu a v\), where \(v\) is the velocity of the body, and \(\mu\) is the coefficient of viscosity of the surrounding fluid.
+</p>
+
+<p>
+Let then, a solid sphere of radius \(a\) and constant density \(\rho\) fall through a dense fluid with constant density \(\rho'\) and viscosity coefficient \(\mu\). Let \(v\) denote the velocity with down the positive direction.
+</p>
+
+<ol class="org-ol">
+<li>Draw a free body diagram, and show that the forces are given the following expressions:
+\begin{align*}
+R &= - 6\pi\mu a v \quad \text{(given in Stokes' law above)} \\
+B &= -\frac{4}{3} \pi g a^3 \rho' \quad \text{(from Archimedes' principle)} \\
+W &= \frac{4}{3} \pi g a^3 \rho 
+\end{align*}
+</li>
+
+<li>Assuming (somewhat naively) that Newton's second law holds for solid bodies, show that the equation of motion is,
+   \[
+   v' = g \frac{\rho  - \rho'}{\rho} - \frac{9\mu}{2a^2\rho} v
+   \]
+</li>
+
+<li>Show that the equilibrium velocity (known as terminal velocity) is given by,
+\[
+   V_L = \frac{2 a^2 g}{9\mu} (\rho - \rho')
+   \]
+and draw a phase diagram indicating stability. 
+
+<p>
+Notice that terminal velocity is attained precisely when the all the forces balance, and that a body travelling a terminal velocity will continue to do so indefinitely.
+</p>
+</li>
+
+<li>The equation of motion may be written more succinctly as
+\[
+   v' + a v = b
+   \]
+with 
+\[
+   a = \frac{9\mu}{2a^2\rho}, \quad \text{and} \quad b = g \frac{\rho  - \rho'}{\rho}.
+   \]
+Notice that \(v_L = b/a\).
+
+<p>
+Solve this equation to obtain
+\[
+   v = \left(v_0 - v_L\right) \exp \left(-\frac{9\mu}{2a^2\rho} t \right) + v_L
+   \]
+confirming the conclusions in part 3. Here \(v_0\) is the initial velocity.
+</p>
+</li>
+
+<li>The Millikan-Fletcher oil drop experiment aims to determine the charge of an electron using the above calculations. Charged droplets (which we assume to be approximately spherical) of oil are allowed to fall between a pair of parallel metal plates of distance \(d\) apart. The velocity of the droplets approaches \(v_L\) exponentially fast as can be seen from the solution obtained in the previous question. Then a voltage \(V\) is applied across the parallel plates inducing an electric field \(E\) of magnitude \(V/d\) pointing upwards. This causes an upward force of magnitude \(Vq/d\) where \(q\) is the charge of a droplet. By adjusting the voltage \(V\) to just the right value, the electric force will balance out the other forces and the droplets become stationary (i.e. \(v = 0\)). Show that,
+</li>
+</ol>
+<p>
+\[
+q = \frac{4\pi a^3 g d}{3 V} (\rho - \rho').
+\]
+</p>
+
+<p>
+By repeating the experiment with many drops, the charge of an electron may be estimated. The estimate obtained by Millikan and Fletcher was \(1.5924(17)×10^{-19}\) Coulombs, within 1% of the currently accepted value of \(1.602176487(40)×10^{-19}\) Coulombs, although there is some controversy related to the experiment which you can read about at the Wikipedia article linked to above.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">Homework Project 2</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Due 4pm Monday 27th July in the dropbox in the AP&amp;M basement. 
+</p>
+
+<p>
+Details TBA.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Online Exercises</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Each week you will need to complete the <a href="https://webwork.ucsd.edu/webwork2/math20d-Bryan-s115/">online homework</a> problems using the <a href="http://www.math.ucsd.edu/~abowers/online/webwork.html">Webwork</a> system. You only need to complete 75% of the problems to get full points, but I encourage you to attempt all the problems since we learn best when doing. Most of the problems are routine, but a handful of the problems may be quite challenging. The solutions will be made available almost immediately after the deadline so there can be no extensions on the due dates. <a href="http://www.math.ucsd.edu/~abowers/online/webwork.html">Help on Webwork.</a>  
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Sample Exercises</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Below is a list of sample exercises from previous years. The bold questions are more in depth/theoretical. The remaining questions are more routine. These problems are not to be turned in and are entirely optional, but may help frame your approach to studying.
+</p>
+</div>
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">Week 1</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><b>Section 2.1</b>: <b>33</b>, plus choose any one problem from questions 13 to 20.
+</li>
+<li><b>Section 2.2</b>: <b>21</b>, plus choose any one problem from questions 1 to 8.
+</li>
+<li><b>Section 2.3</b>: <b>6</b>
+</li>
+<li><b>Section 2.6</b>: <b>18</b>, plus choose any one problem from questions 1 to 12.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2">Week 2</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li><b>Section 2.4</b>: <b>27</b>, plus choose any one problem from questions 1 to 12
+</li>
+<li><b>Section 2.5</b>: <b>7</b>, plus choose any one problem from questions 1 to 6.
+</li>
+<li><b>Section 2.7</b>: 
+</li>
+<li><b>Section 3.1</b>: <b>17</b>, plus choose any one problem from questions 1 to 16.
+</li>
+<li><b>Section 3.2</b>: <b>21</b>, plus choose any one problem from questions 1 to 6.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3">Week 3</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li><b>Section 3.3</b>: <b>28</b>, plus choose any one problem from questions 7 to 16.
+</li>
+<li><b>Section 3.4</b>: <b>18</b>, plus choose any one problem from questions 1 to 10.
+</li>
+<li><b>Section 3.5</b>: <b>29</b>, plus choose any one problem from questions 1 to 14.
+</li>
+<li><b>Section 3.6</b>: <b>21</b>, plus choose any one problem from questions 1 to 4.
+</li>
+<li><b>Section 3.7</b>: <b>30</b> (except part a, which you may use for the remaining parts), plus choose any one problem from questions 1 to 4.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4">Week 4</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li><b>Section 5.1</b>:
+</li>
+<li><b>Section 5.2</b>: <b>21</b> (for (b) only do \(\lambda = 0, 2, 4\); for (c) only do \(H_0, \cdots, H_3\)), plus choose any one problem from questions 1 to 14.
+</li>
+<li><b>Section 5.3</b>:
+</li>
+<li><b>Section 5.4</b>: <b>41</b>, plus choose any one problem from questions 1 to 12.
+</li>
+<li><b>Section 5.7</b>:
+</li>
+<li><b>Section 6.1</b>: <b>30</b>, plus choose any one problem from questions 11 to 14.
+</li>
+<li><b>Section 6.2</b>: <b>28</b>, plus choose any one problem from questions 1 to 10.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5">Week 5</h3>
+<div class="outline-text-3" id="text-4-5">
+<ul class="org-ul">
+<li><b>Section 6.3</b>:
+</li>
+<li><b>Section 6.4</b>:
+</li>
+<li><b>Section 6.5</b>:
+</li>
+<li><b>Section 7.1</b>: <b>7</b>, plus choose any one problem from questions 7 to 16.
+</li>
+<li><b>Section 7.4</b>: <b>6</b>
+</li>
+<li><b>Section 7.5</b>: <b>28</b>, plus choose any one problem from questions 9 to 14.
+</li>
+<li><b>Section 7.6</b>: <b>13</b>, choose any one problem from questions 9 to 10.
+</li>
+</ul>
+</div>
+</div>
+</div>

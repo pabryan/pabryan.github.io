@@ -1,0 +1,88 @@
+---
+layout: course
+base: /teaching/math20d_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 2.1 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>2.5 (up to, but not including Example 1. I recommend you read Example 1 however.)
+</li>
+<li>2.4 (just Theorems 1 and 2)
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 2.1 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<p>The purpose of this lecture is to study <i>Autonomous Equations</i>. These are equations of the form
+\[
+y'(t) = f(y(t))
+\]
+for some given function \(f(y)\). For example, \(y' = 1 - y^2\) (\(f(y) = 1-y^2\)) is autonomous as is \(y' = 2\), but \(y' = e^t\) is autonomous since the right hand side depends <i>explicitly</i> on \(t\).
+</p>
+<p>
+These equations are seperable and so you know how to solve them. The purpose of the lecture is to deduce <i>qualitative</i> properties of the solution without ever having to solve the equation. Even though these equations are seperable, the integral may be difficult to evaluate and may not even have a simple closed form, so such techniques are indeed quite useful.
+</p>
+<p>
+Autonomous equations arise in population dynamics and in physics. See the text for some examples. The point I want to make here is that such equations correspond to situations where the rate of change of \(y\) can be deduced from \(y\) alone and this does not change as \(t\) changes. So for instance, the acceleration of a free-falling body is the same today as it is tomorrow as it was ten thousand years ago. 
+</p>
+<p>
+In population dynamics, autonomous equations describe the rate of change of populations. Here the assumption is that rate of change of the population depends on the size of the population. Today there are roughly seven billion people on earth and we deduce the rate of growth (or decline) of the population from that figure alone. If in a thousand years time, the population hits seven billion again, the rate of change will be the same as it is now. This may not be the most accurate model since other factors may come into play in a thousand years time that are not relevant now - for instance as in some SciFi movies, the government may control who is allowed to breed and when. This latter model is not autonomous, since the rate of change of population is not determined solely from the size of the population. The latter model may be more accurate, but the autonomous model may still be sufficiently accurate for some purposes - like studying fruit flies in a lab.
+</p>
+<p>
+To round out this overview, let me finish by mentioning the approach we will take in studying autonomous equations. The idea is that since \(y' = f(y)\), we can deduce the slope of the graph of \(y\) from the value of \(f\) at \(y\). We can also determine equilibrium solutions (constant or <i>unchanging</i> solutions), and the asymptotic behaviour of solutions (as \(t\to\infty\), along with convexity (\(y''\geq 0\) or conconcavity \(y''\leq 0\) of solutions from \(f\) alone. 
+</p>
+<p>
+The way to think about this approach is that if we have a formula for a solution \(y=y(t)\), then given \(t\) we can find \(y, y', y'', \dotsc\). So we can plot \(y\), see it's slope and see whether it is concave or convex at that given time. What we are doing, is saying that if we know the value of \(y\), we can determine \(y',y'',\dotsc\) <i>any time</i> that our solution happens to equal \(y\). For instance if we know the population is 10,000 (it doesn't matter <i>when</i> it's 10,000, just that it <i>is</i> 10,000), then we can determine how fast the polution is growing or declining (from \(y'\)) and whether or not that growth is speeding up or slowing down (from \(y''\)). For the dropping stone example, if we know how high the stone is, we can determine how fast it is going and how fast it is accelerating. It doesn't matter <i>when</i> we observe the stone at that height, just that it is at that height.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 2.1 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+<ul>
+<li>Autonomous Equations: \(y'(t) = f(y(t))\).
+  Note that although \(y\) depends on \(t\), the function \(f\) depends on \(t\) only through \(y\) and not explictly, as would be the case for instance if \(f = f(y,t) = y(t)\sin t\).
+</li>
+<li>Exponential growth: \(f(y) = r\). 
+  Solutions are \(y(t) = C^e{rt}\) which grow (for \(r&gt;0\) indefinitely at \(t\to \infty\) or shrink to zero (\(r&lt;0\) as \(t\to\infty). These aren't very good popluation models!
+</li>
+<li>Logistic growth: \(f(y) = f(1 - y/K) y\).
+  \(r\) is called the <i>intrinsic</i> growth rate, which is how the population would grow if unchecked as in the exponential growth model. \(K\) is called the carrying capacity, which is the only sustainable population. If at some time there is a population bigger than \(K\), then the population declines towards carrying capacity- the environment cannot support such a large population. If the population is below carrying, then sufficient resources are available and the population can continue to grow toward carrying capacity.
+</li>
+<li>The plot of \(y'=f(y)\) with \(y'\) on the vertical axis and \(y\) on the horizontal axis is called the <i>phase plot</i>. The sign of \(f\) at \(y\) tells us the whether a solution will increase, decrease or remain steady if it happens to reach this value of \(y\) at <i>any time.</i>
+</li>
+<li>We found the equilibrium solutions \(y=0\) and \(y=K\) by finding the roots of \(f\)
+</li>
+<li>We deduced for which values of \(y\), a solution would be concave (\(y''\leq 0\)) or convex (\(y'' \geq 0\)) from \(f\) by using the chain rule to deduce that \(y''(t) = f'(y(t)) f(y(t))\). <b>Caution</b>: Make sure you don't forget the \(f\) here! That is, \(y'' \ne f'(y)\).
+</li>
+<li>The result of this was that solutions are concave and descreasing for \(y\leq 0\), increasing for \(0&lt;y&lt;K\), convex for \(0&lt;y&lt;K/2\), concave for \(K/2&lt;y&lt;K\) and, convex and decreasing for \(y\geq K\).
+</li>
+<li>We found the stability of the equilibrium solutions, with \(K\) being <i>asymptotically stable</i> (solutions asymptote to it) and \(0\) being unstable (solutions diverge from it). This we represented by drawing arrows on the <i>phase line</i>.
+</li>
+<li>I gave the solution to the equation. See the text for how to obtain this using a partial fraction expansion (<a href="https://www.math.ucdavis.edu/~kouba/CalcTwoDIRECTORY/partialfracdirectory/">https://www.math.ucdavis.edu/~kouba/CalcTwoDIRECTORY/partialfracdirectory/</a>). The solution is
+  \[
+  y(t) = \frac{y_0 K}{y_0 + (K-y_0)e^{-r t}}
+  \]
+  You should check that this solution behaves as expected, that is that as \(t\to\infty\) the solution approaches \(K\). Note that this solution is not valid for \(y_0 &lt; 0\). In that case, the solution can be obtained in a similar manner. See if you can spot where in the text \(y_0\geq 0\) is used.
+</li>
+</ul>
+
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

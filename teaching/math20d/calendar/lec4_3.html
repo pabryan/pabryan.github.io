@@ -1,0 +1,116 @@
+---
+layout: course
+base: /teaching/math20d_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 4.3 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>6.1
+</li>
+<li>6.2
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 4.3 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li><a href="#sec-3-1">Discontinuous forcing functions</a>
+  In many applications, the non-homogeneous term \(g\) may not be continuous. For instance, when turning on a power point (in an idealised way), there is an instentaneous jump from 0 volts to 110V. We may be able to solve the equation before the jump and after the jump, but the solution cannot be differentiable (for a first order equation) at the jump. Thus we need a rigorous method of studying such situations.
+</li>
+<li><a href="#sec-3-2">Laplace Transform</a>
+  The Laplace Transform is what is known as an <i>integral transform</i>. Given a function \(f=f(t)\), we define a new function 
+  \[
+  F(s) = \int_{\alpha}^{\beta} K(s, t) f(t) dt
+  \]
+  where the function \(K\) is a fixed function known as the <i>kernel</i> of the transformation. In the case of the Laplace Transform, \(K(s,t) = e^{-st}\).
+</li>
+<li><a href="#sec-3-3">Solving equations with the Laplace Transform</a>
+  The Laplace Transform takes a differential equation and transforms it into an <i>algebraic</i> equation, which may be more amenable to solving, particularly in the case of discontinuous forcing functions. The solution of this algebraic equation is then transformed back via the <i>Inverse Laplace Transform</i> to a solution of the differential equation. Much of the computations required can be undertaken by consulting a table of Laplace Transformations.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 4.3 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><a name="ID-bd3aa5a3-cb0b-4dbc-a1c1-cfd0ddade2a4" id="ID-bd3aa5a3-cb0b-4dbc-a1c1-cfd0ddade2a4"></a>Discontinuous forcing functions</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<ul>
+<li>If \(g\) is discontninous, then the "solution" may not be twice differentiable.
+</li>
+<li>We considered the equation \(y'' + y = g\) where \(g\) is zero for \(0\leq t \leq \pi\) and one for \(\pi &lt; t \leq 2\pi\). If \(y\) is a solution, then for \(0&lt; t &lt; \pi\) we have \(y = C_1 \cos t + C_2 \sin t\) and for \(0&lt; t &lt; \pi\) we have \(y = D_1 \cos t + D_2 \sin t\). For \(y\) to be continuous at \(t=\pi\) we needed \(D_1 = C_1 - 1\). For \(y'\) to be continuous at \(t=\pi\) we needed \(D_2 = C_2\). However, for \(y''\) to be continuous at \(t=\pi\) we needed \(D_1 =C_1\) contradicting that \(D_1 = C_1\). 
+</li>
+<li>Thus we can't find a two-times differentiable function \(y\) solving the equation.
+</li>
+<li>However, we still all \(y\) a solution with aribtrary constants \(C_1,C_2\) since it's the closest we can get and from real-life considerations, we believe there should be a solution.
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><a name="ID-413b023c-8b6b-4c88-bbc9-55df5a6c2079" id="ID-413b023c-8b6b-4c88-bbc9-55df5a6c2079"></a>Laplace Transform</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ul>
+<li>The Laplace Transform is an integral transform.
+</li>
+<li>It is linear.
+</li>
+<li>We calculated a few examples.
+</li>
+<li>If \(f\) grows now faster than an exponential function \(Ke^{at}\) as \(t\to\infty\) the Laplace transform is defined for \(s&gt;0\).
+</li>
+<li>The Laplace Transform of zero is zero. Therefore (at least for our purposes), if two functions have the same Laplace transform, then they are in fact the same function.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><a name="ID-3a5b1aeb-fe92-4b6f-9ece-97ce54d44369" id="ID-3a5b1aeb-fe92-4b6f-9ece-97ce54d44369"></a>Solving equations with the Laplace Transform</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<ul>
+<li>We calculated the Laplace transform of \(f'\) in terms of \(f\). Doing the same thing with \(f\) replaced by \(f'\) gave us the Laplace transform of \(f''\) in terms of \(f'\) and so it terms of \(f\).
+</li>
+<li>Applying the Lalplace transform to a differential equation, and using the initial conditions, gives an expression for the Laplace transform of \(y\).
+</li>
+<li>We need to find a function with the same Laplace transform.
+</li>
+<li>In the example, we use a partial fraction decomposition to show that the a sum of exponentials works. In general, consult the table in the text.
+</li>
+<li>Thus we found the solution and it agreed with the solution we calculated using the methods we already knew.
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

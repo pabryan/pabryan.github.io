@@ -1,0 +1,102 @@
+---
+layout: course
+base: /teaching/math142b_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 2.3 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>Chapter 8.1
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 2.3 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li><a href="#sec-3-1">Differentiating Polynomials</a>
+</li>
+</ul>
+
+<p>Here we review polynomials and how to differentiate them.
+</p><ul>
+<li><a href="#sec-3-2">Order of Contact/Vanishing</a>
+</li>
+</ul>
+
+<p>Here we define the notions of order of contact and order of vanishing. Loosely speaking, this says that \(f\) and \(g\) are close to each for \(x\) near \(x_0\). The order here is some (coarse) quanitification of how close. The higher the order of contact, the closer the functions.
+</p><ul>
+<li><a href="#sec-3-3">Taylor Polynomials</a>
+</li>
+</ul>
+
+<p>Here, for each \(n\), we find a polynomial with order of contact \(n\) with \(f\). Thus we can approximate \(f\) by a polynomial near the point \(x_0\). The reason we want to do this is that polynomials are much easier to understand that arbitrary functions and we will see examples of how this can be useful later in the course.
+</p></div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 2.3 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">Differentiating Polynomials</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<p>The important formula here is
+\[
+\left.\frac{\partial^k}{\partial x}\right|_{x=x_0} (x-x_0)^j = \begin{cases}
+0, & j < k \\
+k!, & j=k \\
+0, & j > k.
+\end{cases}
+\]
+
+
+These all come from repeated application of \(\tfrac{\partial}{\partial z} z^j = j z^{j-1}\). The point here is that if \(k&lt;j\), you get a positive power \((x-x_0)^{j-k}\) after differentiating \(k\) times, and when \(j=k\), this is just 1. Any further differentiation results in zero.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">Order of Contact/Vanishing</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<p>I also defined order of vanishing which says that \(f\) has order of vanishing \(n\) at \(x_0\) if \(f^{(k)}(x_0) = 0\) for \(0\leq k \leq n\). That is all derivatives of \(f\) up to order \(n\) vanish at \(x_0\). Two functions \(f\) and \(g\) have order of contact \(n\) at \(x_0\) if and only if \(f-g\) has order of vanishing \(n\) at \(x_0\).
+</p></div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3">Taylor Polynomials</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<p>The main theorem stated that for each \(x_0\), there is a unique polynomial (called the Taylor Polynomial for f at \(x_0\)) \(p_n(x)\) of degree at most \(n\) that has order of contact \(n\) with \(f\) at \(x_0\). The reason we require that the degree be no greater than \(n\) is that we can add any higher order terms to \(p_n\) without affecting the order of contact. That is, if \(p_n\) has order of contact \(n\) with \(f\) at \(x_0\), then
+\[
+q(x) = p_n(x) + (x-x_0)^m
+\]
+(with \(m&gt;n\)) also has order of contact \(n\) with \(f\). This follows from the main formula for differentating polynomials above, which implies that
+\[
+\left.\frac{\partial^k}{\partial x^k}\right|_{x=x_0} (p_n - q) = \left.\frac{\partial^k}{\partial x^k}\right|_{x=x_0} (x-x_0)^m = (m-k)!/k! (x_0-x_0)^{m-k} = 0
+\]
+since \(m-k \geq m - n &gt; 0\) for \(0\leq k \leq n\).
+</p>
+
+</div>
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

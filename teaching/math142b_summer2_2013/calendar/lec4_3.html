@@ -1,0 +1,135 @@
+---
+layout: course
+base: /teaching/math142b_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 4.3 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>Chapter 9.3
+</li>
+<li>Chapter 9.4
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 4.3 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li><a href="#sec-3-1">Uniform Convergence</a>
+  The notion of uniform convergence is fudamental to the study of limits of sequences of functions. Loosely speaking, it says that the <i>rate of convergence</i> of \(f_n\) is the same for all \(x\). Compare this with the difference between continuity and uniform continuity.
+</li>
+<li><a href="#sec-3-2">Examples</a>
+  We will re-examine our examples and see if they are uniformly convergent.
+</li>
+<li><a href="#sec-3-3">Limit of uniformly continous functions is continuous</a>
+  We know that pointwise convergence of continuous functions is not enough to ensure the limit is continuous. Howerver, uniform convergence <i>is</i> sufficient.
+</li>
+<li><a href="#sec-3-4">Weirstrass Criteria for Uniform Convergence</a>
+  It's not always easy to tell whether a sequence is uniformly convergent or not. The Weirstrass criteria says that a sequence of functions is uniformly convergent to some limit function if and only if it is a Cauchy sequence. Compare with the corresponding statement about sequences of real numbers.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 4.3 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><a name="ID-ac985c4e-9340-4abf-89d0-05b5a8f28a01" id="ID-ac985c4e-9340-4abf-89d0-05b5a8f28a01"></a>Uniform Convergence</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<ul>
+<li>We looked at why the pointwise limit of continuous functions is not continuous. We discovered that the problem is that although for each \(n\), we can find a \(\delta\) in the definition of continuity, this \(\delta\) depends on \(n\) and so we can't take the limit \(n\to\infty\).
+</li>
+<li>Letting \(\delta = \inf \{\delta(n): n \in \mathbb{N}\}\), we saw that if \(\delta &gt; 0\), then the limit is continuous.
+</li>
+<li>For the example \(x^n\), we saw that \(\delta(n) \to 0\) as \(n\to\infty\) which explains why the limit is not continuous.
+</li>
+<li>This discovery lead us to the notion of <a href="http://en.wikipedia.org/wiki/Equicontinuity">equicontinuous sequences</a> (my apologies about the confusing name I made up in class: uniformly continuous sequences of continuous functions - I couldn't remember the correct name at the time). The important property of such sequences is that \(\delta\) works for every \(n\). 
+</li>
+<li><b>Definition</b>
+  A sequence \(f_n : D\to\mathbb{R}\) of functions is called <i>equicontinuous</i> if for every \(x_0\in D\) and every \(\epsilon&gt;0\), there exists a \(\delta = \delta(x_0, \epsilon)&gt;0\) such that
+  \[
+  \forall n \vert x - x_0 \vert < \delta \Rightarrow \vert f_n(x) - f_n(x_0) \vert < \epsilon.
+  \]
+</li>
+<li>There is another situation described in the text book where the limit is continuous. This is the case of a <i>uniformly convergent sequence</i>. See the text for the definition. The difference with pointwise, is that with pointwise, for each \(x\) there is a \(N=N(x,\epsilon)\), but with uniform convergence the same \(N\) works for <i>every</i> \(x\); that is, \(N = N(\epsilon)\).
+</li>
+<li>Graphically, we saw that for any given \(\epsilon\) this means that \(f_n\) lies entirely in the \(\epsilon\) strip about \(f\) as long as \(n\geq N(\epsilon)\). For pointwise convergence, the \(f_n(x)\) is within \(\epsilon\) of \(f(x)\) for each \(x\), but \(f_n\) need not lie entirely within the \(\epsilon\) strip. That is, it is only with \(\epsilon\) of \(f\) at the <i>single point</i> \(x\).
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><a name="ID-af3fd13f-e707-42de-868b-02645be22ae4" id="ID-af3fd13f-e707-42de-868b-02645be22ae4"></a>Examples</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ul>
+<li>We saw that \(x^n\) is not an equicontinuous sequence. It also cannot be uniformly convergent since it must jump out of the \(\epsilon\) strip at some point \(x&lt;1\).
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><a name="ID-6254aba2-dbf3-4ec7-8617-90f572b9b1b6" id="ID-6254aba2-dbf3-4ec7-8617-90f572b9b1b6"></a>Limit of uniformly continous functions is continuous</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<ul>
+<li>We used the triangle inequality to prove that the limit of a uniformly convergent sequence of continuous functions is itself continuous.
+</li>
+<li>I realised later that my proof was not quite correct. We need to first choose \(N\) so that \(\vert F_N(x_0) - F_n(x)\vert &lt; \epsilon/3\) whenever \(\vert x - x_0\vert &lt; \delta\). Then for any such \(x\), since \(f_n\) is <i>uniformly convergent</i> we have
+  \begin{align*}
+  \vert f(x) - f_n(x) \vert &< \epsilon/3 \\
+  \vert f(x_0) - f_n(x_0) \vert &< \epsilon/3.
+  \end{align*}
+  The reason we need uniform convergence here is that we need these inequalities not for just a fixed \(x\), but for every \(x\) such that \(\vert x - x_0\vert &lt; \delta\). This is the step that fails for just pointwise convergence.
+<ul>
+<li>Then the triangle inequality completes the proof just as in the lecture.
+</li>
+</ul>
+
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-4" class="outline-3">
+<h3 id="sec-3-4"><a name="ID-ff90eaec-250c-40a0-91b1-86fde3fc387c" id="ID-ff90eaec-250c-40a0-91b1-86fde3fc387c"></a>Weirstrass Criteria for Uniform Convergence</h3>
+<div class="outline-text-3" id="text-3-4">
+
+<ul>
+<li>We ran out of time to cover this topic.
+</li>
+<li>This says that a sequence is uniformly convergent if and only if it is uniformly Cauchy. We might talk a little about this on Wednesday next week.
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

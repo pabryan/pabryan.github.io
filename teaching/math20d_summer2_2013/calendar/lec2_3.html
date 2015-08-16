@@ -1,0 +1,138 @@
+---
+layout: course
+base: /teaching/math20d_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 2.3 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>3.2
+</li>
+<li>3.3
+</li>
+<li>3.4
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 2.3 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li><a href="#sec-3-1">Existence and Uniqueness, The Wronskian.</a>
+  It's worth revisiting this idea. Theorem 3.2.1 tells us that a unique solution to the initial value problem always exists. Theorems 3.2.2 and 3.2.3 suggest a <i>way to find</i> this solution. First, we try to find any two solutions of the differential equation (we're not worried about initial conditions yet). So for the real, distinct root case these are 
+  \[
+  y_1(t) = e^{r_1 t}, \quad y_2(t) = e^{r_2 t}
+  \]
+ where \(r_1,r_2\) are the roots which by assumption are real and \(r_1 \ne r_2\). Theorem 3.2.2 now tells us that for any constants \(C_1,C_2\), we can construct the new solution
+  \[
+  y(t) = C_1 y_1(t) + C_2 y_2(t).
+  \]
+  Next, Theorem 3.2.3 tells us that if the Wronskian \(W(y_1,y_2) (t_0) \ne 0\), then for any initial conditions \(y_0, y_0'\), <i>the unique solution</i> to the initial value problem can be written as \(y(t) = C_1 y_1(t) + C y_2(t)\). In other words, since we already know \(y\) is a solution to the differential equation, the theorem tells us that we can solve for \(C_1,C_2\) thus satisfying the intial conditions. The uniqueness part of Theorem 3.2.1 means that this is now the solution.
+</li>
+<li><a href="#Complex-Roots-of-the-Characteristic-Equation">Complex Roots of the Characteristic Equation</a>
+  Sometimes the roots of the characteristic equation are complex. In this case, we can construct (by means of Euler's formula) two solutions,
+  \begin{align*}
+  u_1(t) &= e^{(\lambda + i \mu)t} = e^{\lambda t} (\cos \mu t + i \sin \mu t,\\
+  u_2(t) &= e^{(\lambda - i \mu)t} = e^{\lambda t} (\cos \mu t - i \sin \mu t,\\
+  \end{align*}
+  where the roots are
+  \[
+  r_1 = \lambda + i \mu, r_2 = \lambda - i \mu
+  \]
+  which occur in <i>complex conjugate</i> pairs.
+
+<p>
+  The problem here is that these solutions are complex valued! By taking the real and imaginary parts of either \(y_1\) or \(y_2\) we can obtain the following real solutions
+  \[
+  y_1(t) = e^{\lambda t} \cos \mu t, \quad y_2(t) = e^{\lambda t} \sin \mu t.
+  \]
+  You can check that the Wronskian is not zero for any \(t\) and so we have a <i>fundamental set of solutions</i> \(\{y_1,y_2\}\). That is, the <i>general solution</i> is
+  \[
+  y(t) = e^{\lambda t} (C_1 \cos \mu t + C_2 \sin \mu t)
+  \]
+  which means that for any initial conditions \(y_0,y_0'\) we can find \(C_1, C_2\) to satsify the initial conditions.
+</p></li>
+<li><a href="#sec-3-3">Real, repeated roots of the Characteristic Equation.</a>
+  Here the characteristic equation has a repeated root \(r\) and so one solution is given by \(y_1(t) = e^{rt}\) but we don't get a second solution. To find a second solution, use variation of parameters to find a second solution
+</li>
+</ul>
+
+
+\[
+y_2(t) = t e^{rt}.
+\]
+<p>
+Again, you can check that the Wronskian is non-zero so that \(e^{rt}, te^{rt}\) is a fundamental set of solutions.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 2.3 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">Existence and Uniqueness, The Wronskian.</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<p>The important things to remember here are
+</p><ul>
+<li>a unique solution always exists,
+</li>
+<li>given solutions of the differential equation \(y_1,y_2\) a linear combination is again a solution,
+</li>
+<li>if the Wronskian \(W(y_1,y_2)\) is non-zero then the general solution is \(C_1 y_1 + C_2 y_2\) which means we can always solve for any initial conditions. We also say that \(\{y_1,y_2\}\) is a fundamental set of solutions.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">Complex Roots of the Characteristic Equation.</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ul>
+<li>Euler's formula : \(e^{x + i y} = e^x(\cos y + i \sin y\)
+</li>
+<li>\(i\) is a constant! Thus 
+  \[
+  \frac{\partial}{\partial t} (i f(t)) = i \frac{\partial}{\partial t} (f(t)).
+  \]
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3">Real, repeated roots of the Characteristic Equation.</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<ul>
+<li>We will talk about how to get from the guess \(y_2(t) = v(t) e^{rt}\) to finding that \(v(t) = t\) on Monday. The idea is to assume \(y_2\) is a solution and see what conditions this imposes on \(v\) and then solve for \(v\).
+</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

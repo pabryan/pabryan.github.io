@@ -1,0 +1,153 @@
+---
+layout: course
+base: /teaching/math20d_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 4.1 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>7.1
+</li>
+<li>7.4
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 4.1 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li><a href="#sec-3-1">Systems of Equations</a>
+  Systems of differential equations arise when there is more than one dependent variable. For example, in the spring-mass system in the text, there are two masses. Their behaviour is coupled, in that the motion of each mass depends not onlyon its position, but on the position of the other mass as well. 
+
+<p>
+  Second order equations may be transformed into a first order system, with two unkowns.
+</p>
+<p>
+  We also have an existence and uniqueness theorem for systems.
+</p></li>
+<li><a href="#sec-3-2">First Order, Linear, Constant Coefficient, Homogeneous Systems</a>
+  First order, linear, constant coefficient, homogeneous systems are systems where the highest order derivative appearing is just one. Any differential equation, or more generally system of differential equations can be reduced to a first order system so it is sufficient to study just these system. 
+
+<p>
+  Linearity means that if we take a linear combination of solutions (to the homoegeneous problem), we get another solution.
+</p>
+<p>
+  Constant coefficient means that all the coefficients are constants; they do not depend on the independent variable (\(t,x,\dotsc)\).
+</p>
+<p>
+  Homogeneous means that the right hand side equals zero. There are no external forces.
+</p>
+<p>
+  We will only consider the case of two unknowns, and so we won't need much linear albegra.
+</p>
+<p>
+  As for second order equations, we have the notion of <i>fundamental set of solutions</i>. This is given by a pair of solutions (which each consist of two functions) that are <i>linearly independent</i>. This ensures that we can always find constants so that the initial conditions are satisfied. The <i>general solution</i> is a linear combination (with aribtray constants) of the two solutions from a fundamental set of solutions. Once again, we have a Wronskian, and this is non-zero if and only if we have a fundamental set of solutions. We also have an analouge of Abel's theorem: the Wronskian is either \(0\) for every \(t\) or is never \(0\).
+</p></li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 4.1 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">Systems of Equations</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<ul>
+<li>To derive the spring mass system equations:
+<ul>
+<li>note that at equilibrium the net force is zero. Since there's only one force this gives \(k_i L_i = 0\) for \(i=1,2,3\). 
+</li>
+<li>Then it's just a matter of working out the length of the spring (e.g. \(L_2 + x_2 - x_1\)), and multiplying by \(k_i\) (e.g. \(k_2(L_2 + x_2 - x_1) = k_2(x_2-x_1)\)).
+</li>
+<li>You need to be careful about the sign. For instance, if the middle spring is shortened, it pushes \(m_1\) in the <i>negative</i> direction and \(m_2\) in the <i>positive</i> direction.
+</li>
+</ul>
+
+</li>
+<li>Systems can be obtained from single variable equations by the subsitutions
+  \begin{align*}
+  x_1 &= u \\
+  x_2 &= u' \\
+  \vdots &= \vdots \\
+  x_n &= u^{n-1} \\
+  \end{align*}
+  which gives
+  \begin{align*}
+  x_1' &= x_2 \\
+  x_2' &= x_3 \\
+  \vdots &= \vdots \\
+  x_{n-1}' &= x_{n} \\
+  \end{align*}
+  To obtain the equation for \(x_{n}'\) use the original equation \(u^{(n)} = F(u, u', \dotsc, u^{(n-1)}, t)\) to get
+  \[
+  x_{n}' = F(x_1, \dotsc, x_{n-1}, t).
+  \]
+</li>
+<li>Just as with everything else we've been doing, there exists a unique soltution to the intitial value problem for a system.
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">First Order, Linear, Constant Coefficient, Homogeneous Systems</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ul>
+<li>These are equations of the form
+  \begin{align*}
+  x_1' &= a_{11} x_1 + a_{12} x_2 \\
+  x_2' &= a_{21} x_1 + a_{22} x_2
+  \end{align*}
+</li>
+<li>We have to solve both equations at the same time!
+</li>
+<li>In matrix form, this reads
+  \[
+  \vec{x}' = A \vec{x}.
+  \]
+</li>
+<li>Learn (or write on your cheat sheet) some linear algebra rules such as \(A(c_1\vec{x_1} + c_2\vec{x_2}) = c_1 A\vec{x_1} + c_2 A\vec{x_2}\). That is, we can take a linear combination of \(\vec{x_1}\) and \(\vec{x_2}\) and then apply \(A\) or first apply \(A\) to \(\vec{x_1}\) and \(\vec{x_2}\) seperately and then take the linear combination.
+</li>
+<li>The equation is linear so that if \(\vec{x}, \vec{y}\) are solutions, then so too is \(C\vec{x} + D\vec{y}\).
+</li>
+<li>The general solution is obtained as linear combination \(C\vec{x} + D\vec{y}\) where \(\vec{x}, \vec{y}\) are linearly independent solutions.
+</li>
+<li>This is the same as saying that the Wronskian is non-zero. The Wronskian is defined as
+  \[
+  W(\vec{x}, \vec{y})(t_0) = \begin{vmatrix}
+  x_1(t_0) & y_1(t_0) \\
+  x_2(t_0) & y_2(t_0)
+  \end{vmatrix}.
+  \]
+</li>
+<li>We have a analogue of Abel's theorem. Either the Wronskian is always zero or never zero, so we can check it any convinient choice of \(t\).
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

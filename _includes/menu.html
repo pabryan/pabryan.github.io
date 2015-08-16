@@ -1,0 +1,13 @@
+<div id="mainmenu">
+  <ul>
+    {% assign url = page.url|remove:'index.html' %}
+    {% capture url %}{{ page.url | remove: 'index.html' }}{% endcapture %}
+    {% for link in page.navigation %}
+    {% capture linkurl %}{{ page.base }}{{ link.url }}{% endcapture %}
+    <li {% if url == linkurl %}class="current_page_item"{% endif %}>
+      <a href="{{site.url}}{{page.base}}{{link.url}}" title="{{link.title}}">{{link.text}}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+

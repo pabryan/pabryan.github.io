@@ -1,0 +1,118 @@
+---
+layout: course
+base: /teaching/math142b_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 4.2 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>Chapter 9.2
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 4.2 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li><a href="#sec-3-1">Sequences of functions</a>
+  Here we consider sequences of functions. That is for each natural number \(n\), we have a function \(f_n: D \to \mathbb{R}\). Note that \(D \subset \mathbb{R}\) is fixed here. We have the notion of pointwise convergence, which is just convergence at each point.
+</li>
+<li><a href="#sec-3-2">Examples</a>
+  We look at several examples to see how to calculate the pointwise limit of a sequence of functions.
+</li>
+<li><a href="#sec-3-3">Properties of the limit</a>
+  The limit function (if it exists) does not necessarily inherit properties such as continuity, differentiability and integrability from the sequence. Even when it does, the derivative of the limit is not necessarily the limit of the derivatives. The analogous statement also holds for integrals.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 4.2 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><a name="ID-4ae9f5e6-1ff0-4828-ac23-8b2067a9c901" id="ID-4ae9f5e6-1ff0-4828-ac23-8b2067a9c901"></a>Sequences of functions</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<ul>
+<li>\(f_n \to_{\text{pw}} f\) (read \(f_n\) converges pointwise to \(f\)) if for each fixed \(x \in D\),
+  \[
+  \lim_{n\to\infty} f_n(x) = f(x)
+  \]
+  where \(\{f_n(x)\}\) is now just a sequence of real numbers.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><a name="ID-130b9d5a-5cf2-477a-bbf7-fd7d9ae5f8d8" id="ID-130b9d5a-5cf2-477a-bbf7-fd7d9ae5f8d8"></a>Examples</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ul>
+<li>The examples all came from the text, except one: \(f_n(x) = x^n/n\).
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><a name="ID-236afe1c-68e8-44ac-81b9-3308dffb7d03" id="ID-236afe1c-68e8-44ac-81b9-3308dffb7d03"></a>Properties of the limit</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<ul>
+<li>If each \(f_n\) is continuous, the limit need not be continuous.
+</li>
+<li>If this statement <i>were</i> true, it would mean that \(\lim_{x\to x_0} f(x) = f(x_0)\). Since
+  \[
+  \lim_{x\to x_0} f(x) = \lim_{x\to x_0} \lim_{n\to\infty} f_n(x).
+  \]
+  and
+  \[
+  f(x_0) = \lim_{n\to\infty} f_n(x_0) = \lim_{n\to\infty} \lim_{x\to x_0} f_n(x), 
+  \]
+  \(\lim_{x\to x_0} f(x) = f(x_0)\) amounts to saying that
+  \[
+  \lim_{x\to x_0} \lim_{n\to\infty} f_n(x) =  \lim_{n\to\infty} \lim_{x\to x_0} f_n(x).
+  \]
+  That is, it would mean that we can interchange the order limits, which is <b>not</b> true in general.
+</li>
+<li>If each \(f_n\) is differentiable, the limit need not be differentiable.
+</li>
+<li>If each \(f_n\) is integrable, the limit need not be integrable.
+</li>
+<li>If each \(f_n\) is differentiable, and the limit \(f\) is differentiable, it is not true in general that \(f_n' \to_{\text{pw}} f'\). That is, we can't interchange the order in which we take limits and derivatives. From the definition of the derivative, this would amount to the statement that
+  \[
+  \lim_{n\to\infty} \left[ \lim_{h\to 0} \frac{f_n(x) - f_n(x+h)}{h}\right] = \lim_{h\to 0} \left[\frac{\lim_{n\to\infty} f_n(x) - \lim_{n\to\infty} f_n(x+h)}{h}\right].
+  \]
+  In other words, it would amount to saying that we can interchange the order in which we take the limits. This is <b>not</b> true in general.
+</li>
+<li>Similarly, if each \(f_n\) is integrable, and the limit \(f\) is integrable, it is not true in general that \(\lim_{n\to\infty} \int f_n = \int f\). That is, we can't interchange the order in which we take limits and integrals. 
+</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

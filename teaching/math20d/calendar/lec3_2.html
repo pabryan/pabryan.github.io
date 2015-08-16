@@ -1,0 +1,162 @@
+---
+layout: course
+base: /teaching/math20d_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 3.2 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>3.7
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 3.2 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li><a href="#Spring-Mass-Systems">Spring/Mass Systems</a>
+  Here we see that a mass attached to a spring may be modelled by a second order, constant coefficient, linear differential equation. This arises by applying Newton's second law where the forces are the force of gravity, the force from the spring tension and damping (friction, wind-resistance etc.). To obtain the desired equation, we use Hooke's law which states that the force due to the spring is proportional to the displacement and we make the assumption that any damping is proportional to the velocity of the mass (though as mentioned in the first week, taking the square of the velocity may be more accurate).
+</li>
+<li><a href="#sec-3-2">Undamped, no forcing</a>
+  The first step is to consider undamped (no friction) oscillations with no forcing term (homogenous equations). Thus the equation has no first derivative term (the velocity). Because the coefficients (mass, Hooke's constant) are all positive, we find that the roots are purely imaginary and so the solution is an oscillation that continues for all time: a perpetual motion machine! This is because there is no damping, so no loss of energy.
+</li>
+<li><a href="#sec-3-3">Damped, no forcing</a>
+  Next, we add in some damping. The first thing we conclude (again essentially because the coefficients are positive) is that all solutions converge to \(0\) as \(t\to\infty\). If the roots are positive and distinct, we have an <i>overdamped</i> system where no oscillation occurs; the spring may pass through the equilibrium position (\(0\)) and then after achieving maximum displacement, converges to \(0\). Much the same thing happens when the roots are real distinct which is known as <i>critically damped</i>. If we <b>decrease</b> the damping coefficient \(\gamma\), then the discriminant becomes negative and we have complex roots. This corresponds to damped oscillations. We are able to find the frequency of oscillation and we see that it is <b>lower</b> than the the frequency when the system is undamped. The amplitude and phase of the oscillation are determined solely from the initial conditions.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 3.2 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">Spring/Mass systems</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<ul>
+<li>Gravity: \(F_{\text{g}} = mg\)
+</li>
+<li>Hookes's Law: \(F_{\text{s}} = -k (u+L)\)
+</li>
+<li>Damping: \(F_{\text{d}} = -\gamma u'\)
+</li>
+<li>External: \(F_{\text{ext}}\)
+</li>
+<li>Equilibrium: \(mg - kL = 0\)
+</li>
+<li>Netwon's second law: \(mu'' + \gamma u' + k u = F_{\text{ext}}(t)\)
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">Undamped, no forcing</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ul>
+<li>\(\gamma = 0\)
+</li>
+<li>Solution: \(u = A \cos \omega_0 t + B \sin \omega_0 t\)
+</li>
+<li>Rewrite in polar coords for \(A,B\): \(u = R\cos(\omega_0 t - \delta)\)
+</li>
+<li>Amplitude: \(R = \sqrt{A^2 + B^2}\)
+</li>
+<li>Phase: \(\delta = \arctan (B/A)\)
+</li>
+<li>Resonant Frequency \(\omega_0 = \sqrt{k/m}\)
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3">Damped, no forcing</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<ul>
+<li>\(\gamma &gt; 0\)
+</li>
+<li>Overdamped
+<ul>
+<li>\(\gamma^2 - 4mk &gt; 0\), 
+</li>
+<li>\(r_1,r_2 &lt; 0\), 
+</li>
+<li>\(u = A e^{r_1 t} + B e^{r_2 t}\)
+</li>
+<li>No oscillation. 
+</li>
+<li>\(\lim_{t\to\infty} u = 0\)
+</li>
+</ul>
+
+</li>
+<li>Critically damped
+<ul>
+<li>\(\gamma^2 - 4mk = 0\), 
+</li>
+<li>\(r &lt; 0\), 
+</li>
+<li>\(u = (A + Bt) e^{r t}\)
+</li>
+<li>No oscillation. Only one \(t\)-axis crossing.
+</li>
+<li>\(\lim_{t\to\infty} u = 0\)
+</li>
+</ul>
+
+</li>
+<li>Damped
+<ul>
+<li>\(\gamma^2 - 4mk &lt; 0\), 
+</li>
+<li>\(\lambda &lt; 0\), 
+</li>
+<li>\(u = e^{\lambda t}(A \cos \mu t + B \sin \mu t)\)
+</li>
+<li>Rewrite: \(u = R e^{-(\gamma/2m) t} \cos(\mu t - \delta)\)
+</li>
+<li>Damped oscillation.
+</li>
+<li>\(\lim_{t\to\infty} u = 0\)
+</li>
+<li>quasi-frequency is strictly less than than resonant frequency:
+    \[
+    \mu = (1/2m) \sqrt{4mk - \gamma^2} < \sqrt{\frac{k}{m}} = \omega_0
+    \]
+</li>
+</ul>
+
+</li>
+</ul>
+
+
+
+
+</div>
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

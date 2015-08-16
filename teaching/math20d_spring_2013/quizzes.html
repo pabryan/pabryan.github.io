@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content=""/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-06-11 08:07:37 PDT"/>
+<meta name="author" content="nil"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel="stylesheet" type="text/css" href="http://math.ucsd.edu/~pbryan/css/variant-classic.css" title="Variant Classic" media="screen,projection" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+<div id="top"><div class="inner">
+
+	<div id="topleft">
+		<h1><a href="/">Paul Bryan</a></h1>
+		<p>UCSD Mathematics</p>
+	</div>
+
+	<br class="clear" />
+
+	<div id="mainmenu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="calendar.html">Calendar</a></li>
+			<li><a href="syllabus.html">Syllabus</a></li>
+			<li><a href="homework.html">Homework</a></li>
+                        <li><a href="exams.html">Exams</a></li>
+                        <li><a href="quizzes.html">Quizzes</a></li>
+		</ul>
+	</div>
+	<br class="clear" />
+</div></div>
+
+<div id="wrap"><div class="inner">
+
+	<div id="content">
+</div>
+
+<div id="content">
+<h1 class="title"></h1>
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Quizzes</h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1">Instructions</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+<p>
+There will be an online quiz due each <b>Monday at 11am</b>. The quiz is available on <a href="http://ted.ucsd.edu">TED</a> and can be taken anytime before the due date. You don't need to complete it in one sitting. 
+</p>
+<p>
+You should read the relevant sections (see <a href="#sec-1-2">Schedule</a> below) of the text in advance of taking the quiz. Just skim through the text, reading the definitions and theorem statements (not necessarily proofs) and skim over a few of the examples. Then try to complete the quiz. If you have trouble, only then should you look at the relevant part of the text in more details. 
+</p>
+<p>
+You should <b>not</b> wait until you have completed the homework before taking the quizzes! The quizzes will be on the material we are <i>going</i> to cover that week and so are not meant to test your knowledge of material we have already covered. They are intended to get you thinking a little about the material before coming to lectures.
+</p>
+<p>
+Each quiz will be graded as follows: you will get <b>2</b> points for submitting the quiz. Each question is worth <b>1</b> point up to a maximum score of <b>5</b> points. There will usually be more than 3 questions so you don't need to get every question right.  Please, don't spend too much time on the quiz! Each quiz is worth only half a point for your final grade and you get almost half that just by completing the quiz. The worst case scenario is if you get <b>every</b> question wrong on <b>every</b> quiz and then you will only lose 3 points on your final grade! However, if you spend hours on the quiz, you won't have as much time to do the homework which contributes a greater percentage of your final grade.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><a name="ID-177e18d5-abb5-483b-b858-106ab4c2f05b" id="ID-177e18d5-abb5-483b-b858-106ab4c2f05b"></a>Schedule</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="right" /><col class="left" /><col class="right" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="right">Quiz Number</th><th scope="col" class="left">Due Date</th><th scope="col" class="right">Sections of the Text</th></tr>
+</thead>
+<tbody>
+<tr><td class="right">01</td><td class="left">-</td><td class="right">No quiz</td></tr>
+<tr><td class="right">02</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-04-08 Mon</span></span></td><td class="right">2.3-2.6</td></tr>
+<tr><td class="right">03</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-04-15 Mon</span></span></td><td class="right">3.1-3.3</td></tr>
+<tr><td class="right">04</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-04-22 Mon</span></span></td><td class="right">2/3.1-3.4</td></tr>
+<tr><td class="right">05</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-04-29 Mon</span></span></td><td class="right">3.5-3.7</td></tr>
+<tr><td class="right">06</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-05-06 Mon</span></span></td><td class="right">7.1-7.4</td></tr>
+<tr><td class="right">07</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-05-13 Mon</span></span></td><td class="right">7.5-7.8</td></tr>
+<tr><td class="right">08</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-05-20 Mon</span></span></td><td class="right">3.5-3.7/7</td></tr>
+<tr><td class="right">09</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-05-27 Mon</span></span></td><td class="right">5.1-5.3</td></tr>
+<tr><td class="right">10</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-06-03 Mon</span></span></td><td class="right">6</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3">Questions</h3>
+<div class="outline-text-3" id="text-1-3">
+
+
+</div>
+
+<div id="outline-container-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1">Quiz 02 (Sections 2.3-2.6)</h4>
+<div class="outline-text-4" id="text-1-3-1">
+
+<ol>
+<li>In example 1 pp. 52-53, if \(Q(0)\) is not \(25\), is there a \(t\) such that \(Q(t)=25\)?
+
+<p>
+    F
+</p>
+</li>
+<li>Is the following equation linear? 
+   \[
+   ty' + 2y = 4 sin (t)
+   \]
+
+   T
+</li>
+<li>Let \(y_1\) and \(y_2\) be solutions of \(y' + p(t)y = g(t)\). Is \(y_1 + y_2\) also a solution?
+
+<p>
+   T
+</p>
+</li>
+<li>Let \(y_1\) and y<sub>2</sub> be solutions of \(y' + p(t)y = g(t)\) with \(y_1(0)\) not equal to \(y_2(0)\). Can the curves \(y_1(t)\), \(y_2(t)\) cross? That is does there exist a \(t\) with \(y_1(t)\) = \(y_2(t)\)?
+
+<p>
+   F
+</p>
+</li>
+<li>If \(y' = f(y)\), does the direction field depend on \(t\)?
+
+<p>
+   F
+</p>
+</li>
+<li>In the logistic growth equation (pp. 79-83), if for some \(t_1\) we have \(y(t_1)&gt;K\), does there exist a \(t_2\) with \(y(t_2)&lt;K\)?
+
+<p>
+   F
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2">Quiz 03 (Sections 3.1-3.3)</h4>
+<div class="outline-text-4" id="text-1-3-2">
+
+<ol>
+<li>Suppose \(ar^2 + br + c\) has real, positive distinct roots and let \(y(t)\) be the solution of 
+    \[
+   \begin{cases}
+    ay'' + by' + c &= 0 \\
+    y(0) &= 1 \\
+    y'(0) &= 1.
+    \end{cases}
+    \]
+    Which of the following is true?
+
+<ol>
+<li>\(y \to \infty\) as \(t\to\infty\).
+</li>
+<li>\(y \to -\infty\) as \(t\to\infty\).
+</li>
+<li>\(y \to 0\) as \(t\to\infty\).
+
+</li>
+</ol>
+
+<p>   a
+</p>
+</li>
+<li>Suppose \(r_0=0\) is a root of \(ar^2 + br + c\). Does \(ay'' + by' + c = 0\) admit a constant function as solution?
+
+<p>
+   T
+</p>
+</li>
+<li>Let \(y_1\), \(y_2\) be solutions of \(ay'' + by' + cy = 0\) such that the Wronskian \(W(y_1, y_2) (t_0) = 0\).
+
+<p>
+   True or false? \(W(y_1,y_2)(t) = 0\) for all \(t\).
+</p>
+<p>
+   T
+</p>
+</li>
+<li>How many fundamental sets of solutions does a second order linear homogeneous equation have?
+<ol>
+<li>0
+</li>
+<li>1
+</li>
+<li>\(\infty\)
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>Suppose the characteristic equation \(ar^2 + br + c = 0\) has one complex root. Is the other root
+<ol>
+<li>real,
+</li>
+<li>zero or
+</li>
+<li>complex?
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>If the characteristic equation \(ar^2 + br + c = 0\) has complex roots, does the equation \(ay'' + by' + c = 0\) admit real solutions?
+
+<p>
+   T
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3">Quiz 04</h4>
+<div class="outline-text-4" id="text-1-3-3">
+
+<p>You may retake quizzes 02 and/or 03 if you like. You are not required to retake either quiz if you don't wish to. I do encourage you however, to at least look the questions again as a study aid.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-3-4" class="outline-4">
+<h4 id="sec-1-3-4">Quiz 05 (Sections 3.4-3.6)</h4>
+<div class="outline-text-4" id="text-1-3-4">
+
+
+<p>
+This week you get less questions! To get full marks you only need to get 2 questions correct. 
+</p>
+<ol>
+<li>Why isn't \(C_1 e^{r t} + C_2 e^{rt}\) the <b>general form</b> of a linear, constant coefficient, homogeneous equation where the characteristic equation has the repeated root \(r\)?
+<ol>
+<li>The Wronsikian is non zero.
+</li>
+<li>There are infinitely many \(C_1, C_2\) satisfying the initial conditions.
+</li>
+<li>There exists \(y_0, y_0'\) where no \(C_1, C_2\) can be chosen to satisfy the initial conditions.
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>How many equations does the method of Variations of Parameters produce for \(u_1', u_2'\)?
+<ol>
+<li>0
+</li>
+<li>1
+</li>
+<li>2
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>Let \(y_1, y_2\) be a fundamental set of solutions for the homogeneous, linear equation \(y'' + p(t)y' + q(t)y = 0\) and \(Y(t)\) be a solution of the non-homogeneous, linear equation \(y'' + p(t)y' + q(t)y = g(t)\). Which of the following is the <b>general form</b> of the solution to the non-homogeneous equation?
+<ol>
+<li>Y(t)
+</li>
+<li>C<sub>1</sub> y<sub>1</sub> + C<sub>2</sub> y<sub>2</sub> + Y
+</li>
+<li>C<sub>1</sub> y<sub>1</sub> + C<sub>2</sub> y<sub>2</sub>
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>What is a particular solution for the equation \(y'' - 3y' - 4y = 2\sin t\)?
+<ol>
+<li>\(A \sin t + B \cos t\)
+</li>
+<li>\(A \sin t\)
+</li>
+<li>\(B \cos t\)
+
+</li>
+</ol>
+
+<p>   a
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-5" class="outline-4">
+<h4 id="sec-1-3-5">Quiz 06</h4>
+<div class="outline-text-4" id="text-1-3-5">
+
+<ol>
+<li>Which of the following is the first order system corresponding to the equation \(u'' + 1/2 u' + 2u = 0\)?
+<ol>
+<li>\[
+      \begin{split}
+      x_1 &= u \\
+      x_2 &= -1/2 x_2 - 2x_1
+      \end{split}
+      \]
+</li>
+<li>\[
+      \begin{split}
+      x_1' &= u \\
+      x_2'  &= -1/2 x_1 - 2x_1
+      \end{split}
+      \]
+
+</li>
+<li>\[
+      \begin{split}
+      x_1' &= u \\
+      x_2' &= -1/2 x_2 - 2x_1
+      \end{split}
+      \]
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>If \(\det A \ne 0\), what is \(A^{-1}\)?
+<ol>
+<li>\(\frac{M_{ij}}{\det A}\)
+</li>
+<li>\(\frac{C_{ji}}{\det A}\)
+</li>
+<li>\(\frac{(-1)^{i+j} C_{ij}}{\det A}\)
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>What are the eigenvalues of 
+   \[ 
+    A = \begin{pmatrix}
+   3 & -1 \\
+   4 & -2
+   \end{pmatrix}
+   \]
+
+<ol>
+<li>\(2\), \(-1\)
+</li>
+<li>\(-2\), \(1\)
+</li>
+<li>\(2\), \(1\)
+
+</li>
+</ol>
+
+<p>   a
+</p>
+</li>
+<li>Are the vectors 
+   \[
+   \begin{pmatrix} 1 \\ 1
+   \end{pmatrix}, 
+   \begin{pmatrix} -3 \\ 4
+   \end{pmatrix}
+   \]
+<ol>
+<li>linearly dependent, or
+</li>
+<li>linearly independent?
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li><b>My apologies, this question is poorly worded. The Wronksian is certainly non-zero at \(t_1\), but the vectors \(\{x_1(t_1), \cdots, x_n(t_1)\}\) could be linearly independent or linearly dependent at \(t_1\). Thus the most correct is "neither".</b> If \(n\) solutions \(x_1, \dotsc, x_n\) to a linear first order system of \(n\) equations in \(n\) unknowns are linearly independent at \(t_0\), are they 
+
+<ol>
+<li>linearly independent at \(t_1\ne t_0\),
+</li>
+<li>linearly dependent at \(t_1\ne t_0\), or
+</li>
+<li>neither?
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>What is the maximum number of functions possible for a fundamental set of solutions to a system of \(n\) equations?
+<ol>
+<li>1
+</li>
+<li>\(n\)
+</li>
+<li>0
+</li>
+<li>\(\infty\)
+
+</li>
+</ol>
+
+<p>   b
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-6" class="outline-4">
+<h4 id="sec-1-3-6">Quiz 07</h4>
+<div class="outline-text-4" id="text-1-3-6">
+
+<ol>
+<li>At a saddle point, which is true of the eigenvalues.
+<ol>
+<li>Real, repeated eigenvalues.
+</li>
+<li>Real, distinct eigenvalues with the same sign.
+</li>
+<li>Real, distinct eigenvalues with the oppposite sign. 
+
+</li>
+</ol>
+
+<p>   c 
+</p>
+</li>
+<li>The matrix 
+   \[
+   A = \begin{pmatrix}
+   1 & 1 \\
+   4 & 1
+   \end{pmatrix}
+   \]
+   has eigenvector
+   \[
+   \xi = \begin{pmatrix}
+   1 \\
+   2
+   \end{pmatrix}.
+   \]
+   What is the eigenvalue?
+
+<p>
+   3
+</p>
+</li>
+<li>True or False? All spiral points are stable.
+
+<p>
+   F
+</p>
+</li>
+<li>If \(r\) is a root of the characteristic equation with positive real part, is the origin unstable?
+
+<p>
+   T
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-7" class="outline-4">
+<h4 id="sec-1-3-7">Quiz 08</h4>
+<div class="outline-text-4" id="text-1-3-7">
+
+<p>You may retake any previous quiz.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-3-8" class="outline-4">
+<h4 id="sec-1-3-8">Quiz 09</h4>
+<div class="outline-text-4" id="text-1-3-8">
+
+<ol>
+<li>True of false? The following function is piecewise continuous?
+   \[
+   f(t) = \begin{cases}
+   0, & t\leq 0 \\
+   1/t, & t>0
+   \end{cases}
+   \]
+
+   F
+
+</li>
+<li>In example 6 why is \(\mathcal{L}\{f\}\) independent of \(k\)?
+<ol>
+<li>Because \(f\) is piecewise continuous.
+</li>
+<li>Because \(\int_0^1 f\) is independent of \(f(1)\).
+</li>
+<li>Because \(\int_0^1 f\) is independent of \(f(0)\).
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>What is the Laplace transform of \(y'' + y = f\)?
+<ol>
+<li>\([s^2 Y(s) - sy(0) - y'(0)] + Y(s) = f\)
+</li>
+<li>\([s^2 Y(s) - sy(0) - y'(0)] + Y(s) = F\)
+</li>
+<li>\([s^2 Y(s) - sy(0) - y'(0)] + [sY(s) - y(0)] + Y(s) = F\)
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>In example 2, which term of \(Y(s)\) corresponds to a particular solution of the non-homogeneous equation?
+<ol>
+<li>\(\frac{2s}{s^2 + 1} + \frac{5/3}{s^2 + 1}\)
+</li>
+<li>\(\frac{5/3}{s^2 + 1} - \frac{2/3}{s^2 + 4}\)
+</li>
+<li>\(-\frac{2/3}{s^2 + 4}\)
+
+</li>
+</ol>
+
+<p>   c
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-9" class="outline-4">
+<h4 id="sec-1-3-9">Quiz 10</h4>
+<div class="outline-text-4" id="text-1-3-9">
+
+<p>You may retake any previous quiz.
+</p></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+</div>
+
+	<div id="sidebar">
+
+        <h3>Contact</h3>
+        <p>
+        Office: Applied Physics & Mathematics (APM) 5240 <br />
+        E-Mail: <a href="mailto:pbryan@ucsd.edu">pbryan@ucsd.edu</a> <br />
+        Phone: (858) 534-3590 <br />
+        Fax: (858) 534-5273 <br />
+
+        Mailing address: <br />
+        Department of Mathematics, UCSD <br />
+        9500 Gilman Drive <br />
+        La Jolla, CA 92093-0112
+        </p>
+	</div>
+</div>
+<br class="clear" />
+</div>
+
+<div id="footer"><div class="inner">
+	<p>
+    <span class="credits"><a href="http://www.math.ucsd.edu/">UCSD Mathematics</a></span><br />
+	
+    <a href="http://andreasviklund.com/templates/variant-classic/" title="Variant Classic template">Template design</a> by <a href="http://andreasviklund.com/" title="Andreas Viklund">Andreas Viklund</a><br />
+	</p>
+</div></div>
+</div>
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+---
+layout: course
+base: /teaching/math20d_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 3.1 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>3.4
+</li>
+<li>3.6
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 3.1 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<ul>
+<li><a href="#sec-3-1">Variation of Parameters</a>
+  Variation of Parameters is a method for obtaining a solution of non-homogeneous equations. The idea is to take a linear combination of a fundamental set of solutions \((y_1,y_2)\)of the homogeneous equation, but allowing the coefficients \((u_1,u_2)\) to depend on \(t\). Then we substitute this new expression into the differential equation and see what comes up. In the end, writing the resulting expression in the appropriate way, we obtain two conditions for \((u_1',u_2')\) which miraculously we can solve since the Wronskian of \(\(y_1,y_2)\) is non-zer. Thus we obtain a solution of the non-homogeneous equation.
+</li>
+<li><a href="#sec-3-2">Reduction of Order</a>
+  Reducation of order is applying the same idea to finding a second solution of the homogenous equation, given that we've already found one solution. if \(y_1\) is the solution we've found, then we set \(y_2(t) = v(t) y_1(t)\) and substitute this expression into the differential equation. After some rearranging, we find that \(y_2\) is a solution if and only if \(v'\) solves a first order equation, for which we have methods of obtaining the solution and thus finding \(y_2\). Applying this to the case of second order, linear, constant coefficient, homoegenous equations with repeated root, we find the second solution is given by \(y_2(t) = te^rt\) where \(r\) is the root of the characteristic equation.
+</li>
+<li><a href="#sec-3-3">Particular Solutions</a>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 3.1 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1">Variation of Parameters</h3>
+<div class="outline-text-3" id="text-3-1">
+
+<ul>
+<li>Try a solution of the non-homogeneous equation of the form 
+  \[
+  Y(t) = u_1(t)y_1(t) + u_2(t)y_2(t)
+  \]
+  where \(\{y_1, y_2\}\) is a fundamental set of soutions. It's absolutely essential that we use a fundamental set of solutions so we can solve for \(u_1,u_2\).
+</li>
+<li>By a clever way of expressing the resulting equation, we get two equations from \(u_1',u_2'\) which we can solve because we have a fundamental set of solutions.
+</li>
+<li>The expression for \(u_1,u_2\) is
+  \begin{align*}
+  u_1 &= - \int \frac{y_2 g}{W(y_1,y_2)} \\
+  u_2 &= \int \frac{y_1 g}{W(y_1,y_2)}.
+  \end{align*}
+</li>
+<li>Thus given \(y_1,y_2\) found by solving the homogeneous equation and given the non-homegenous term \(g\) we find a particular solution to the non-homgeneous equation.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2">Reduction of Order</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ul>
+<li>We apply variation of parameters to the second order, linear, constant coefficient, homoegenous equations with a repeated root.
+</li>
+<li>Given the solution \(y_1(t) = e^rt\), set \(y_2 = v(t) e^{rt}\) with \(v\) a yet to be determined function.
+</li>
+<li>The resulting equation can be solved, giving \(v(t)=t\).
+</li>
+<li>A fundamental set of solutions is
+  \[
+  y_1(t) = e^{rt}, \quad y_2(t) = te^{rt}.
+  \]
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3">Particular Solutions</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<ul>
+<li>Given any solution \(Y\) of the non-homogeneous equation, the general solution is 
+  \[
+  y = C_1 y_1 + C_2 y_2 + Y.
+  \]
+</li>
+<li>This means that any solution of the non-homogeneous equation can be written in this form.
+</li>
+<li>The constants are obtained from the initial conditions.
+</li>
+<li>If we find a different soltution \(\tilde{Y}\) of the non-homogeneous equation, then the general solutions can also be expressed as
+  \[
+  y = \tilde{C}_1 y_1 + \tilde{C}_2 y_2 + \tilde{Y}
+  \]
+  for new constants.
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

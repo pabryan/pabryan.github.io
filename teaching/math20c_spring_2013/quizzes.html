@@ -1,0 +1,830 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content=""/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-06-10 11:31:38 PDT"/>
+<meta name="author" content="nil"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel="stylesheet" type="text/css" href="http://math.ucsd.edu/~pbryan/css/variant-classic.css" title="Variant Classic" media="screen,projection" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&nbps;</script>
+    <div id="top"><div class="inner">
+
+	<div id="topleft">
+		<h1><a href="/">Paul Bryan</a></h1>
+		<p>UCSD Mathematics</p>
+	</div>
+
+	<br class="clear" />
+
+	<div id="mainmenu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="calendar.html">Calendar</a></li>
+			<li><a href="syllabus.html">Syllabus</a></li>
+			<li><a href="homework.html">Homework</a></li>
+                        <li><a href="exams.html">Exams</a></li>
+                        <li><a href="quizzes.html">Quizzes</a></li>
+		</ul>
+	</div>
+	<br class="clear" />
+</div></div>
+
+<div id="wrap"><div class="inner">
+
+	<div id="content">
+</div>
+
+<div id="content">
+<h1 class="title"></h1>
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Quizzes</h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1">Instructions</h3>
+<div class="outline-text-3" id="text-1-1">
+
+
+<p>
+There will be an online quiz due each <b>Monday at 11am</b>. The quiz is available on <a href="http://ted.ucsd.edu">TED</a> and can be taken anytime before the due date. You don't need to complete it in one sitting. 
+</p>
+<p>
+You should read the relevant sections (see <a href="#sec-1-2">Schedule</a> below) of the text in advance of taking the quiz. Just skim through the text, reading the definitions and theorem statements (not necessarily proofs) and skim over a few of the examples. Then try to complete the quiz. If you have trouble, only then should you look at the relevant part of the text in more details. 
+</p>
+<p>
+You should <b>not</b> wait until you have completed the homework before taking the quizzes! The quizzes will be on the material we are <i>going</i> to cover that week and so are not meant to test your knowledge of material we have already covered. They are intended to get you thinking a little about the material before coming to lectures.
+</p>
+<p>
+Each quiz will be graded as follows: you will get <b>2</b> points for submitting the quiz. Each question is worth <b>1</b> point up to a maximum score of <b>5</b> points. There will usually be more than 3 questions so you don't need to get every question right.  Please, don't spend too much time on the quiz! Each quiz is worth only half a point for your final grade and you get almost half that just by completing the quiz. The worst case scenario is if you get <b>every</b> question wrong on <b>every</b> quiz and then you will only lose 3 points on your final grade! However, if you spend hours on the quiz, you won't have as much time to do the homework which contributes a greater percentage of your final grade.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2"><a name="ID-177e18d5-abb5-483b-b858-106ab4c2f05b" id="ID-177e18d5-abb5-483b-b858-106ab4c2f05b"></a>Schedule</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption></caption>
+<colgroup><col class="right" /><col class="left" /><col class="right" />
+</colgroup>
+<thead>
+<tr><th scope="col" class="right">Quiz Number</th><th scope="col" class="left">Due Date</th><th scope="col" class="right">Sections of the Text</th></tr>
+</thead>
+<tbody>
+<tr><td class="right">01</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-04-05 Fri 23:59</span></span></td><td class="right">12.1-12.3</td></tr>
+<tr><td class="right">02</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-04-10 Wed 11:00</span></span></td><td class="right">12.3-12.5</td></tr>
+<tr><td class="right">03</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-04-15 Mon 11:00</span></span></td><td class="right">13.1-13.3</td></tr>
+<tr><td class="right">04</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-04-22 Mon 11:00</span></span></td><td class="right">12/13</td></tr>
+<tr><td class="right">05</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-04-29 Mon 11:00</span></span></td><td class="right">14.1-14.3</td></tr>
+<tr><td class="right">06</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-05-06 Mon 11:00</span></span></td><td class="right">14.4-14.6</td></tr>
+<tr><td class="right">07</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-05-13 Mon 11:00</span></span></td><td class="right">14.7-14.8</td></tr>
+<tr><td class="right">08</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-05-20 Mon 11:00</span></span></td><td class="right">14</td></tr>
+<tr><td class="right">09</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-05-27 Mon 11:00</span></span></td><td class="right">15.1-15.2</td></tr>
+<tr><td class="right">10</td><td class="left"><span class="timestamp-wrapper"> <span class="timestamp">2013-06-03 Mon 11:00</span></span></td><td class="right">15.3-15.4</td></tr>
+</tbody>
+</table>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3">Questions</h3>
+<div class="outline-text-3" id="text-1-3">
+
+
+</div>
+
+<div id="outline-container-1-3-1" class="outline-4">
+<h4 id="sec-1-3-1">Quiz 01</h4>
+<div class="outline-text-4" id="text-1-3-1">
+
+<ol>
+<li>12.1.3
+   a
+</li>
+<li>12.1.2
+   15
+</li>
+<li>12.2.3
+   a
+</li>
+<li>12.2.5
+   d
+</li>
+<li>12.3.3
+   c
+</li>
+<li>12.3.5
+   c
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-2" class="outline-4">
+<h4 id="sec-1-3-2"><a name="ID-15c76b7d-a714-4b4c-a136-2ea99b06ac4f" id="ID-15c76b7d-a714-4b4c-a136-2ea99b06ac4f"></a>Quiz 02</h4>
+<div class="outline-text-4" id="text-1-3-2">
+
+<ol>
+<li>12.3.5 Let \(\mathbf{u}_{\parallel}\) be the projection of \(\mathbf{u}\) along \(\mathbf{v}\).  Which of the following is the projection of \(\mathbf{u}\) along the vector \(2\mathbf{v}\)?
+<ol>
+<li>\(\frac{1}{2} \mathbf{u}_{\parallel}\)
+</li>
+<li>\(\mathbf{u}_{\parallel}\)
+</li>
+<li>\(2 \mathbf{u}_{\parallel}\)
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>12.4.2 The angle between two unit vectors \(\mathbf{e}\) and \(\mathbf{f}\) is \(\tfrac{\pi}{6}\). What is the length of \(\mathbf{e} \times \mathbf{f}\)?
+
+<p>
+   0.5
+</p>
+</li>
+<li>12.4.6 When is the cross prouct \(\mathbf{v}\times\mathbf{w}\) equal to zero?
+<ol>
+<li>When \(\mathbf{v}\) and \(\mathbf{w}\) are orthogonal.
+</li>
+<li>When \(\mathbf{v}\) and \(\mathbf{w}\) are linearly independent.
+</li>
+<li>When \(\mathbf{v}\) and \(\mathbf{w}\) are parallel.
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>12.5.2 The vector \(\mathbf{k}\) is normal to which of the following planes?
+<ol>
+<li>\(x = 1\)
+</li>
+<li>\(y = 1\)
+</li>
+<li>\(z = 1\)
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>12.5.5 Which of the following planes contains the \(z\)-axis?
+<ol>
+<li>\(z = 1\)
+</li>
+<li>\(x+y = 1\)
+</li>
+<li>\(x+y = 0\)
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>12.5.6 Suppose that a plane \(\mathcal{P}\) with normal vector \(\mathbf{n}\) and a line \(\mathcal{L}\) with direction vector \(\mathbf{v}\) both pass through the origin and that \(\mathbf{n} \cdot \mathbf{v} = 0\). Which of the following statements is correct?
+<ol>
+<li>\(\mathcal{L}\) is contained in \(\mathcal{P}\).
+</li>
+<li>\(\mathcal{L}\) is orthogonal to \(\mathcal{P}\).
+
+</li>
+</ol>
+
+<p>   a
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-3" class="outline-4">
+<h4 id="sec-1-3-3">Quiz 03</h4>
+<div class="outline-text-4" id="text-1-3-3">
+
+<ol>
+<li>(13.1.1) Which of the following does <i>not</i> parametrise a line?
+<ol>
+<li>\(\mathbf{r}_1(t) = \langle 8-t, 2t, 3t\rangle\)
+</li>
+<li>\(\mathbf{r}_2(t) = t^3\mathbf{i} - 7t^3\mathbf{j} + t^3\mathbf{k}\)
+</li>
+<li>\(\mathbf{r}_3(t) = \langle 8-4t^3, 2 + 5t^2, 9t^3\rangle\)
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>(13.1.3) Which projection of \(\langle \cos t, \cos 2t, \sin t\rangle\) is a circle?
+<ol>
+<li>projection onto the \(xy\)-plane.
+</li>
+<li>projection onto the \(xz\)-plane.
+</li>
+<li>projection onto the \(yz\)-plane.
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>(13.2.2) True or false? The derivative of a vector-valued function is defined as the limit of the difference quotient, just as in the scalar-valued case.
+
+<p>
+   True.
+</p>
+</li>
+<li>(13.2.5) True or false? The derivative of a vector-valued function is the slope of the tangent line, just as in the scalar-valued case.
+
+<p>
+   False.
+</p>
+</li>
+<li>(13.3.2) Two cars travel in the same direction along the same roller coaster (at different times). Which of the following statements about their velocity vectors at a given point \(P\) on the roller coaster is/are true?
+<ol>
+<li>The velocity vectors are identical.
+</li>
+<li>The velocity vectors point in the same direction but may have different lengths.
+</li>
+<li>The velocity vectors may point in opposite directions.
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>(13.3.4) What is the length of the path traced by \(\mathbf{r}(t)\) for \(4 \leq t \leq 10\) if \(\mathbf{r}(t)\) is an arc-length parametrisation?
+
+<p>
+   6
+</p></li>
+</ol>
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-4" class="outline-4">
+<h4 id="sec-1-3-4">Quiz 04</h4>
+<div class="outline-text-4" id="text-1-3-4">
+
+<p>You may retake quizzes 02 and/or 03 if you like. You are not required to retake either quiz if you don't wish to. I do encourage you however, to at least look the questions again as a study aid.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-3-5" class="outline-4">
+<h4 id="sec-1-3-5">Quiz 05</h4>
+<div class="outline-text-4" id="text-1-3-5">
+
+<ol>
+<li>(14.1.1) What is the difference between a horizontal trace and a level curve?
+<ol>
+<li>Nothing. They are the same.
+</li>
+<li>The horizontal trace is the graph of \(f\) over the level curve.
+</li>
+<li>The level curve is a graph of \(f\) over the horizontal trace.
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>(14.1.5) How will the contour maps of 
+   \[ 
+   f(x, y) = x \quad \text{and} \quad g(x, y) = 2x
+   \]
+   with contour interval \(1\) look different?
+<ol>
+<li>The level curves of \(f\) are closer.
+</li>
+<li>They won't look different. They are the same.
+</li>
+<li>The level curves of \(g\) are closer.
+
+</li>
+</ol>
+
+<p>   c
+</p>
+</li>
+<li>(14.2.2) Suppose that \(f(x, y)\) is continuous at \((2,3)\) and that \(f(2, y) = y^3\) for \(y\ne 3\). What is the value of \(f(2, 3)\)?
+
+<p>
+   27
+</p>
+</li>
+<li>(14.2.4) Suppose that \(f(x,0) = 3\) for all \(x\ne 0\) and \(f(0, y) = 5\) for all \(y\ne 0\). What can you conclude about \(\lim_{(x,y)\to(0,0)} f(x,y)\)?
+<ol>
+<li>It is equal to \(0\).
+</li>
+<li>It is equal to \(\infty\).
+</li>
+<li>It is not defined.   
+
+</li>
+</ol>
+
+<p>   a
+</p>
+</li>
+<li>(14.3.4) What is \(f_x\) where \(f(x,y,z) = (\sin yz) e^{z^3-z^{-1}\sqrt{y}}\)?
+<ol>
+<li>\(0\).
+</li>
+<li>\(\infty\).
+</li>
+<li>Not defined.
+
+</li>
+</ol>
+
+<p>   a
+</p>
+</li>
+<li>(14.3.5) Assuming the hypotheses of Clairaut's Theorem are satisfied (i.e. all <i>third</i> partial derivatives are continuous), which of the following partial derivatives are equal to \(f_{xxy}\)?
+<ol>
+<li>\(f_{xyx}\)
+</li>
+<li>\(f_{yyx}\)
+</li>
+<li>\(f_{xyy}\)
+
+</li>
+</ol>
+
+<p>   a
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-6" class="outline-4">
+<h4 id="sec-1-3-6">Quiz 06</h4>
+<div class="outline-text-4" id="text-1-3-6">
+
+<ol>
+<li>(14.4.1) How is the linearization of \(f(x,y)\) at \((a,b)\) defined?
+<ol>
+<li>\(L(x,y) = f(a,b) + f_x(a,b)(x-a) + f_y(a,b)(y-b)\)
+</li>
+<li>\(L(x,y) = f(a,b) + f_x(a,b) + f_y(a,b)\)
+</li>
+<li>\(L(x,y) = f(a,b) + f_x(a,b)(x-a)\)
+
+</li>
+</ol>
+
+<p>   a
+</p>
+</li>
+<li>(14.4.3) Assume that \(f(2,3)=8\), \(f_x(2,3)=5\), \(f_y(2,3)=7\). Which of the following is the linearization of \(f\) at \((2,3)\)?
+<ol>
+<li>\(L(x,y) = 8 + 5x + 7y\)
+</li>
+<li>\(L(x,y) = 8 + 5(x-2) + 7(y-3)\)
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>(14.5.2) True or false? A differentiable function increases at the rate \(\|\nabla f_P\|\) in the direction of \(\nabla f_P\)?
+
+<p>
+   True
+</p>
+</li>
+<li>(14.5.4) You are standing at a point where the temperature gradient vector is pointing in the northeast (NE) direction. In which direction(s) should you walk to avoid a change in temperature?
+<ol>
+<li>NE
+</li>
+<li>NW
+</li>
+<li>SE
+</li>
+<li>SW
+
+</li>
+</ol>
+
+<p>   b,c.
+</p>
+</li>
+<li>(14.6.4) According to the Chain Rule, \(\partial f/\partial r\) is equal to (choose the correct answer):
+<ol>
+<li>\(\frac{\partial f}{\partial x} \frac{\partial x}{\partial r} + \frac{\partial f}{\partial x} \frac{\partial x}{\partial s}\)
+</li>
+<li>\(\frac{\partial f}{\partial x} \frac{\partial x}{\partial r} + \frac{\partial f}{\partial y} \frac{\partial y}{\partial r}\)
+</li>
+<li>\(\frac{\partial f}{\partial r} \frac{\partial r}{\partial x} + \frac{\partial f}{\partial s} \frac{\partial s}{\partial x}\)
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>(14.6.5) Suppose that \(x,y,z\) are functions of the independent variables \(u,v,w\). Which of the following terms appear in the Chain Rule expression for \(\partial f/\partial w\)?
+<ol>
+<li>\(\frac{\partial f}{\partial v} \frac{\partial x}{\partial v}\)
+</li>
+<li>\(\frac{\partial f}{\partial w} \frac{\partial w}{\partial x}\)
+</li>
+<li>\(\frac{\partial f}{\partial z} \frac{\partial z}{\partial w}\)
+
+</li>
+</ol>
+
+<p>   c
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-7" class="outline-4">
+<h4 id="sec-1-3-7">Quiz 07</h4>
+<div class="outline-text-4" id="text-1-3-7">
+
+<ol>
+<li>(14.7.1) Let \(f(x,y) = x^2 + y^2\) and \(g(x,y) = x^2-y^2\). Notice that \(P=(0,0)\) is a critical point of both \(f\) and \(g\). Which of the following is correct?
+<ol>
+<li>\(P\) is a local minimum of both \(f\) and \(g\).
+</li>
+<li>\(P\) is a local minimum of \(f\) and a saddle point of \(g\).
+</li>
+<li>\(P\) is a local minimum of \(g\) and a saddle point of \(f\).
+</li>
+<li>\(P\) is a saddle point of both \(f\) and \(g\).
+
+</li>
+</ol>
+
+<p>  b
+</p>
+</li>
+<li>(14.7.3) Let \(f\) be continuous on a domain \(D\). Which of the following is true?
+<ol>
+<li>If \(D\) is closed and bounded, then \(f\) has a maximum on \(D\).
+</li>
+<li>If \(D\) is neither closed nor bounded then \(f\) has no maximum on \(D\).
+</li>
+<li>If \(D=\{(x,y): 0\leq x \leq 1, 0\leq y \leq 1\}\), then \(f\) need not have a maximum.
+</li>
+<li>If \(D=\{(x,y): x&gt;0, y&gt;0\}\) then \(f\) takes on neither a maximum nor a minimum.
+
+</li>
+</ol>
+
+<p>   a
+</p>
+</li>
+<li>(14.8.1) Suppose that the point \(P\) is such that \(G(P)=0\) and \(f(P)\) is maximum for all points \(Q\) with \(g(Q)=0\) and such that \(\nabla g (P) \ne 0\). Which is true?
+<ol>
+<li>\(\nabla f\) is tangent to the curve \(g(Q)=0\).
+</li>
+<li>\(\nabla f\) is orthogonal to the curve \(g(Q)=0\).
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>(14.8.2) In reference to the left hand figure in figure 9, which of the following is true?
+<ol>
+<li>The point shown is a maximum.
+</li>
+<li>The point shown is a minimum.
+</li>
+<li>The point shown is neither a maximum nor a minimum.
+
+</li>
+</ol>
+
+<p>   a
+</p>
+</li>
+<li>(14.8.2) In reference to the right hand figure in figure 9, which of the following is true?
+<ol>
+<li>The point shown is a maximum.
+</li>
+<li>The point shown is a minimum.
+</li>
+<li>The point shown is neither a maximum nor a minimum.
+
+</li>
+</ol>
+
+<p>   c
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-8" class="outline-4">
+<h4 id="sec-1-3-8">Quiz 08</h4>
+<div class="outline-text-4" id="text-1-3-8">
+
+<p>You may retake all the previous quizzes.
+</p></div>
+
+</div>
+
+<div id="outline-container-1-3-9" class="outline-4">
+<h4 id="sec-1-3-9">Quiz 09</h4>
+<div class="outline-text-4" id="text-1-3-9">
+
+<ol>
+<li>(15.1.1) If \(S_{8,4}\) is a Riemann sum for a double integral over \(\mathcal{R} = [1, 5] \times [2, 10]\) using a regular partition, what is the area of each subrectangle?
+
+<p>
+   1
+</p>
+</li>
+<li>(15.1.5) Which of (a) or (b) is equal to \(\int_1^2 \int_4^5 f(x,y) dydx\)?
+<ol>
+<li>\(\int_1^2 \int_4^5 f(x,y) dxdy\)
+</li>
+<li>\(\int_4^5 \int_1^2 f(x,y) dx dy\)
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>(15.1.6) For which of the following functions is the double integral over the rectangle \(R = [-1, 1] \times [0, 1]\) in Figure 15 equal to zero?
+<ol>
+<li>\(f(x,y) = x^2y\)
+</li>
+<li>\(f(x,y) = xy^2\)
+</li>
+<li>\(f(x,y) = \sin x\)
+</li>
+<li>\(f(x,y) = e^x\)
+
+</li>
+</ol>
+
+<p>   b,c
+</p>
+</li>
+<li>(15.2.1) Which of the following expressions do not make sense?
+<ol>
+<li>\(\int_0^1 \int_1^x f(x,y) dy dx\)
+</li>
+<li>\(\int_0^1 \int_1^y f(x,y) dy dx\)
+</li>
+<li>\(\int_0^1 \int_x^y f(x,y) dy dx\)
+</li>
+<li>\(\int_0^1 \int_x^1 f(x,y) dy dx\)
+
+</li>
+</ol>
+
+<p>   b,c
+</p>
+</li>
+<li>(15.2.3) Which of the four regions in Figure 18 is the domain of integration for \(\int_{-2\sqrt{2}}^0 \int_{-x}^{\sqrt{1-x^2}} f(x,y) dydx\)?
+<ol>
+<li>A
+</li>
+<li>B
+</li>
+<li>C
+</li>
+<li>D
+
+</li>
+</ol>
+
+<p>   b
+</p>
+</li>
+<li>(15.2.4) Let \(D\) be the unit disk. If the maximum value of \(f(x,y)\) on \(D\) is \(4\), then the largest possible value of \(\int\int_{D} f(x,y) dA\) is (choose the correct answer):
+<ol>
+<li>\(4\)
+</li>
+<li>\(4\pi\)
+</li>
+<li>\(\frac{4}{\pi}\)
+
+</li>
+</ol>
+
+<p>   b
+</p></li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3-10" class="outline-4">
+<h4 id="sec-1-3-10">Quiz 10</h4>
+<div class="outline-text-4" id="text-1-3-10">
+
+<p>You may retake all the previous quizzes.
+</p></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+</div>
+
+	<div id="sidebar">
+
+        <h3>Contact</h3>
+        <p>
+        Office: Applied Physics & Mathematics (APM) 5240 <br />
+        E-Mail: <a href="mailto:pbryan@ucsd.edu">pbryan@ucsd.edu</a> <br />
+        Phone: (858) 534-3590 <br />
+        Fax: (858) 534-5273 <br />
+
+        Mailing address: <br />
+        Department of Mathematics, UCSD <br />
+        9500 Gilman Drive <br />
+        La Jolla, CA 92093-0112
+        </p>
+	</div>
+</div>
+<br class="clear" />
+</div>
+
+<div id="footer"><div class="inner">
+	<p>
+    <span class="credits"><a href="http://www.math.ucsd.edu/">UCSD Mathematics</a></span><br />
+	
+    <a href="http://andreasviklund.com/templates/variant-classic/" title="Variant Classic template">Template design</a> by <a href="http://andreasviklund.com/" title="Andreas Viklund">Andreas Viklund</a><br />
+	</p>
+</div></div>
+</div>
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>
+
+</body>
+</html>

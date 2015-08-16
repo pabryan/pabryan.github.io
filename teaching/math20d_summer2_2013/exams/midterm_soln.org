@@ -1,0 +1,199 @@
+#+FILETAGS: noexport
+#+options: num:nil toc:nil timestamp:nil title:nil
+#+BIND: org-export-latex-title-command ""
+#+LATEX_HEADER: \usepackage{a4wide}
+#+LATEX_HEADER: \usepackage{framed}
+
+* MATH20D Midterm
+
+** Instructions
+1. You may not use any type of calculator or electronic devices during this exam.
+1. You may use one pages of notes (written on both sides), but no books or other assistance during this exam.
+1. Write your Name, PID, and Section on the front of your Blue Book.
+1. Write your solutions clearly in your Blue Book
+   a. Carefully indicate the number and letter of each question and question part.
+   a. Present your answers in the same order they appear in the exam.
+   a. Start each question on a new page.
+1. Read each question carefully, and answer each question completely.
+1. Show all of your work; no credit will be given for unsupported answers.
+
+** Questions
+
+1. Consider the initial value problem
+   \[
+   \begin{cases}
+   y' + 2t y &=  e^{-t^2} \\
+   y(0) &= 0.
+   \end{cases}
+   \]
+
+   a. Show that the equation is not exact.
+
+      \begin{framed}
+      Write the equation as
+      \[
+      y' + (2ty - e^{-t^2}) = 0
+      \]
+      and let \(N(y,t) = 1\), \(M(y,t) = (2ty - e^{-t^2})\). Then
+      \[
+      \pd{t} N = 0 \ne 2t = \pd{y} M
+      \]
+      so the equation is not exact.
+      \end{framed}   
+   b. Find the integtating factor \(\mu(t)\) and show that 
+      \[
+      \mu y' + 2t \mu y = \mu e^{-t^2}
+      \]
+      is exact.
+
+      \begin{framed}
+      The integrating factor is
+      \[
+      \mu(t) = \exp(\int 2t) = e^{t^2}.
+      \]
+      For the new equation we have \(N(t,y) = e^{t^2}\), \(M(t, y) = 2te^{t^2} y - 1\). Then we have      
+      \[
+      \pd{t} N = 2t e^{t^2} = \pd{y} M
+      \]
+      and so the new equation is exact.      
+      \end{framed}
+   c. Solve the initial value problem (using any method we've learnt about in class), presenting an explicit solution. 
+
+      \begin{framed}
+      The general solution is given by
+      \[
+      y(t) = e^{-t^2} \int e^{t^2} e^{-t^2} dt + C e^{-t^2} = (t + C)e^{-t^2}
+      \]
+      Solving for \(C\) to satisfy the initial condition gives
+      \[
+      0 = y(0) = C
+      \]
+      and so the solution is
+      \[
+      y(t) = t e^{-t^2}.
+      \]
+      \end{framed}
+
+2. Consider the autonomous equation,
+   \[
+   y' = \sin y.
+   \]
+
+   a. Find the equilibrium solutions. /Hint/: There are infinitely many! 
+
+      \begin{framed}
+      The equilibrium solutions are the roots of \(\sin y\) which are equal to \(n \pi\) for any integer \(n\). That is the constant functions \(y(t) = n\pi\) are precisely the equilibrium solutions.      
+      \end{framed}
+
+   b. Draw a phase diagram (i.e. a plot of \(y'\) versus \(y\)).
+
+      \begin{framed}
+      This is just a plot of \(\sin y\)!
+      \end{framed}
+
+   c. Draw the phase line with arrows indicating the stability of the equilibrium solutions including equilibrium solutions for values of \(y\) between \(-2\pi\) and \(2\pi\).
+
+      \begin{framed}
+      This should have a dot at the points \(-2\pi, -\pi, 0, \pi, 2\pi\).  The arrow points up if \(\sin y>0\) and points down if \(\sin y < 0\). Thus (-2\pi\) is stable, \(-\pi\) is unstable, \(0\) is stable and \(\pi\) is unstable and \(2\pi\) is stable. In general, even multiples of \(\pi\) are stable whilst odd multiples are unstable.
+      \end{framed}
+      
+   d. Sketch some solutions for values of \(y\) between \(-2\pi\) and \(2\pi\). Be sure to include the equilibrium solutions, and to show where solutions are concave up or concave down along with values of \(y\) that are inflection points.
+
+      \begin{framed}
+      The equilibrium solutions should be horizontal lines at the values \(y = -2\pi, -\pi, 0, \pi, 2\pi\). There should be a dashed horizontal lines midway between each equilibrium solution, i.e. at values \(n\pi + \pi/2\) for any integer \(n\) in general. When solutions cross these lines, they change from convave up to concave down or vice versa. The table summarises the situation (noting that \(f=\sin\) so \(f'=\cos\)). Solutions are concave up where \(ff'\) is positive and concave down where \(ff'\) is negative.
+      \end{framed}
+
+      | x                    | f | f' | ff' |
+      |----------------------+---+----+-----|
+      | \([3\pi/2, 2\pi]\)   | - | +  | -   |
+      | \([\pi, 3\pi/2]\)    | - | -  | +   |
+      | \([\pi/2, \pi]\)     | + | -  | -   |
+      | \([0, \pi/2]\)       | + | +  | +   |
+      | \([-\pi/2, 0]\)      | - | +  | -   |
+      | \([-\pi, -\pi/2]\)   | - | -  | +   |
+      | \([-3\pi/2, -\pi]\)  | + | -  | -   |
+      | \([-2\pi, -3\pi/2]\) | + | +  | +   |
+
+3. Consider the intitial value problem
+   \[
+   \begin{cases}
+   y'' + 4y' + 5y &= e^{-2t} \\
+   y(0) &= 1 \\
+   y'(0) &= 0.
+   \end{cases}
+   \]
+
+   a. Write down the characteristic equation.
+
+      \begin{framed}
+      \[
+      r^2 + 4r + 5 = 0
+      \]
+      \end{framed}
+
+   b. Write down the general solution of the homogenous differential equation.
+
+      \begin{framed}
+      The roots are \(-2 \pm i\) and so a fundamental set of solutions is given by
+      \[
+      y_1(t) = e^{-2t} \cos t, \quad y_2(t) = e^{-2t}\sin t.
+      \]
+      The general solution is
+      \[
+      e^{-2t} (C_1 \cos t + C_2 \sin t).
+      \]
+      \end{framed}
+
+   c. Use variation of parameters to show that a particular solution \(Y\) to the non-homogenous problem is given by
+      \[
+      Y(t) = e^{-2t}.
+      \]
+
+      \begin{framed}
+      First, we need the Wronskian:
+      \[
+      y_1' = -e^{-t} (2 \cos t + \sin t), \quad y_2' = e^{-2t}(-2\sin t + \cos t).
+      \]
+      Thus the Wroskian is,
+      \[
+      W = y_1y_2' - y_2y_1' = e^{-4t}.
+      \]
+
+      Next we find \(u_1,u_2\) according to the formulae
+      \begin{align*}      
+      u_1 &= -\int \frac{y_2 g}{W} = -\int \frac{e^{-2t}\sin t e^{-2t}}{e^{-4t}} = -\int \sin t = \cos t \\
+      u_2 &= \int \frac{y_1 g}{W} = \int \frac{e^{-2t}\cos t e^{-2t}}{e^{-4t}} = \int \cos t = \sin t.
+      \end{align*}
+
+      Then the solution is
+      \[
+      Y(t) = u_1y_1 + u_2y_2 = \cos t e^{-2t} \cos t + \sin t e^{-2t} \sin t = e^{-2t}.
+      \]
+      \end{framed}
+
+   d. Write down the general solution of the non-homogeneous equation.
+
+      \begin{framed}
+      The general solution of the non-homogeneous equation is the general solution of the homogeneous equation plus any solution of the non-homogeneous equation. Thus using \(Y = e^{-2t}\) from the previous question,
+      \[
+      y = e^{-2t} (C_1 \cos t + C_2 \sin t) + e^{-2t}
+      \]
+
+      \end{framed}
+
+   e. Solve for the initial conditions and write down the solution to the initial value problem.
+
+      \begin{framed}
+      We to solve for \(C_1,C_2\) but taking into account \(Y(t_0\). That is we need to solve
+      \begin{align*}
+      1 &= y_0 = C_1 y_1(0) + C_2 y_2(0) + Y(0) = C_1 + 1 \\
+      0 &= y_0' = C_1 y_1'(0) + C_2 y_2'(0) + Y'(0) = -2C_1 + C_2 - 2. 
+      \end{align*}
+
+      The solution is \((C_1,C_2) = (0, 2)\). Thus the solution of the initial value problem is
+      \[
+      y(t) = e^{-2t}(2\sin t + 1).
+      \]      
+      \end{framed}
+
+      

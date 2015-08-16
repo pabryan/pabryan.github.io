@@ -1,0 +1,116 @@
+---
+layout: course
+base: /teaching/math20d_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 2.2 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>3.1
+</li>
+<li>3.2
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 2.2 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<p>In this lecture we begin our study of second order equations. At the moment we are concerned with 2nd order, constant coefficient, linear, homogenous equations. These are equations of the form
+\[
+ay'' + by' + cy = 0
+\]
+and the adjectives mean
+</p><ul>
+<li>2nd order: there is a y'' and \(a\ne0\),
+</li>
+<li>constant coefficient: \(a,b,c\) are constants,
+</li>
+<li>linear: the map \(L[y] = ay'' + by' + cy\) is linear,
+</li>
+<li>homoegenous: the right hand side is zero.
+</li>
+</ul>
+
+
+<p>
+We need to supplement this equation with initial conditions
+\[
+y(t_0) = y_0, \quad y'(t_0) = y_0'.
+\]
+
+The model equation is
+\[
+y'' - y = 0
+\]
+which has solutions
+\[
+y_1(t) = e^t, \quad y_2(t) = e^{-t}.
+\]
+Then the <i>general</i> solution is
+\[
+y(t) = C_1 e^t + C_2 e^{-t}.
+\]
+Since \(L\) is linear, we find that \(y\) is a solution. It is the general solutin because any solution of \(y'' - y = 0\), with <i>any</i> initial conditions can be written in the form \(C_1e^t + C^2e^{-t}\).
+</p>
+<p>
+Generalising this example, we guess a solution of the form \(e^{rt}\) to the equation \(ay'' + by' + cy = 0\). This leads to the <i>characteristic equation</i>,
+\[
+ar^2 + br + c = 0.
+\]
+That is, \(e^{rt}\) is a solution if and only if \(r\) is a root of \(ar^2 + br + c\). There are three posibilities,
+</p><ol>
+<li>roots are real and distinct (\(b^2 - 4ac &gt;0\)),
+</li>
+<li>roots are real, repeated (\(b^2 - 4ac = 0\)),
+</li>
+<li>roots are complex, (\(b^2 - 4ac &lt; 0\)).
+</li>
+</ol>
+
+
+<p>
+In all cases, Theorem 3.2.1 says that there always (i.e. for any initial data) exists a unique solution. Theorem 3.2.2 says that if we can find two solutions \(y_1,y_2\) to the differential equation, then we can take linear combinations to construct new solutions
+\[
+y = C_1 y_1 + C_2 y_2.
+\]
+Finally, Theorem 3.2.3 says that this is the general solution if and only if the Wronskian,
+\[
+W(y_1, y_2) (t_0) = \begin{vmatrix}
+y_1(t_0) & y_2(t_0) \\
+y_1'(t_0) & y_2'(t_0)
+\end{vmatrix}
+\ne 0
+\]
+This last condition ensures that given any initial conditions, \(y_0,y_0'\), we can always find \(C_1,C_2\) so that \(y = C_1 y_1 + C_2 y_2\) satisfies the initial conditions. This is what is meant by <i>general solution</i>.
+</p></div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 2.2 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+<ul>
+<li>The quantitiy \(b^2 - 4 ac\) is called the discriminant. It appears under the radical sign in the quadratic formula for the roots which is why we can use the discriminant to classify the roots. 
+</li>
+<li>The uniqueness and existence theorem says that we can always solve the initial value problem. Theorems 3.2.2 and 3.2.3 combined tell us that if we can find two solutions \(y_1,y_2\) with non-zero Wronskian, then for any initial conditions <i>the unique</i> solution can be expressed as linear combination of \(y_1,y_2\).
+</li>
+<li>If the Wronskian is zero, then for some \(y_0,y_0'\) we will be able to find \(C_1,C_2\) and for some \(y_0,y_0'\) we won't be able to find \(C_1,C_2\). For example, take \(y_1 = y_2 = e^t\) as solutions to \(y'' - y = 0\). Then if \((y_0, y_0') = (1, 1)\), the function \(y = 1/2 y_1 + 1/2 y_2\) solves the initial value problem. However, if we take \((y_0,y_0') = (1,0)\) then we cannot find any \(C_1,C_2\) to satisfy the initial conditions.
+</li>
+</ul>
+
+
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

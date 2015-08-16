@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
+    
+    <!-- Meta -->
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% endif %}
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" media="screen" href="{{site.url}}/assets/css/variant-classic.css" title="Variant Classic" />
+
+    <!-- MathJax -->
+    <script type="text/javascript"
+	    src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    </script>
+
+    <!-- Author -->
+    <link rel="author" href="https://plus.google.com/+PaulBryanguy" />
+  </head>
+  
+  <body>
+    <!-- Header -->
+    {% include header.html %}
+    <div id="wrap">
+      <div class="inner">
+	<!-- Content -->
+	<div id="content">
+	  {{ content }}
+	</div>
+	<!-- Sidebar -->
+	{% include sidebar.html %}
+      </div>
+      <br class="clear" />
+    </div>
+    <!-- Footer -->
+    {% include footer.html %}      
+  </body>
+</html>

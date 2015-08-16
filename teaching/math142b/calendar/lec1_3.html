@@ -1,0 +1,371 @@
+---
+layout: course
+base: /teaching/math142b_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 1.3 Overview</h2>
+<div class="outline-text-2" id="text-1">
+
+
+<p>
+The main point of this lecture is to see how our formal, mathematic definition of the integral behaves as we would want/expect. The other important part of the lecture is to gain more exposure working with the formal definitions involved, that is with upper and lower sums and integrals and in particular how to apply the Archimedes-Riemann Theorem and the Refinement Lemma to deduce properties of the integral.
+</p>
+<p>
+The first part is to cover the following three items
+</p><ul>
+<li><a href="#sec-2-1">Additivity over intervals</a> (Theorem 6.12),
+</li>
+<li><a href="#sec-2-2">Monotonicity</a> (Theorem 6.13),
+</li>
+<li><a href="#sec-2-3">Linearity</a> (Theorem 6.15).
+</li>
+</ul>
+
+
+<p>
+In the second part, we will prove that
+</p><ul>
+<li><a href="#sec-2-4">Continuous functions are integrable</a> (Theorem 6.18),
+</li>
+<li><a href="#sec-2-5">Integrals are independent of the value at the end points.</a> (Theorem 6.19).
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 1.3 Notes</h2>
+<div class="outline-text-2" id="text-2">
+
+
+
+</div>
+
+<div id="outline-container-2-1" class="outline-3">
+<h3 id="sec-2-1">Additivity over intervals</h3>
+<div class="outline-text-3" id="text-2-1">
+
+
+<p>
+This is Theorem 6.12 on page 150 of the text. The statement is
+</p>
+<p>
+<b>Theorem</b>
+Let \(f: [a,b] \to \mathbf{R}\) be integrable on \([a,b]\) and \(c\in (a,b)\). Then \(f\) is integrable on \([a,c]\) and on \([c,b]\) and the integral is additive over the intervals \([a,c]\) and \([c,b]\) which means that
+\[
+\int_a^b f = \int_a^c f + \int_c^b.
+\]
+
+<b>Proof</b>
+</p>
+<p>
+To prove this theorem, we took an Archimedean sequence \(\{P_n\}\) for \(f\) on \([a,b]\) which means that \(\lim_{n\to\infty} U(f,P_n) = \lim_{n\to\infty} L(f,P_n)\) and the integral \(\int_a^b f\) is equal to this limit. We then added in the point \(c\) to each \(P_n\) to obtain a new sequence of partitions \(P_n^{\star} = P_n \cup \{c\}\). 
+</p>
+<p>
+By the refinement lemma, this new sequence is also Archimedean. That is if \(P_n^{\star}\) is a refinement of \(P_n\), then \(U_n^{\star} \leq U_n\) and \(L_n^{\star} \geq L_n\). Therefore
+\[
+0 \leq U_n^{\star} - L_n^{\star} \leq U_n - L_n
+\]
+and the <a href="http://www.proofwiki.org/wiki/Squeeze_Theorem/Sequences/Real_Numbers">Squeeze Theorem</a> implies \(U_n^{\star} - L_n^{\star} \to 0\) as \(n\to\infty\).
+</p>
+<p>
+Then we just split the partition \(P_n^{\star}\) into \(P_n' = P_n^{\star} \cap [a,c]\) (the points in \(P_n^{\star}\) contained in \([a,c]\)) and \(P_n'' = P_n^{\star} \cap [c,b]\) (the points in \(P_n^{\star}\) contained in \([c,b]\)). Since \(P_n^{\star}\) contains \(c\), \(P_n'\) is a sequence of partitions of \([a,c]\) and \(P_n''\) is a sequence of partitions of \([c,b]\) (which is why we needed to add in \(c\)). The result follows now from
+\[
+U_n^{\star} - L_n^{\star} = (U_n' - L_n') + (U_n'' - L_n'')
+\]
+and the facts that the left hand side converges to \(0\) as \(n \to \infty\) and the terms in parentheses are non-negative real numbers, hence they also converge to \(0\).
+</p>
+<p>
+To see this last claim, suppose \(a_n\), \(b_n\) are sequences of non-negative, real numbers such that 
+\[
+\lim_{n\to\infty} (a_n + b_n) = 0.
+\]
+To prove this last claim, we can apply the squeeze theorem to
+\[
+0 \leq a_n \leq a_n + b_n
+\]
+which follows since \(a_n,b_n \geq 0\) for every \(n\).
+</p>
+<p>
+<b>q.e.d.</b>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2-2" class="outline-3">
+<h3 id="sec-2-2">Monotonicity</h3>
+<div class="outline-text-3" id="text-2-2">
+
+
+<p>
+This theorem 6.13 from the text which states,
+</p>
+<p>
+<b>Theorem</b>
+If \(f,g: [a,b] \to \mathbf{R}\) are integrable and \(f(x) \leq g(x)\) for each \(x\in [a,b]\), then
+\[
+\int_a^b f \leq \int_a^b g.
+\]
+
+<b>Proof</b> 
+</p>
+<p>
+To prove this theorem, we took any partition \(P\) and immediately observed that \(M_i(f) \leq M_i(g)\) for each \(i\). Thus
+\[
+U(f, P) \leq U(g, P)
+\]
+for any partition \(P\). Taking infimum's completes the proof since the infimum over all paritions is the upper integral which is equal to the integral since \(f,g\) are integrable. 
+</p>
+<p>
+I mentioned that, we need to be a little careful. It is not true (in general) for instance that \(U(f,P)\) is a lower bound for the set of all uppers sums \(\{U(g,P)\}\). There could be partitions \(P_1,P_2\) with \(U(f,P_1) &gt; U(g,P_2)\). For example, take \(f=g\) and \(P_1,P_2\) partitions with different upper sums. Howerver, for any \(\epsilon&gt;0\), by definition of the infimum, there is a partition \(P^{\star}\) such that 
+\[
+U(g,P^{\star}) - \epsilon < \inf\{U(g,P)\} = \int g.
+\]
+Thus
+\[
+\begin{split}
+\int f - \epsilon &= \inf\{U(f,P)\} - \epsilon \leq U(f, P^{\star}) - \epsilon \\
+&\leq U(g, P^{\star}) - \epsilon < \int g.
+\end{split}
+\]
+Since this is true for every \(\epsilon&gt;0\), we must have \(\int f \leq \int g\) as desired.
+</p>
+<p>
+<b>q.e.d.</b> 
+</p>
+
+<p>
+<b>Remark</b> 
+</p>
+<p>
+An alternative proof using Archimedian sequences for \(f,g\) is presented in the text.
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2-3" class="outline-3">
+<h3 id="sec-2-3">Linearity</h3>
+<div class="outline-text-3" id="text-2-3">
+
+
+<p>
+This is Theorem 6.15 in the text, which reads,
+</p>
+<p>
+<b>Theorem</b>
+</p>
+<p>
+Let \(f,g: [a,b] \to \mathbf{R}\) be integrable and \(\alpha,\beta \in \mathbf{R}\) be real numbers. Then \(\alpha f + \beta g\) is integrable and
+\[
+\int(\alpha f + \beta g) = \alpha \int f + \beta \int g.
+\]
+
+<b>Proof</b>
+</p>
+<p>
+I remarked that it is sufficient to prove
+</p>
+<ol>
+<li>\(\int \alpha f = \alpha \int f\)
+</li>
+<li>\(\int (f + g) = \int f + \int g\)
+</li>
+</ol>
+
+
+<p>
+If this is true, then
+\[
+\begin{split}
+\int (\alpha f + \beta g) &= \int \alpha f + \int \beta g \quad \text{(by 1)} \\
+&= \alpha \int f + \beta \int g \quad \text{(by 2)}.
+\end{split}
+\]
+
+We proved 1 in class. The main subtlety to be aware of here is that if \(\alpha &lt; 0\), then \(m_i(\alpha f) = \alpha M_i(f)\) and \(M_i(\alpha f) = \alpha m_i(f)\). Otherwise, the rest is straight forward. We ran out of time to prove 2 so let's do it here.
+</p>
+<p>
+We use that
+\[
+M_i(f + g) \leq M_i(f) + M_i(g), \quad m_i(f + g) \geq m_i(f) + m_i(g).
+\]
+
+This follows for instance by noting that \(f(x) \leq M_i(f)\) and \(g(x) \leq M_i(g)\) for all \(x\in[x_{i-1}, x_i]\) so that
+\[
+f(x) + g(x) \leq M_i(f) + M_i(g).
+\]
+Now take the supremum on the left hand side. Notice that in general we don't get equality. For example, take \(f(x) = x\), \(g(x) = 1-2x\) for \(x\in [0,1]\). So \((f+g)(x) = 1-x\) which has maximum \(M(f+g)=1\) and minimum \(m(f+g)=0\). However, \(f\) has maximum \(M(f)=1\) and minimum \(m(f)=0\) while \(g\) has maximum \(M(g)=1\) and minimum \(m(g)=-1\).
+</p>
+<p>
+So we may conclude that for any partition \(P\),
+\[
+U(f+g,P) \leq U(f,P) + U(g,P), \quad L(f+g) \geq L(f,P) + L(g,P)
+\]
+which is equation (6.30) in the text (note there is a typo in the text!).
+</p>
+<p>
+Now, by refinement and the Archimedes-Riemann theorem, there is a sequence \(\{P_n\}\) that is Archimedean sequence for both \(f\) and \(g\). Applying the inequality (6.30) just obtained for each \(n\) gives
+\[
+L(f,P_n) + L(g,P_n) \leq L(f+g,P_n) \leq U(f+g,P_n) \leq U(f,P_n) + U(g,P_n)
+\]
+The far left and far right hand sides both have limit \(\int f + \int g\) as \(n\to \infty\) since \(f\) and \(g\) are integrable and \(\{P_n\}\) is Archimedean for both \(f\) and \(g\). Therefore, by the squeeze theorem the two inner sequences have the same limit which proves both that \(\{P_n\}\) is Archimedian for \(f\) and \(g\) and that \(\int f+g = \int f + \int g\).
+</p>
+<p>
+<b>q.e.d.</b>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2-4" class="outline-3">
+<h3 id="sec-2-4">Continuous functions are integrable</h3>
+<div class="outline-text-3" id="text-2-4">
+
+<p>This is Theorem 6.18 in the text, which reads,
+</p>
+<p>
+<b>Theorem</b>
+</p>
+<p>
+Let \(f: [a,b] \to \mathbf{R}\) be continuous. Then \(f\) is integrable on \([a,b]\).
+</p>
+<p>
+To prove this theorem, we required the following useful technical lemma
+</p>
+<p>
+<b>Lemma</b>
+</p>
+<p>
+Let \(f: [a,b] \to \mathbf{R}\) be continuous and \(P = \{x_0, \dotsc, x_n\}\) any partition of \([a,b]\). Then there is an \(i\) and \(u,v \in I_i = [x_{i-1}, x_i]\) such that
+\[
+0 \leq U(f, P) - L(f, P) \leq [f(u) - f(v)][b - a].
+\]
+
+<b>Proof of the theorem</b>
+</p>
+<p>
+The relevance of the lemma here is that \(u,v\in I_i\) so that if \(\text{gap} P &lt; \delta\) is small then 
+\[
+\vert u - v\vert \leq \Delta x_i \leq \text{gap} P < \delta.
+\]
+Thus, since \(f\) is continuous on the <b>closed bounded</b> interval \([a,b]), it is <b>uniformly continuous</b> and so for any \(\epsilon &gt; 0\), there is a \(\delta&gt;0\) such that if \(|u - v| &lt; \delta\), then \(|f(v) - f(u)| &lt; \epsilon\). 
+</p>
+<p>
+Now, to prove the theorem, we actually proved that if \(\{P_n\}\) is <b>any</b> sequence of partitions such that \(\{\text{gap} P_n\} \to 0\) as \(n \to \infty\), then it is Archimedean for \(f\). To see this, since \(\{\text{gap} P_n\} \to 0\), we can choose \(N\geq 0\) such that if \(n \geq N\), \(\text{gap} P_n &lt; \delta\) which implies \(|f(v) - f(u)| &lt; \epsilon\) for any \(n\geq N\). Hence
+\[
+0 \leq U(f,P_n) - L(f,P_n) \leq [f(v) - f(u)][b-a] \leq [b-a]\epsilon
+\]
+which is the same as saying that 
+\[
+\lim_{n\to\infty} U(f,P_n) - L(f,P_n) = 0
+\]
+and so by the Archimedes-Riemann Theorem, \(f\) is integrable.
+</p>
+<p>
+<b>q.e.d.</b>
+</p>
+<p>
+<b>Proof of the lemma</b>
+</p>
+<p>
+Now, you can read the proof the lemma in the text. Let me just highlight the essential point here though. Since \(f\) is continuous on \([a,b]\), for each \(i\) it is of course continuous on \([x_{i-1}, x_i]\) which is closed and bounded so that \(f\) attains its minimum and maximum by the Extreme Value Theorem. Let \(u_i,v_i\) be such that
+\[
+m_i = f(u_i), \quad M_i = f(v_i).
+\]
+
+Since there are finitely many \(i\), we can choose an index \(i_0\) so that
+\[
+M_{i_0} - m_{i_0} = \max_{1\leq i\leq n} M_i - m_i.
+\]
+Note that we \(i_0\) might not be the index where \(M_i\) is largest and \(m_i\) is smallest. It's the difference \(M_{i_0} - m_{i_0}\) that's maximized. Now let \(u = u_{i_0}, v = v_{i_0}\) which gives (why?) the inequality
+\[
+M_i - m_i \leq f(v) - f(u).
+\]
+Thus
+\[
+U(f, P) - L(f, P) = \sum (M_i - m_i) (x_i - x_{i-1}) \leq [f(v) - f(u)] \sum (x_i - x_{i-1} = [f(v) - f(u)][b-a]
+\]
+
+<b>q.e.d.</b>
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-2-5" class="outline-3">
+<h3 id="sec-2-5">Integrals are independent of the value at the end points.</h3>
+<div class="outline-text-3" id="text-2-5">
+
+
+<p>
+Finally, there is an important theorem in the text that we didn't get time to cover. 
+</p>
+<p>
+The theorem is important in it's own right, but you might also want to study the proof in preperation for the midterm exam. Just saying.
+</p>
+<p>
+<b>Theorem</b>
+</p>
+<p>
+Suppose \(f\) is continuous on the <i>open</i> interval \((a,b)\) and bounded on the closed interval \([a,b]\), then \(f\) is integrable on \([a,b]\) and is independent of the value of \(f\) at \(a\) and \(b\).
+</p>
+<p>
+The last statment means that if we define a new function \(g\) say that equals \(f\) on the open interval but is different at either \(a\) or \(b\) (or both) then it is also integrable and the value of the integral is the same.
+</p>
+<p>
+<b>Proof</b>
+</p>
+<p>
+For every \(n\), \(f\) is continuous on the <b>closed</b> interval \([a+1/n,b-1/n]\) and so is integrable on this interval. Thus there exists a partition \(P_n^{\star}\) of \([a+1/n,b-1/n]\) such that
+\[
+U(f, P_n^{\star}) - L(f,P_n^{\star}) \leq 1/n.
+\]
+Make sure you understand why this is true! <i>Hint</i>: it's because the integral is simultaneously the sup of the lower sums and the inf of the upper sums. 
+</p>
+<p>
+Now define \(\{P_n\} = \{a\} \cup P_n^{\star} \cup \{b\}\). That is, we add the end points \(a\) and \(b\) to the partition \(P_n^{\star}\) to obtain a partition \(P_n\) of \([a,b]\). Writing \(P_n = \{a, a + 1/n, x_2, \dotsc, x_{k-2}, b-1/n, b\}\) and noting that \(f\) is bounded so that \(-M \leq f \leq M\) for some \(M\), we have
+\[
+\begin{split}
+U(f,P_n) &= (x_1 - x_0) M_1 + \sum_{i=2}^{k-1} (x_i-x_{i-1}) M_i + (x_k - x_{k-1}) M_k \\
+&= (a+1/n - a) M_1 + U(f,P_n^{\star} + (b - (b-1/n)) M_k \\
+&\leq  2M/n + U(f,P_n^{\star}.
+\end{split}
+\]
+Similarly
+\[
+L(f,P_n) \geq -2M/n + L(f,P_n^{\star})
+\]
+Combining these inequalities, we have
+\[
+U(f,P_n) - L(f,P_n) \leq 2M/n + U(f,P_n^{\star} - \left[U(f,P_n^{\star}) - 2M/n\right] \leq 1/n + 4M/n
+\]
+which converges to \(0\) as \(n\to\infty\). 
+</p>
+<p>
+<b>q.e.d.</b>
+</p>
+<p>
+<b>Remark</b>
+</p>
+<p>
+Note that, the value of \(f\) at either \(a\) or \(b\) does not matter here, just that \(f\) is bounded. Essentially what has happened, is we've squeezed out the contribution to the upper and lower sums near the end points. Since \(f\) is assumed bounded, the contribution can be made smaller than \(M/n\) which goes to zero. 
+</p>
+<p>
+<b>Remark</b>
+</p>
+<p>
+Note also that the exact same proof proves that if \(f\) is bounded, and integrable on \([a,b]\), then the integral is independent of the value of \(f\) at \(a\) and \(b\). By splitting the integral into \(\int_a^b f = \int_a^c + \int_c^b\) we also see that we can change \(f\) at any point \(c\in [a,b]\) without affecting the integral.
+</p>
+</div>
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

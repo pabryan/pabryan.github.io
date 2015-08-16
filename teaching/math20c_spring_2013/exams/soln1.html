@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>soln1</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="title" content="soln1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-06-06 17:27:10 PDT"/>
+<meta name="author" content="nil"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  {margin-left:auto; margin-right:0px;  text-align:right;}
+  .left   {margin-left:0px;  margin-right:auto; text-align:left;}
+  .center {margin-left:auto; margin-right:auto; text-align:center;}
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top;  }
+  th.right  { text-align:center;  }
+  th.left   { text-align:center;   }
+  th.center { text-align:center; }
+  td.right  { text-align:right;  }
+  td.left   { text-align:left;   }
+  td.center { text-align:center; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  div.inlinetask {
+    padding:10px;
+    border:2px solid gray;
+    margin:10px;
+    background: #ffffcc;
+  }
+  textarea { overflow-x: auto; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style><link rel="stylesheet" type="text/css" href="http://math.ucsd.edu/~pbryan/css/variant-classic.css" title="Variant Classic" media="screen,projection" />
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+
+<div id="preamble">
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">&nbps;</script>
+    <div id="top"><div class="inner">
+
+	<div id="topleft">
+		<h1><a href="/">Paul Bryan</a></h1>
+		<p>UCSD Mathematics</p>
+	</div>
+
+	<br class="clear" />
+
+	<div id="mainmenu">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="calendar.html">Calendar</a></li>
+			<li><a href="syllabus.html">Syllabus</a></li>
+			<li><a href="homework.html">Homework</a></li>
+                        <li><a href="exams.html">Exams</a></li>
+                        <li><a href="quizzes.html">Quizzes</a></li>
+		</ul>
+	</div>
+	<br class="clear" />
+</div></div>
+
+<div id="wrap"><div class="inner">
+
+	<div id="content">
+</div>
+
+<div id="content">
+<h1 class="title">soln1</h1>
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">MATH20C Midterm 1</h2>
+<div class="outline-text-2" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-3">
+<h3 id="sec-1-1">Instructions</h3>
+<div class="outline-text-3" id="text-1-1">
+
+<ol>
+<li>You may use one page of notes (written on both sides), but no books or other assistance during this exam.
+</li>
+<li>Write your Name, PID, and Section on the front of your Blue Book.
+</li>
+<li>Write your solutions clearly in your Blue Book
+<ol>
+<li>Carefully indicate the number and letter of each question and question part.
+</li>
+<li>Present your answers in the same order they appear in the exam.
+</li>
+<li>Start each question on a new page.
+</li>
+</ol>
+
+</li>
+<li>Read each question carefully, and answer each question completely.
+</li>
+<li>Show all of your work; no credit will be given for unsupported answers.
+</li>
+<li>The long questions require full proofs, the short answer questions only require brief justification.
+</li>
+</ol>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-3">
+<h3 id="sec-1-2">Some Trigonmetric Formulae</h3>
+<div class="outline-text-3" id="text-1-2">
+
+
+<p>
+You may find some of the following formulae useful:
+</p>
+<ul>
+<li>\(\cos \pi/6 = \sqrt{3}/2\)
+</li>
+<li>\(\cos \pi/3 = 1/2\)
+</li>
+<li>\(\sin \pi/6 = 1/2\)
+</li>
+<li>\(\sin \pi/3 = \sqrt{3}/2\)
+</li>
+<li>\(\cos 5/6 \pi = - \sqrt{3}/2\)
+</li>
+<li>\(\cos 2/3 \pi = - 1/2\)
+</li>
+<li>\(\sin 5/6 \pi = 1/2\)
+</li>
+<li>\(\sin 2/3 \pi = \sqrt{3}/2\)
+</li>
+</ul>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-3">
+<h3 id="sec-1-3">Long Questions</h3>
+<div class="outline-text-3" id="text-1-3">
+
+
+<p>
+These questions require full proofs. 
+</p>
+<ol>
+<li>(5 points) Find the intersection of the lines 
+   \begin{align*}
+   \mathbf{r}_1(t) &= \langle -1, 1 \rangle + t \langle 2, 3 \rangle \\
+   \mathbf{r}_2(s) &= \langle 4, 1 \rangle + s \langle -1, 6 \rangle.
+   \end{align*}
+
+   \begin{framed}
+   The intersection is given by points $(t,s)$ such that
+   \[
+   \mathbf{r}_1(t) = \mathbf{r}_2 (s),
+   \]
+   or in components,
+   \begin{align*}
+   -1 + 2t &= 4 - s \\
+   1 + 3t &= 1 + 6s.
+   \end{align*}
+   That is, $(s,t)$ be a solution of the linear systems of two equations in two unkowns
+   \begin{align*}
+   2t + s &= 5 \\
+   3t - 6s &= 0.
+   \end{align*}
+   The first equation gives $t=2s$ which upon substitution into the second equation gives $5s = 5$. Thus the unique solution is $(2, 1)$.
+   \end{framed}
+
+</li>
+<li>(5 points) Find the area of the parallelogram spanned by vectors \(\mathbf{v}\) and \(\mathbf{w}\) such that \(\|\mathbf{v}\| = \|\mathbf{w}\| = \sqrt{2}\) and \(\mathbf{v} \cdot \mathbf{w} = 1\).
+
+<p>
+   \begin{framed}
+   The area $A$ is given by the formula
+   \[
+   A = \|\mathbf{v} \times \mathbf{w}\|.
+   \]
+   
+   To compute this, first note that the angle $\theta$ can be determined from
+   \[
+   \cos \theta = \frac{\mathbf{v} \cdot \mathbf{w}}{\|\mathbf{v}\| \|\mathbf{w}\|} = \frac{1}{2}.
+   \]
+   Using the formulae provided,
+   \[
+   \theta = \pi/3.
+   \]
+
+   Now the area is
+   \[
+   A = \|\mathbf{v} \times \mathbf{w}\| = \sin \theta \|\mathbf{v}\| \|\mathbf{w}\| = \frac{\sqrt{3}}{2} \sqrt{2} \sqrt{2} = \sqrt{3},
+   \]
+   once more using the formulae provided.
+   \end{framed}
+
+</p></li>
+<li>(5 points) Find a parametrisation for the intersection of the surfaces
+   \begin{align*}
+   z &= x^2 - y^2, \\
+   z &= x^2 + xy - 1.
+   \end{align*}
+   You may give this parametrisation using either methods discussed in the lectures and text.
+
+<p>
+   There are two options here. 
+</p>
+<p>   
+   \begin{framed}
+   The first option is to find the points $(x,y)$ such that
+   \[
+   x^2 - y^2 = x^2 + xy - 1.
+   \]
+   Cancelling the $x^2$ term are rearranging gives,
+   \[
+   xy + y^2 = 1
+   \]
+   which is equivalent to
+   \[
+   x = \frac{1 - y^2}{y}
+   \]
+   for $y\ne 0$. Notice that $xy + y^2 = 1$ cannot be satisfied if $y=0$ so we can assume that $y\ne 0$. Then using the first equation (we could also use the second equation) for $z$ we have
+   \[
+   \begin{split}
+   z &= x^2 - y^2 \\
+   &= \left(\frac{1 - y^2}{y}\right)^2 - y^2 \\
+   &= \frac{1 - 2y^2 + y^4}{y^2} - \frac{y^4}{y^2} \\
+   &= \frac{1 - 2y^2}{y^2}.
+   \end{split}
+   \]
+   Thus we can parametrise the intersection by $y$:
+   \[
+   \vec{c} (y) = \langle \frac{1 - y^2}{y}, y, \frac{1-2y^2}{y^2}\rangle.
+   \]
+   \end{framed}
+</p></li>
+</ol>
+
+
+
+<p>
+   \begin{framed}
+   The second option is to parametrise the level curves of $f(x,y) = x^2 - y^2$. This can be done as follows:
+   \begin{align*}
+   \vec{c}_+(t) &= \langle t, \sqrt{t^2 - c}\rangle, \quad t^2 - c \geq 0 \\
+   \vec{c}_-(t) &= \langle t, -\sqrt{t^2 - c}\rangle, \quad t^2 - c \geq 0.
+   \end{align*}
+   Then the first surface is parametrised by
+   \[
+   (t, \sqrt{t^2 - s}, s), \qquad (t, -\sqrt{t^2 - s}, s)
+   \]
+   with $t^2 \geq s$ and any $s$.
+
+   Now substitue this into the equation
+   \[
+   z &= x^2 + xy - 1
+   \]
+   to get
+   \[
+   s = t^2 \pm t \sqrt{t^2 - s} - 1
+   \]
+   or
+   \[
+   (s^2 - t^2 + 1)^2 = t^2(t^2 - s)
+   \]
+   At this point, I would just give up and try the other way! I leave it to those interested to complete it from here solving for $s$ as function of $t$ or vice versa.
+   \end{framed}
+
+   \begin{framed}
+   There is in fact, a third option, which is to use \emph{hyperbolic polar} coordinates (if you aren't familar with hyperbolic trigonmetric functions, just ignore this option!). This method is preferential to the second method as it gives a better parametrisation (try for instance doing $z=x^2+y^2$ using the second method as compared with using polar coordinates). Hyperbolic polar coordinates give
+   \[
+   x = r \cosh t \qquad y = r \sinh t \qquad z = r^2.
+   \]
+   Now proceed as you would for $z = x^2 + y^2$ in polar coordinates
+   \[
+   x = r \cos t \qquad y = r \sin t \qquad z = r^2.
+   \]   
+   \end{framed}
+
+</p><ol>
+<li>(5 points) For the following, you may use the <i>rules</i> for differentiating vector valued functions as described in the lectures and text.
+
+<ol>
+<li>Show that \(\left(\mathbf{a} \times \mathbf{r}\right)' = \mathbf{a} \times \mathbf{r}'\) for any constant vector \(\mathbf{a}\).
+
+<p>
+      \begin{framed}
+      \[
+      \left(\mathbf{a} \times \mathbf{r}\right)' = \mathbf{a}' \times \mathbf{r} + \mathbf{a} \times \mathbf{r}' = \mathbf{a} \times \mathbf{r}'
+      \]
+      since $\mathbf{a}' = \mathbf{0}$.
+      \end{framed}
+
+</p></li>
+<li>Let \(\mathbf{r}(t)\) be the position of an object of mass \(m\) at time \(t\). The momentum is defined as \(\mathbf{p}(t) = m \mathbf{r}'(t)\). If \(\mathbf{F}\) is the force acting on the object, then Newton's second law states that \(\mathbf{F} = \mathbf{p}'(t)\). 
+
+<p>
+      For rotating objects, define the <b>angular momentum</b>, \(\mathbf{J} = \mathbf{r}(t) \times \mathbf{p}(t)\) and <b>torque</b> \(\mathbf{\tau} = \mathbf{r}(t) \times \mathbf{F}\). Using Newton's second law show that 
+      \[
+      \mathbf{J}' = \mathbf{\tau}.
+      \]
+      This is the analogue of Newton's law for rotational motion.
+</p>
+<p>
+      \begin{framed}
+      Differentiate $\mathbf{J} = \mathbf{r}(t) \times \mathbf{p}(t)$ to obtain
+      \[
+      \mathbf{J}' = (\mathbf{r}' \times \mathbf{p}) + (\mathbf{r} \times \mathbf{p}').
+      \]
+      Since $\mathbf{p} = m \mathbf{r}'$ we have
+      \[
+      \mathbf{r}' \times \mathbf{p} = m (\mathbf{r}' \times \mathbf{r}') = \mathbf{0}.
+      \]
+      Then since $\mathbf{p}' = \mathbf{F}$ we have
+      \[
+      \mathbf{J}' = \mathbf{r} \times \mathbf{p}' = \mathbf{r} \times \mathbf{F} = \mathbf{\tau}.
+      \]
+      \end{framed}
+</p></li>
+</ol>
+
+</li>
+</ol>
+
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-4" class="outline-3">
+<h3 id="sec-1-4">Short Answer (5 points total)</h3>
+<div class="outline-text-3" id="text-1-4">
+
+
+<p>
+These questions only require brief justification.
+</p>
+
+<ol>
+<li>(1 point) Suppose that \(\mathbf{v}\) is a vector based at the origin \((0, 0)\), with components \(\langle 0, 1\rangle\). How, if at all, do the components change if you translate \(\mathbf{v}\) to be based at \((1,1)\)?
+
+<p>
+   \begin{framed}
+   They don't change at all! The components are computed with respect to the base point.
+   \end{framed}
+
+</p></li>
+<li>(1 point) Which of the following is equal to \(\cos\theta\), where \(\theta\) is the angle between \(\mathbf{u}\) and \(\mathbf{v}\)?
+<ol>
+<li>\(\mathbf{u} \cdot \mathbf{v}\)
+</li>
+<li>\(\mathbf{u} \cdot \mathbf{e_v}\)
+</li>
+<li>\(\mathbf{e_u} \cdot \mathbf{e_v}\)
+</li>
+</ol>
+
+<p>   where \(\mathbf{e_u} = \mathbf{u}/\|\mathbf{u}\|\) is the unit vector pointing in the direction \(\mathbf{u}\) and similarly for \(\mathbf{e_v}\).
+</p>
+<p>
+   \begin{framed}
+   (c). The other options don't take into account the length of the vectors involved.
+   \end{framed}
+</p></li>
+</ol>
+
+
+
+<ol>
+<li>(1 point) Suppose that a plane \(\mathcal{P}\) with normal vector \(\mathbf{n}\) and a line \(\mathcal{L}\) with direction vector \(\mathbf{v}\) both pass through the origin and that \(\mathbf{n} \cdot \mathbf{v} = 0\). Which of the following statements is correct?
+<ol>
+<li>\(\mathcal{L}\) is contained in \(\mathcal{P}\).
+</li>
+<li>\(\mathcal{L}\) is orthogonal to \(\mathcal{P}\).
+
+</li>
+</ol>
+
+<p>   \begin{framed}
+   (a) The vector $\vec{v}$ lies in the plane $\mathcal{P}$ since the plane is composed of all vectors based at the origin and orthogonal to $\vec{n}$. Thus the line also lies in the plane.
+   \end{framed}
+
+</p></li>
+<li>(1 point) Which of the following does <i>not</i> parametrise a line?
+<ol>
+<li>\(\mathbf{r}_1(t) = \langle 8-t, 2t, 3t\rangle\)
+</li>
+<li>\(\mathbf{r}_2(t) = t^3\mathbf{i} - 7t^3\mathbf{j} + t^3\mathbf{k}\)
+</li>
+<li>\(\mathbf{r}_3(t) = \langle 8-4t^3, 2 + 5t^2, 9t^3\rangle\)
+
+</li>
+</ol>
+
+<p>   \begin{framed}
+   (c) This not of the form $\vec{p} + t \vec{v}$. Note that setting $s=t^3$, option b is of the form $\vec{p} + s \vec{v}$.
+   \end{framed}
+
+</p></li>
+<li>(1 point) True or false? The derivative of a vector-valued function is the slope of the tangent line, just as in the scalar-valued case.
+
+<p>
+   \begin{framed}
+   False. The derivative is the tangent vector.
+   \end{framed}
+</p></li>
+</ol>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="postamble">
+</div>
+
+	<div id="sidebar">
+
+        <h3>Contact</h3>
+        <p>
+        Office: Applied Physics & Mathematics (APM) 5240 <br />
+        E-Mail: <a href="mailto:pbryan@ucsd.edu">pbryan@ucsd.edu</a> <br />
+        Phone: (858) 534-3590 <br />
+        Fax: (858) 534-5273 <br />
+
+        Mailing address: <br />
+        Department of Mathematics, UCSD <br />
+        9500 Gilman Drive <br />
+        La Jolla, CA 92093-0112
+        </p>
+	</div>
+</div>
+<br class="clear" />
+</div>
+
+<div id="footer"><div class="inner">
+	<p>
+    <span class="credits"><a href="http://www.math.ucsd.edu/">UCSD Mathematics</a></span><br />
+	
+    <a href="http://andreasviklund.com/templates/variant-classic/" title="Variant Classic template">Template design</a> by <a href="http://andreasviklund.com/" title="Andreas Viklund">Andreas Viklund</a><br />
+	</p>
+</div></div>
+</div>
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>
+
+</body>
+</html>

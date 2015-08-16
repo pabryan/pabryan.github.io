@@ -1,0 +1,151 @@
+---
+layout: course
+base: /teaching/math142b_summer2_2013
+---
+
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">Lecture 2.1 Text Sections</h2>
+<div class="outline-text-2" id="text-1">
+
+<ul>
+<li>Section 6.4 (just <a href="#sec-3-1">Theorem 6.19</a>)
+</li>
+<li><a href="#sec-3-2">Section 6.5</a> 
+</li>
+<li><a href="#sec-3-3">Section 6.6</a>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-2">
+<h2 id="sec-2">Lecture 2.1 Overview</h2>
+<div class="outline-text-2" id="text-2">
+
+<p>This lecture deals mostly with the first and second fundamental theorems (6.5,6.6). Theorem 6.19 needs to be examined first. We need the result for the first fundamental theorem, but the proof is worth understanding and the result is more generally applicable than just for the first fundamental theorem. 
+</p>
+<p>
+Theorem 6.19 says that if a function \(f\) is continuous on \((a,b)\) and bounded on \([a,b]\) then it is integrable, with integral independent of the value of \(f\) at the endpoints. 
+</p>
+<p>
+The first fundamental theorem says that to evaluate an integral, one can find an <i>anti-derivative</i>.
+</p>
+<p>
+The second fundamental theorem says that if \(f\) is continuous, then an anti-derivative always exists. It also tells us how to differentiate an integral.
+</p>
+<p>
+Putting the two theorems together, we find that integrals and derivatives are inverse operations to each other.
+</p></div>
+
+</div>
+
+<div id="outline-container-3" class="outline-2">
+<h2 id="sec-3">Lecture 2.1 Notes</h2>
+<div class="outline-text-2" id="text-3">
+
+
+
+</div>
+
+<div id="outline-container-3-1" class="outline-3">
+<h3 id="sec-3-1"><a name="ID-d9b213c0-85f5-426a-b97b-0def8fd9b97a" id="ID-d9b213c0-85f5-426a-b97b-0def8fd9b97a"></a>Theorem 6.19</h3>
+<div class="outline-text-3" id="text-3-1">
+
+
+<p>
+This is quite an important theorem. 
+</p>
+<ul>
+<li>The only place continuity is used is to show that \(f\) is integrable on \([c,d]\) whenever \([c,d] \subset (a,b)\). Thus the proof actually shows that if a function \(f\) is integrable on \([c,d]\) whenever \([c,d] \subset (a,b)\), and bounded on \([a,b]\), then \(f\) is integrable on \([a,b]\) and the integral doesn't depend on the value at the endpoints. 
+</li>
+<li>From this theorem, we can easily prove that if \(c\in[a,b]\), then changing the value of \(f\) at \(c\) doesn't affect the integral. <i>Hint</i>: Use additivity over intervals.
+</li>
+</ul>
+
+</div>
+
+</div>
+
+<div id="outline-container-3-2" class="outline-3">
+<h3 id="sec-3-2"><a name="ID-179c9dc2-76f2-45c1-a982-2ed42c10d191" id="ID-179c9dc2-76f2-45c1-a982-2ed42c10d191"></a>Section 6.5</h3>
+<div class="outline-text-3" id="text-3-2">
+
+<ul>
+<li>We needed Lemma 6.21. This says that if \(A\) is a real number such that 
+  \[
+  L(f,P) \leq A \leq U(f,P),
+  \]
+  for every \(P\), then \(A = \int f\). This follows since the integral is equal to both the best upper bound for all the \(L(f,P)\) and the best lower bound for all the \(U(f,P)\). The assumption here is that \(A\) is also an upper bound for the \(L(f,P)\) and a lower bound for the \(U(f,P)\). See the text to see that the only possibility is that \(A=\int f\).
+</li>
+<li>To prove the first fundamental theorem, we choose any partition and apply the Mean Value Theorem on each partition interval. This says that there is a point \(c_i \in [x_{i-1}, x_i]\) such that
+  \[
+  F(x_i) - F(x_{i-1}) = F'(c_i)(x_i - x_{i-1}).
+  \]
+</li>
+<li>To finish, we proved the inequality,
+  \[
+  U(F', P) \leq F(b) - F(a) \leq L(F', P)
+  \]
+  for any partition, which we obtained by using the Mean Value Theorem and the bounds
+  \[
+  m_i(F') \leq F'(c_i) \leq M_i(F')
+  \]
+  which lead to the required inequality, through the now very familiar telescoping sum. Then Lemma 6.21 completed the proof with \(A = F(b) - F(a)\) and \(f = F'\).
+</li>
+<li>We also saw how integration by parts follows easily from the first fundamental theorem.
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3-3" class="outline-3">
+<h3 id="sec-3-3"><a name="ID-89f20fa7-7640-4be5-82d2-865e6fecdb99" id="ID-89f20fa7-7640-4be5-82d2-865e6fecdb99"></a>Section 6.6</h3>
+<div class="outline-text-3" id="text-3-3">
+
+<ul>
+<li>For the first fundamental theorem, we used the Mean Value Theorem (for derivatives). The analogous result for integrals is the Theorem 6.26 (the Mean Value Theorem for integrals) which states that there is a point \(x_0 \in [a,b]\) such that
+  \[
+  \frac{1}{b-a} \int_a^b f = f(x_0).
+  \]
+  The right hand side can be interperted as the mean value of \(f\) over \([a,b]\). We didn't prove this theorem. You should read the text for the proof which is reasonably straight forward.
+</li>
+<li>Before proving the second fundamental theorem, we proved Proposition 6.27, which states that if \(f\) is integrable, then the function \(F(x) = \int_a^x f\) is continuous. The proof came from showing that 
+  \[
+  \vert F(u) - F(v) \vert \leq M \vert u - v\vert
+  \]
+  where \(|F| \leq M\). This latter result proves \(F\) is continuous. This is because if \(|u-v| \leq \tfrac{\epsilon}{M}\), then \(|F(u) - F(v)| \leq \epsilon\).
+</li>
+<li>To prove the second fundamental theorem, we used the mean value theorem for integrals to show that
+  \[
+  \lim_{x\to x_0} \left[ \frac{F(x) - F(x_0)}{x-x_0}\right] = f(x_0).
+  \]
+  The key observation was that the mean value theorem gave us a point \(c(x)\) strictly between \(x\) and \(x_0\) such that \(f(c(x))\) equals the term insise the brackets above. So \(c(x) \to x_0\) as \(x\to x_0\). Since \(f\) is continuous, \(f(c(x)) \to f(x_0)\) as \(x\to x_0\) completing the proof.
+</li>
+<li>We also defined integrals in the "negative" direction
+  \[
+  \int_d^c f = -\int_c^d f
+  \]
+  when \(c&lt; d\), and
+  \[
+  \int_c^c f = 0.
+  \]
+  With these definitions, additivity over intervals holds. In fact, if we want additivity over intervals to hold, we're forced into this defintion.
+</li>
+<li>Let me also remark that we saw \(f\) integrable implies \(F\) continuous and \(f\) continuous implies \(F\) is differentiable. In fact if \(f\) is \(k\)-times differentiable, then \(F\) is \(k+1\)-times differntiable, which can be seen easily by induction. Thus integration adds one to number of times a function is differentiable, while differentations substracts one from this number. This should not be suprising from the fact that integration and differentiation are inverses to each other. Thus, even though derivatives are easier to compute than integrals, they make a function "worse" whereas integrals make a function "better".
+</li>
+</ul>
+
+
+</div>
+</div>
+</div>
+
+<p><br/><br/>
+<!-- hhmts start --> <!-- hhmts end --></p>

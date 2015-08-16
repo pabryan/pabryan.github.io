@@ -1,0 +1,510 @@
+---
+layout: course
+base: /teaching/math20d_summer1_2015
+---
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Instructions</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+There will be two homework projects. These involve several related questions, applying the theory of the course to real world problems, comprising a complete solution of the given problem. Each part can be done somewhat independently of the others (so you can just treat the homework like a list of separate questions, but will not learn as much compared to when looked at as cohesive whole). Some questions require the results of previous questions. If you are unable to complete one part, you may still assume the result of that part in subsequent questions.
+</p>
+
+<p>
+There are also weekly homework problems available online <a href="https://webwork.ucsd.edu/webwork2/math20d-Bryan-s115/">https://webwork.ucsd.edu/webwork2/math20d-Bryan-s115/</a>. See <i>Online Exercises</i> below for more details.
+</p>
+</div>
+</div>
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Homework Projects</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1">Homework Project 1</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Due 4pm Friday 17th July in the dropbox in the AP&amp;M basement. 
+</p>
+
+<p>
+<a href="homework1.pdf">Download PDF</a>
+</p>
+</div>
+
+<div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1">Millikan-Fletcher Oil drop experiment</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<p>
+Reference: <a href="https://en.wikipedia.org/wiki/Oil_drop_experiment">https://en.wikipedia.org/wiki/Oil_drop_experiment</a>
+</p>
+
+<p>
+This problem is based on Boyce-DePrima question 27 from section 2.3.
+</p>
+
+<p>
+A body falling in a relatively dense fluid, oil for example, is acted on by three forces: a resistive force \(R\), a buoyant force \(B\), and its weight \(W\) due to gravity. 
+</p>
+
+<p>
+Archimedes' principal states that the buoyant force is equal to the weight of the fluid displaced by the object. <b>Warning</b>: Weight is a force (not the mass!) of magnitude equal to the mass times the gravitational constant, \(g \simeq 9.8 m/s^2\).
+</p>
+
+<p>
+For a slowly moving spherical body of radius \(a\), the resistive force is given by Stokes' law, \(R = -6\pi\mu a v\), where \(v\) is the velocity of the body, and \(\mu\) is the coefficient of viscosity of the surrounding fluid.
+</p>
+
+<p>
+Let then, a solid sphere of radius \(a\) and constant density \(\rho\) fall through a dense fluid with constant density \(\rho'\) and viscosity coefficient \(\mu\). Let \(v\) denote the velocity with down the positive direction.
+</p>
+
+<ol class="org-ol">
+<li>Draw a free body diagram, and show that the forces are given the following expressions:
+\begin{align*}
+R &= - 6\pi\mu a v \quad \text{(given in Stokes' law above)} \\
+B &= -\frac{4}{3} \pi g a^3 \rho' \quad \text{(from Archimedes' principle)} \\
+W &= \frac{4}{3} \pi g a^3 \rho 
+\end{align*}
+
+<p>
+Recall the volume of a sphere of radius \(a\) is given by \(V = 4/3 \pi a^3\).
+</p>
+
+<dl class="org-dl">
+<dt> Solution </dt><dd>     Figure \ref{fig:free_body} shows the Free Body Diagram.
+
+<p>
+<a href="free_body.pdf">free_body.pdf</a>
+</p>
+
+<p>
+Stokes' law for the resistive force is given.
+</p>
+
+<p>
+Archimedes principal states that the buoyant force equals to weight of displaced fluid. The volume of displaced fluid equals the volume of the sphere which is given as \(V = 4/3 \pi a^3\). The density is constant so the mass \(M'\) equals the density times the volume,
+\[
+     M' = \rho' 4/3 \pi a^3
+     \]
+Now weight equals \(M' g\) which is \(B\).
+</p>
+
+<p>
+The weight is the mass of the sphere, \(M\) times \(g\) which gives \(W\) since the sphere has density \(\rho\).
+</p>
+</dd>
+</dl>
+</li>
+
+<li>Assuming (somewhat naively) that Newton's second law holds for solid bodies, show that the equation of motion is,
+   \[
+   v' = g \frac{\rho  - \rho'}{\rho} - \frac{9\mu}{2a^2\rho} v
+   \]
+
+<dl class="org-dl">
+<dt> Solution </dt><dd>     Newtwon's second law says force = mass time acceleration so,
+\begin{align*}
+\rho V v' &= M v' = R + B + W = - 6\pi\mu a v - \frac{4}{3} \pi g a^3 \rho' + \frac{4}{3} \pi g a^3 \rho \\
+&= - 6\pi \mu a v + (\rho - \rho')V.
+\end{align*}
+<p>
+Dividing through by \(\rho V\), we obtain,
+\[
+     v' =  -\frac{6\pi \mu a}{\rho 4/3 \pi a^3} v + g \frac{\rho - \rho'}{\rho} = - \frac{9\mu}{2a^2\rho} v + g \frac{\rho  - \rho'}{\rho}.
+     \]
+</p>
+</dd>
+</dl>
+</li>
+
+<li>Show that the equilibrium velocity (known as terminal velocity) is given by,
+\[
+   V_L = \frac{2 a^2 g}{9\mu} (\rho - \rho')
+   \]
+and draw a phase diagram indicating stability. 
+
+<p>
+Notice that terminal velocity is attained precisely when the all the forces balance, and that a body travelling a terminal velocity will continue to do so indefinitely.
+</p>
+
+<dl class="org-dl">
+<dt> Solution </dt><dd>     Figure \ref{fig:phase_plot} shows the phase diagram and figure \ref{fig:phase_line} shows the phase line.
+
+<p>
+<a href="phase_plot.pdf">phase_plot.pdf</a>
+</p>
+
+<p>
+<a href="phase_line.pdf">phase_line.pdf</a>
+</p>
+
+<p>
+The differential equation is \(v' = f(v)\) where
+\[
+     f(v) = g \frac{\rho  - \rho'}{\rho} - \frac{9\mu}{2a^2\rho} v.
+     \]
+The equilibrium is the unique root of \(f\) and is obtained by setting the right hand side to \(0\) and solving for \(v\):
+\[
+     g \frac{\rho  - \rho'}{\rho} = \frac{9\mu}{2a^2\rho} v
+     \]
+and hence,
+\[
+     v = \left(g \frac{\rho  - \rho'}{\rho}\right) / \left(\frac{9\mu}{2a^2\rho}\right) = \frac{2 a^2 g}{9\mu} (\rho - \rho').
+     \]
+</p>
+</dd>
+</dl>
+</li>
+
+<li>The equation of motion may be written more succinctly as
+\[
+   v' + a v = b
+   \]
+with 
+\[
+   a = \frac{9\mu}{2a^2\rho}, \quad \text{and} \quad b = g \frac{\rho  - \rho'}{\rho}.
+   \]
+Notice that \(v_L = b/a\).
+
+<p>
+Solve this equation to obtain
+\[
+   v = \left(v_0 - v_L\right) \exp \left(-\frac{9\mu}{2a^2\rho} t \right) + v_L
+   \]
+confirming the conclusions in part 3. Here \(v_0\) is the initial velocity.
+</p>
+
+<dl class="org-dl">
+<dt> Solution </dt><dd>
+</dd>
+</dl>
+<p>
+The integrating factor is
+\[
+   \mu(t) = e^{\int a dt} = e^{at}
+   \]
+and hence the solution is
+\[
+   v(t) = e^{-at} \int b e^{at} dt + C e^{-at} = \frac{b}{a} + C e^{-at}.
+   \]
+</p>
+
+<p>
+The initial condition is \(v(0) = v_0\) which upon substituting above gives,
+\[
+   v_0 = \frac{b}{a} + C
+   \]
+so that \(C = v_0 - \tfrac{b}{a}\) and the solution is
+\[
+   v(t) = \frac{b}{a} + \left(v_0 - \frac{b}{a}\right) e^{-at}.
+   \]
+</p>
+
+<p>
+The equilibrium of \(y' + at = b\) is easily seen to be \(b/a\) so \(v_L = b/a\). Substituting \(a = \frac{9\mu}{2a^2\rho}\) above gives
+\[
+   v(t) = \left(v_0 - v_L\right) \exp \left(-\frac{9\mu}{2a^2\rho} t \right) + v_L
+   \]
+as required. Moreover, \(\lim_{t\to \infty} v(t) = v_L\) so that \(v_L\) is stable as in part (3).
+</p>
+</li>
+
+<li>The Millikan-Fletcher oil drop experiment aims to determine the charge of an electron using the above calculations. Charged droplets (which we assume to be approximately spherical) of oil are allowed to fall between a pair of parallel metal plates of distance \(d\) apart. The velocity of the droplets approaches \(v_L\) exponentially fast as can be seen from the solution obtained in the previous question. Then a voltage \(V\) is applied across the parallel plates inducing an electric field \(E\) of magnitude \(V/d\) pointing upwards. This causes an upward force of magnitude \(Vq/d\) where \(q\) is the charge of a droplet. By adjusting the voltage \(V\) to just the right value, the electric force will balance out the other forces and the droplets become stationary (i.e. \(v = 0\)). Show that,
+</li>
+</ol>
+<p>
+\[
+q = \frac{4\pi a^3 g d}{3 V} (\rho - \rho').
+\]
+</p>
+
+<p>
+By repeating the experiment with many drops, the charge of an electron may be estimated. The estimate obtained by Millikan and Fletcher was \(1.5924(17)×10^{-19}\) Coulombs, within 1% of the currently accepted value of \(1.602176487(40)×10^{-19}\) Coulombs, although there is some controversy related to the experiment which you can read about at the Wikipedia article linked to above.
+</p>
+
+<dl class="org-dl">
+<dt> Solution </dt><dd>    The electric field, \(E = - Vq/d\). When all the forces balance, \(v = 0\) and so the resistive force, \(R = 0\). Thus we have
+\[
+    0 = B + W + E = -\frac{4}{3} \pi g a^3 \rho' + \frac{4}{3} \pi g a^3 \rho - Vq/d
+    \]
+so that 
+\[
+    q = \frac{d}{V} \left(-\frac{4}{3} \pi g a^3 \rho' + \frac{4}{3} \pi g a^3 \rho\right) = \frac{4\pi a^3 g d}{3 V} (\rho - \rho').
+    \]
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2">Homework Project 2</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Due 4pm Wednesday 29th July in the dropbox in the AP&amp;M basement. 
+</p>
+
+<p>
+<a href="homework2.pdf">Download PDF</a>
+</p>
+</div>
+
+<div id="outline-container-sec-2-2-1" class="outline-4">
+<h4 id="sec-2-2-1">RLC Circuits</h4>
+<div class="outline-text-4" id="text-2-2-1">
+<p>
+Reference: <a href="https://en.wikipedia.org/wiki/RLC_circuit">https://en.wikipedia.org/wiki/RLC_circuit</a>
+</p>
+
+<p>
+This problem is based on Boyce-DePrima, "Electric Circuits", Section 3.7 p. 202
+</p>
+
+<p>
+An RLC circuit is a circuit composed of a <i>resistor</i> (of resistance \(R\) Ohms), an <i>inductor</i> (of inductance \(L\) Henrys), a <i>capacitor</i> (or capacitance \(C\) Farads), and an <i>impressed voltage</i> (of \(E(t)\) Volts) wired in series (see figure \ref{fig:RLC}). The impressed voltage may be time dependent, whereas \(R, L, C\) are constants.
+</p>
+
+<p>
+<a href="RLC_series_circuit_v1.pdf">RLC_series_circuit_v1.pdf</a>
+</p>
+
+<p>
+Let \(Q(t)\) denote the charge on the capacitor at time \(t\) and let \(I(t)\) denote the current through the circuit at time \(t\). Then we have the relation
+</p>
+\begin{equation}
+\label{eq:charge_current}
+I = \frac{dQ}{dt}.
+\end{equation}
+
+<p>
+The voltage drops across the circuit elements are
+</p>
+\begin{align*}
+V_R &= IR, \\
+V_C &= Q/C, \\
+V_L &= L \frac{dI}{dt}.
+\end{align*}
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Kirchhoff%2527s_circuit_laws#Kirchhoff.27s_voltage_law_.28KVL.29">Kirchoff's Voltage Law</a> states that the impressed voltage equals the sum of the voltage drops. That is
+\[
+E(t) = IR + Q/C + L \frac{dI}{dt}.
+\]
+</p>
+
+<ol class="org-ol">
+<li>Show that this leads the differential equation
+\begin{equation}
+\label{eq:RLC_ODE}
+L Q'' + R Q' + \frac{1}{C} Q = E(t)
+\end{equation}
+<p>
+for the charge on the capacitor.
+</p>
+</li>
+
+<li><i>Undamped free oscillations</i>. Suppose that there is no resitance in the circuit (\(R = 0\)) and no impressed voltage \(E(t) = 0\). 
+
+<ol class="org-ol">
+<li>Both an inductor and a capacitor store and release energy. The electrical energy stored in the capacitor is
+\[
+      U_C(t) = \frac{Q(t)^2}{2 C},
+      \]
+and the energy stored in the inductor is
+\[
+      U_L(t) = \frac{L I(t)^2}{2}. 
+      \]
+
+<p>
+The total electrical energy stored in the circuit is thus
+\[
+      U(t) = \frac{1}{2} \left(\frac{Q(t)^2}{C} + L I(t)^2\right).
+      \]
+</p>
+
+<p>
+<b>Without solving equation \eqref{eq:RLC_ODE}</b>, show that <i>energy is conserved</i>, i.e. \(U(t)\) is constant (compare problem 30 in section 3.7 of Boyce-DePrima). 
+</p>
+
+<p>
+<i>Hint</i>: How do you tell if a function is constant? Now use equations \eqref{eq:RLC_ODE} and \eqref{eq:charge_current}.
+</p>
+</li>
+
+<li>Show that the charge is
+\[
+	Q(t) = A \cos(\omega_0 t - \delta)
+	\]
+where \(A\) and \(\delta\) are arbitrary constants and 
+\[
+	\omega_0 = \frac{1}{\sqrt{LC}}.
+	\]
+We call \(A\) the amplitude of oscillation, \(\delta\) the phase and \(\omega_0\) the natural, or resonant frequency.
+</li>
+
+<li>Show that the current is
+      \[
+      I(t) = - A \omega_0 \sin(\omega_0 t - \delta).
+      \]
+</li>
+
+<li>Using the expressions for \(Q\) and \(I\) from parts (b) and (c), verfiy explicitly that 
+\[
+      U(t) = \frac{A^2}{2C}
+      \] 
+is constant.
+</li>
+</ol>
+</li>
+
+<li><i>Underdamped free oscillations</i>. Suppose \(R < 2 \sqrt{L/C}\) and \(E(t)\) is a given function.
+
+<ol class="org-ol">
+<li>Show that 
+\[
+      \frac{dU}{dt} = Q'(t)[E(t) - R Q'(t)]
+      \]
+and thus in the presence of resistance or an impressed voltage, energy is generally not conserved.
+</li>
+
+<li>Show that the general solution of the homogeneous equation (\(E(t) = 0\)) \eqref{eq:RLC_ODE} is
+\[
+      Q(t) = \exp\left(-\tfrac{R}{2L} t\right) A \cos(\mu t - \delta) 
+      \]
+where the amplitude \(A\) and the phase \(\delta\) are arbitrary constants, and 
+\[
+      \mu = \sqrt{\tfrac{1}{LC} - \tfrac{R^2}{4L^2}}
+      \]
+is the quasi-frequency. Thus if \(R < 2 \sqrt{L/C}\) the circuit undergoes a damped oscillation.
+</li>
+
+<li>Let
+\[
+      E(t) = - R \omega_0 \sin(\omega_0 t),
+      \]
+where \(\omega_0 = 1/\sqrt{LC}\) is the resonant frequency. Show by direct substitution into \eqref{eq:RLC_ODE}, that a particular solution of the non-homogeneous equation \eqref{eq:RLC_ODE} is
+\[
+      Q(t) = \cos(\omega_0 t).
+      \]
+
+<p>
+Using part (a) show that energy <i>is conserved</i> for this particular solution. Hence, for this particular solution, the loss of energy via heat in the resistor is <i>exactly</i> compensated for by the addition of energy from the impressed voltage.
+</p>
+</li>
+</ol>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Online Exercises</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Each week you will need to complete the <a href="https://webwork.ucsd.edu/webwork2/math20d-Bryan-s115/">online homework</a> problems using the <a href="http://www.math.ucsd.edu/~abowers/online/webwork.html">Webwork</a> system. You only need to complete 75% of the problems to get full points, but I encourage you to attempt all the problems since we learn best when doing. Most of the problems are routine, but a handful of the problems may be quite challenging. The solutions will be made available almost immediately after the deadline so there can be no extensions on the due dates. <a href="http://www.math.ucsd.edu/~abowers/online/webwork.html">Help on Webwork.</a>  
+</p>
+</div>
+</div>
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Sample Exercises</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Below is a list of sample exercises from previous years. The bold questions are more in depth/theoretical. The remaining questions are more routine. These problems are not to be turned in and are entirely optional, but may help frame your approach to studying.
+</p>
+</div>
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1">Week 1</h3>
+<div class="outline-text-3" id="text-4-1">
+<ul class="org-ul">
+<li><b>Section 2.1</b>: <b>33</b>, plus choose any one problem from questions 13 to 20.
+</li>
+<li><b>Section 2.2</b>: <b>21</b>, plus choose any one problem from questions 1 to 8.
+</li>
+<li><b>Section 2.3</b>: <b>6</b>
+</li>
+<li><b>Section 2.6</b>: <b>18</b>, plus choose any one problem from questions 1 to 12.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2">Week 2</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li><b>Section 2.4</b>: <b>27</b>, plus choose any one problem from questions 1 to 12
+</li>
+<li><b>Section 2.5</b>: <b>7</b>, plus choose any one problem from questions 1 to 6.
+</li>
+<li><b>Section 2.7</b>: 
+</li>
+<li><b>Section 3.1</b>: <b>17</b>, plus choose any one problem from questions 1 to 16.
+</li>
+<li><b>Section 3.2</b>: <b>21</b>, plus choose any one problem from questions 1 to 6.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3">Week 3</h3>
+<div class="outline-text-3" id="text-4-3">
+<ul class="org-ul">
+<li><b>Section 3.3</b>: <b>28</b>, plus choose any one problem from questions 7 to 16.
+</li>
+<li><b>Section 3.4</b>: <b>18</b>, plus choose any one problem from questions 1 to 10.
+</li>
+<li><b>Section 3.5</b>: <b>29</b>, plus choose any one problem from questions 1 to 14.
+</li>
+<li><b>Section 3.6</b>: <b>21</b>, plus choose any one problem from questions 1 to 4.
+</li>
+<li><b>Section 3.7</b>: <b>30</b> (except part a, which you may use for the remaining parts), plus choose any one problem from questions 1 to 4.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4">Week 4</h3>
+<div class="outline-text-3" id="text-4-4">
+<ul class="org-ul">
+<li><b>Section 5.1</b>:
+</li>
+<li><b>Section 5.2</b>: <b>21</b> (for (b) only do \(\lambda = 0, 2, 4\); for (c) only do \(H_0, \cdots, H_3\)), plus choose any one problem from questions 1 to 14.
+</li>
+<li><b>Section 5.3</b>:
+</li>
+<li><b>Section 5.4</b>: <b>41</b>, plus choose any one problem from questions 1 to 12.
+</li>
+<li><b>Section 5.7</b>:
+</li>
+<li><b>Section 6.1</b>: <b>30</b>, plus choose any one problem from questions 11 to 14.
+</li>
+<li><b>Section 6.2</b>: <b>28</b>, plus choose any one problem from questions 1 to 10.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-4-5" class="outline-3">
+<h3 id="sec-4-5">Week 5</h3>
+<div class="outline-text-3" id="text-4-5">
+<ul class="org-ul">
+<li><b>Section 6.3</b>:
+</li>
+<li><b>Section 6.4</b>:
+</li>
+<li><b>Section 6.5</b>:
+</li>
+<li><b>Section 7.1</b>: <b>7</b>, plus choose any one problem from questions 7 to 16.
+</li>
+<li><b>Section 7.4</b>: <b>6</b>
+</li>
+<li><b>Section 7.5</b>: <b>28</b>, plus choose any one problem from questions 9 to 14.
+</li>
+<li><b>Section 7.6</b>: <b>13</b>, choose any one problem from questions 9 to 10.
+</li>
+</ul>
+</div>
+</div>
+</div>
