@@ -1,0 +1,81 @@
+/* Custom CSS */
+
+.masthead {
+  height: 350px;
+  background: url('http://pabryan.github.io/img/banner.jpg') top center no-repeat;
+  margin: 0 auto;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+.profile-frame {
+    background: #FFF;
+    border: 5px solid #fff;
+    border-radius: 12px;
+    height: 200px;
+    width: 200px;
+    box-shadow: 0 1px 1px rgba(136,153,166,0.15);    
+    position: absolute;
+    bottom: -70px;
+    z-index: 3;
+}
+
+img.profile-img {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    border-radius: 8px;
+}
+
+.navbar {
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+   
+}
+
+.navbar-xs .navbar-nav > li > a, .navbar-brand {
+    margin-top: 5px !important; 
+    margin-bottom: 5px !important;
+    height: 30px;
+}
+
+.navbar-xs {
+    min-height: 30px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.main-container {
+    background-color: #f5f8fa;
+    padding-top: 10px;
+    border-top-style: solid;
+    border-top-color: #D9EDF7;
+    border-top-width: thin;
+}
+
+.right-sidebar .panel-heading {
+   background-color: transparent !important;
+   background: transparent !important;
+}
+
+.content-panel .panel-heading {
+   background-color: transparent !important;
+   background: transparent !important;
+   text-align: center;
+}
+
+
+.social > ul {
+    overflow: auto;
+}
+ 
+.social > ul > li {
+    list-style-type: none;
+    float: left;
+}
+

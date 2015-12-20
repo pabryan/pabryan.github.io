@@ -1,0 +1,25 @@
+# Site settings
+title: Paul Bryan
+description: "Paul Bryan : Mathematician"
+author: "Paul Bryan"
+header-img: img/leibnizuniversity.jpg
+profile-img: img/profile.jpg
+email: pabryan@gmail.com
+baseurl: ""
+url: "http://pabryan.github.io"
+
+twitter_username: pabryan78
+github_username:  pabryan
+facebook_username:  doctorpabryan
+googleplus_username: PaulBryanguy
+skype_username: paul_a_bryan
+orcid: 0000-0001-8155-6091
+arxiv_identifier: bryan_p_1
+researchgate_username: Paul_Bryan3
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
