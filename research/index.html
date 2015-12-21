@@ -1,0 +1,51 @@
+---
+layout: default
+title: Research
+category: research
+---
+
+<div class="panel panel-default content-panel">
+  <div class="panel-heading">
+    <h1 class="panel-title">Publications</h1>
+  </div> 
+</div>
+
+
+{% for post in site.categories.[page.category] %}
+<div class="panel panel-default research-panel">
+  <div class="panel-heading">
+    <h3 class="panel-title">
+      {{ post.title }}
+    </h3>
+  </div>
+  <div class="panel-body">
+    <ul>      
+      <li>{{ post.journal }} (<a href="https://dx.doi.org/{{ post.doi }}" target="_blank">{{ post.doi}}</a>)</li>
+      {% unless post.collaborators == '' %}
+      <li>With {{ post.collaborators | join }}</li>
+      {% endunless %}
+    </ul>
+    <a href="#abstract-{{ post.id }}" class="show-hide-abstract" data-toggle="collapse"><span class="show-more-less">More...</span></a>
+    <div id="abstract-{{ post.id }}" class="collapse">
+      {{ post.excerpt }}
+    </div>    
+  </div>
+
+  <div class="panel-footer">
+    <ul>
+      <li>
+	<a href="http://arxiv.org/abs/{{ post.arxiv }}" class="btn btn-social-icon btn-arxiv" target="_blank">
+	  <i class="ai ai-arxiv"></i>
+	</a>
+      </li>
+
+      <li>
+	<a href="http://www.researchgate.com/publication/{{ post.researchgate }}" class="btn btn-social-icon btn-researchgate" target="_blank">
+	  <i class="ai ai-researchgate"></i>
+	</a>
+      </li>
+    </ul>
+  </div>
+</div>
+{% endfor %}
+

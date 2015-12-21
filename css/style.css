@@ -69,7 +69,6 @@ img.profile-img {
    text-align: center;
 }
 
-
 .social > ul {
     overflow: auto;
 }
@@ -79,3 +78,26 @@ img.profile-img {
     float: left;
 }
 
+.research-panel .panel-heading {
+   background-color: transparent !important;
+   background: transparent !important;
+   text-align: center;
+}
+
+.research-panel .panel-body > ul {
+    list-style-type: none;
+}
+
+.research-panel .panel-footer {
+   background-color: transparent !important;
+   background: transparent !important;
+   text-align: center;
+}
+.research-panel .panel-footer > ul {
+    overflow: auto;
+}
+
+.research-panel .panel-footer > ul > li {
+    list-style-type: none;
+    float: left;
+}
