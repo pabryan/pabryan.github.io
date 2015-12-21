@@ -20,13 +20,13 @@ category: research
   </div>
   <div class="panel-body">
     <ul>      
-      <li>{{ post.journal }} (<a href="https://dx.doi.org/{{ post.doi }}" target="_blank">{{ post.doi}}</a>)</li>
+      <li>{{ post.journal }} <a href="https://dx.doi.org/{{ post.doi }}" target="_blank">{{ post.doi}}</a></li>
       {% unless post.collaborators == '' %}
       <li>With {{ post.collaborators | join }}</li>
       {% endunless %}
     </ul>
-    <a href="#abstract-{{ post.id }}" class="show-hide-abstract" data-toggle="collapse"><span class="show-more-less">More...</span></a>
-    <div id="abstract-{{ post.id }}" class="collapse">
+    <a href="#abstract-{{ post.paper-id }}" class="show-hide-abstract" data-toggle="collapse"><span class="show-more-less">More...</span></a>
+    <div id="abstract-{{ post.paper-id }}" class="collapse">
       {{ post.excerpt }}
     </div>    
   </div>
