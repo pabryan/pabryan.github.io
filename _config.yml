@@ -8,6 +8,7 @@ email: pabryan@gmail.com
 baseurl: ""
 url: "http://pabryan.github.io"
 
+# User accounts
 twitter_username: pabryan78
 github_username:  pabryan
 facebook_username:  doctorpabryan
@@ -16,6 +17,8 @@ skype_username: paul_a_bryan
 orcid: 0000-0001-8155-6091
 arxiv_identifier: bryan_p_1
 researchgate_username: Paul_Bryan3
+googlescholar_username: buI6MKsAAAAJ
+scirate_username: paul-bryan
 
 # Build settings
 markdown: kramdown
