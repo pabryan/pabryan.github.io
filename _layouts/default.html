@@ -10,10 +10,7 @@
   <div class="container-fluid main-container">
     <div class="container">
       <div class="row">
-	<div class="col-md-3 left-sidebar">
-	  {% include left_sidebar.html %}
-	</div>
-	<div class="col-md-6">
+	<div class="col-md-9">
 	  {{ content }}
 	</div>
 	<div class="col-md-3 right-sidebar">
@@ -26,7 +23,7 @@
   <script src="{{ "/js/jquery.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
   <script src="{{ "/js/local.js" | prepend: site.baseurl }}"></script>
-  <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
 </body>
 
