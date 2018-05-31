@@ -1,7 +1,7 @@
 $('.collapse').on('shown.bs.collapse', function () {
-    $(this).prev().find(".show-more-less").text("Less");
+    $(this).prev().find(".abstract-arrow").toggleClass('fa-caret-down fa-caret-up');
 });
 
 $('.collapse').on('hidden.bs.collapse', function () {
-    $(this).prev().find(".show-more-less").text("More...");
+    $(this).prev().find(".abstract-arrow").toggleClass('fa-caret-up fa-caret-down');
 });

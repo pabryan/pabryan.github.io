@@ -83,6 +83,14 @@ img.profile-img {
    background: transparent !important;
 }
 
+.research-panel .panel-title {
+    font-weight: bold;
+}
+
+.research-panel .panel-heading-ul {
+    list-style-type: none !important;
+}
+
 .research-panel .panel-body > ul {
     list-style-type: none;
 }
