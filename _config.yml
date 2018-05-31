@@ -22,6 +22,6 @@ scirate_username: paul-bryan
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 permalink: pretty
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
