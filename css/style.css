@@ -142,3 +142,9 @@ img.profile-img {
 .broken-iso-scroll {
     -webkit-overflow-scrolling: touch;
 }
+
+.notes-panel .panel-heading {
+   background-color: grey !important;
+   background: transparent !important;
+   text-align: left;
+}
