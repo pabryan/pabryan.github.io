@@ -1,12 +1,13 @@
+<body>
 <div id="content">
 <h1 class="title">Geodesics and Exponential Map</h1>
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org2fdcb7d" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>References</a>
+<h3><a href="#notes-section-org4ee12e8" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>References</a>
 </h3>
 </div>
-<div id="notes-section-org2fdcb7d" class="panel-collapse collapse">
+<div id="notes-section-org4ee12e8" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
@@ -22,10 +23,10 @@
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org36fb14d" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Metric Structure</a>
+<h3><a href="#notes-section-org41a8ead" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Metric Structure</a>
 </h3>
 </div>
-<div id="notes-section-org36fb14d" class="panel-collapse collapse">
+<div id="notes-section-org41a8ead" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-2">
 <p>
@@ -74,10 +75,10 @@ The Riemannian manifold \((M, g))\) is <i>complete</i> if the metric space \((M,
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orgcd569ff" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Geodesics</a>
+<h3><a href="#notes-section-org0bb72a1" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Geodesics</a>
 </h3>
 </div>
-<div id="notes-section-orgcd569ff" class="panel-collapse collapse">
+<div id="notes-section-org0bb72a1" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-3">
 <p>
@@ -86,7 +87,7 @@ We'll parametrise our curves over \([0, 1]\) for convenience. Geometric quantiti
 
 <div class="defn">
 <p>
-<b>Definition</b>: A smooth curve \(\gamma : [0, 1] \to M\) is a geodesic if
+A smooth curve \(\gamma : [0, 1] \to M\) is a geodesic if
 \[
 \nabla_{\gamma'} \gamma' = 0.
 \]
@@ -101,14 +102,14 @@ We'll parametrise our curves over \([0, 1]\) for convenience. Geometric quantiti
 
 <div class="lem">
 <p>
-<b>Lemma</b>: Geodesics have constant speed. That is \(|\gamma'| \equiv \text{const}\).
+Geodesics have constant speed. That is \(|\gamma'| \equiv \text{const}\).
 </p>
 
 </div>
 
 <div class="proof">
 <p>
-<b>Proof</b>: By metric compatibility we have
+By metric compatibility we have
 \[
 \partial_t |\gamma'(t)|^2 = \partial_{\gamma'} g(\gamma', \gamma') = 2 g(\nabla_{\gamma'} \gamma', \gamma') = 0.
 \]
@@ -130,7 +131,7 @@ Now is a good time to state a theorem.
 
 <div class="thm">
 <p>
-<b>Theorem</b>: Suppose \(\gamma\) is length minimising. Then \(\gamma\) is a geodesic. Conversely, every geodesic is locally length minimising in the sense that for all \(t_0 \in [0, 1]\), there is an \(\epsilon > 0\) such that \(\gamma\) restricted to \([0, 1] \cap \{|t - t_0| < \epsilon\}\) is length minimising.
+Suppose \(\gamma\) is length minimising. Then \(\gamma\) is a geodesic. Conversely, every geodesic is locally length minimising in the sense that for all \(t_0 \in [0, 1]\), there is an \(\epsilon > 0\) such that \(\gamma\) restricted to \([0, 1] \cap \{|t - t_0| < \epsilon\}\) is length minimising.
 </p>
 
 </div>
@@ -140,12 +141,16 @@ Let us give the proof of the first part here since it involves calculating varia
 </p>
 
 <p>
-The proof of the second part is more delicate and will be discussed below in <a href="#org344f2e9">Exponential Map</a>.
+The proof of the second part is more delicate and will be discussed below in <a href="#org7e9020a">Exponential Map</a>.
 </p>
 
 <div class="proof">
 <p>
-<b>Proof of the first part</b>: A <i>variation</i> of \(\gamma\) is a map
+<i>First part only</i>.
+</p>
+
+<p>
+A <i>variation</i> of \(\gamma\) is a map
 \[
 F : [0, 1] \times (-\epsilon, \epsilon) \to M
 \]
@@ -223,7 +228,7 @@ and hence \(\gamma\) is a geodesic.
 
 <div class="rem">
 <p>
-<b>Remark</b>: Another way of saying this is that Euler-Lagrange equation for the length functional of curves with fixed end points \(x, y \in M\) is precisely the geodesic equation. <b>The critical points of the length functional are geodesics</b>.
+Another way of saying this is that Euler-Lagrange equation for the length functional of curves with fixed end points \(x, y \in M\) is precisely the geodesic equation. <b>The critical points of the length functional are geodesics</b>.
 </p>
 
 </div>
@@ -238,7 +243,7 @@ First, given a \(\gamma\), variations may be constructed in several ways.
 
 <div class="ex">
 <p>
-<b>Exercise</b>: Show that there exist variations of \(\gamma\), and in particular that there are variations fixing the endpoints. <i>Hint</i>: By the implicit function theorem we can always choose a chart \(\varphi : U \to \mathbb{R}^n\) for \(M\) such that \(\gamma \cap U\) is mapped to a coordinate axis \(x^2 = \cdots = x^n = 0\). Then define a variation of \(\gamma\) in coordinates and transfer back to \(M\) by the inverse of the chart. This produces just a local variation. To get a variation of all \(\gamma\), cover it by charts and patch together the local variations using a partition of unity.
+Show that there exist variations of \(\gamma\), and in particular that there are variations fixing the endpoints. <i>Hint</i>: By the implicit function theorem we can always choose a chart \(\varphi : U \to \mathbb{R}^n\) for \(M\) such that \(\gamma \cap U\) is mapped to a coordinate axis \(x^2 = \cdots = x^n = 0\). Then define a variation of \(\gamma\) in coordinates and transfer back to \(M\) by the inverse of the chart. This produces just a local variation. To get a variation of all \(\gamma\), cover it by charts and patch together the local variations using a partition of unity.
 </p>
 
 </div>
@@ -249,7 +254,7 @@ Recall that a vector field \(V\) along \(\gamma\) is a map \(V : [0, 1] \to TM\)
 
 <div class="ex">
 <p>
-<b>Exercise</b>: Show that for a vector field \(V\) along \(\gamma\) with \(V(0) = 0, V(1) = 0\), if
+Show that for a vector field \(V\) along \(\gamma\) with \(V(0) = 0, V(1) = 0\), if
 \[
 \int_0^1 g(V(t), S(t)) dt = 0
 \]
@@ -260,7 +265,7 @@ for every vector field \(S\) along \(\gamma\), then \(V \equiv 0\). <i>Hint</i>:
 
 <div class="ex">
 <p>
-<b>Exercise</b>: Show that given a vector field \(S\) along \(\gamma\), there exists a variation of \(\gamma\) with variation field \(S\). <i>Hint</i>: You need to define for each \(t\), a curve \(\alpha_t(s)\) such that \(\alpha_t(0) = \gamma(t)\) and \(\alpha_t'(0) = S(t)\). This must be done is such a way that the map
+Show that given a vector field \(S\) along \(\gamma\), there exists a variation of \(\gamma\) with variation field \(S\). <i>Hint</i>: You need to define for each \(t\), a curve \(\alpha_t(s)\) such that \(\alpha_t(0) = \gamma(t)\) and \(\alpha_t'(0) = S(t)\). This must be done is such a way that the map
 \[
 F(t, s) = \alpha_t(s)
 \]
@@ -276,10 +281,10 @@ depends smoothly on \(t\) and each \(\alpha_t\) is defined for \(s \in (-\epsilo
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org344f2e9" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Exponential Map</a>
+<h3><a href="#notes-section-org7e9020a" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Exponential Map</a>
 </h3>
 </div>
-<div id="notes-section-org344f2e9" class="panel-collapse collapse">
+<div id="notes-section-org7e9020a" class="panel-collapse collapse">
 <div class="panel-body">
 
 </div>
@@ -287,10 +292,10 @@ depends smoothly on \(t\) and each \(\alpha_t\) is defined for \(s \in (-\epsilo
 </div>
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orgadc9d63" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Hopf-Rinow</a>
+<h3><a href="#notes-section-org1f1af4e" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Hopf-Rinow</a>
 </h3>
 </div>
-<div id="notes-section-orgadc9d63" class="panel-collapse collapse">
+<div id="notes-section-org1f1af4e" class="panel-collapse collapse">
 <div class="panel-body">
 
 </div>
@@ -298,10 +303,10 @@ depends smoothly on \(t\) and each \(\alpha_t\) is defined for \(s \in (-\epsilo
 </div>
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orgfed87e1" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Cut Locus</a>
+<h3><a href="#notes-section-orga05d0a2" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Cut Locus</a>
 </h3>
 </div>
-<div id="notes-section-orgfed87e1" class="panel-collapse collapse">
+<div id="notes-section-orga05d0a2" class="panel-collapse collapse">
 <div class="panel-body">
 
 </div>
