@@ -155,6 +155,11 @@ img.profile-img {
     text-align: center;
     display: block;
     width: 100%;
+    padding: 1%;
+    border: solid;
+    border-width: 0 0 1px 0;
+    margin-bottom: 3%;
+    border-image: linear-gradient(to right, transparent, black, transparent) 100;
 }
 
 div.proof {
@@ -171,6 +176,11 @@ div.proof {
     text-align: center;
     display: block;
     width: 100%;
+    padding: 1%;
+    border: solid;
+    border-width: 0 0 1px 0;
+    margin-bottom: 3%;
+    border-image: linear-gradient(to right, transparent, black, transparent) 100;
 }
 
 div.ex {
@@ -187,6 +197,11 @@ div.ex {
     text-align: center;
     display: block;
     width: 100%;
+    padding: 1%;
+    border: solid;
+    border-width: 0 0 1px 0;
+    margin-bottom: 3%;
+    border-image: linear-gradient(to right, transparent, black, transparent) 100;
 }
 
 div.thm {
@@ -202,10 +217,37 @@ div.thm {
     font-weight: bold;
     text-align: center;
     display: block;
+    float: center;
     width: 100%;
+    padding: 1%;
+    border: solid;
+    border-width: 0 0 1px 0;
+    margin-bottom: 3%;
+    border-image: linear-gradient(to right, transparent, black, transparent) 100;
 }
 
 div.lem {
+    border-style: solid;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
+
+.defn:before {
+    content: 'Definition';
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 1%;
+    border: solid;
+    border-width: 0 0 1px 0;
+    margin-bottom: 3%;
+    border-image: linear-gradient(to right, transparent, black, transparent) 100;
+}
+
+div.defn {
     border-style: solid;
     background-color: whitesmoke;
     border-radius: 5px;
