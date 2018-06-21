@@ -1,7 +1,9 @@
-$('.collapse').on('shown.bs.collapse', function () {
-    $(this).prev().find(".abstract-arrow").toggleClass('fa-caret-down fa-caret-up');
-});
+$(document).ready(function(){
+    $('.collapse').on('show.bs.collapse', function () {
+	$(this).parent().find(".fa").toggleClass('fa-caret-down fa-caret-up');
+    });
 
-$('.collapse').on('hidden.bs.collapse', function () {
-    $(this).prev().find(".abstract-arrow").toggleClass('fa-caret-up fa-caret-down');
+    $('.collapse').on('hide.bs.collapse', function () {
+	$(this).parent().find(".fa").toggleClass('fa-caret-up fa-caret-down');
+    });
 });
