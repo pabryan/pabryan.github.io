@@ -148,3 +148,67 @@ img.profile-img {
    background: transparent !important;
    text-align: left;
 }
+
+.proof:before {
+    content: 'Proof';
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+div.proof {
+    border-style: solid;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
+
+.ex:before {
+    content: 'Exercise';
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+div.ex {
+    border-style: solid;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
+
+.thm:before {
+    content: 'Theorem';
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+div.thm {
+    border-style: solid;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
+
+.lem:before {
+    content: 'Lemma';
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+div.lem {
+    border-style: solid;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
