@@ -1,13 +1,12 @@
-<body>
 <div id="content">
 <h1 class="title">Geodesics and Exponential Map</h1>
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org4ee12e8" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>References</a>
+<h3><a href="#notes-section-org7d7e7bf" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>References</a>
 </h3>
 </div>
-<div id="notes-section-org4ee12e8" class="panel-collapse collapse">
+<div id="notes-section-org7d7e7bf" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
@@ -23,17 +22,23 @@
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org41a8ead" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Metric Structure</a>
+<h3><a href="#notes-section-org0384019" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Metric Structure</a>
 </h3>
 </div>
-<div id="notes-section-org41a8ead" class="panel-collapse collapse">
+<div id="notes-section-org0384019" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-2">
+<div class="defn">
 <p>
 The length of a smooth path \(\gamma : [a, b] \to M\) is
 \[
 L(\gamma) = \int_a^b \sqrt{g_{\gamma(t)}(\gamma'(t), \gamma'(t))} dt.
 \]
+</p>
+
+</div>
+
+<p>
 Here \(g_x\) is the metric at the point \(x \in M\). If we define
 \[
 \lvert \gamma' \rvert_g = \sqrt{g_{\gamma(t)}(\gamma'(t), \gamma'(t)})
@@ -45,12 +50,18 @@ L(\gamma) = \int_a^b |\gamma'| dt
 where we dropped the subscript \(g\) because it's tedious to include it every time we write it out! There will usually only be one metric under consideration so this convention won't cause any confusion. If there is more than one metric under consideration, then we will be explicit with subscripts.
 </p>
 
+<div class="defn">
 <p>
 A metric (i.e. distance function not Riemannian metric!) on \((M, g)\) is given by
 \[
 d_g (x, y) = \inf\{L(\gamma) : \gamma(0) = x, \gamma(1) = y\}.
 \]
-Again, typically we will drop the subscript and just write \(d\).
+</p>
+
+</div>
+
+<p>
+Again, typically we will drop the subscript in \(d_g\) and just write \(d\) except when any confusion might occur.
 </p>
 
 <ul class="org-ul">
@@ -75,10 +86,10 @@ The Riemannian manifold \((M, g))\) is <i>complete</i> if the metric space \((M,
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org0bb72a1" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Geodesics</a>
+<h3><a href="#notes-section-orgf8507a5" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Geodesics</a>
 </h3>
 </div>
-<div id="notes-section-org0bb72a1" class="panel-collapse collapse">
+<div id="notes-section-orgf8507a5" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-3">
 <p>
@@ -118,6 +129,121 @@ By metric compatibility we have
 </div>
 
 <p>
+One question might come to mind: do any geodesics exist? If so, how many? What there properties? We'll answer the first two questions here and consider the third question in the next sections.
+</p>
+
+<div class="lem">
+<p>
+Let \(x \in M\) and \(X \in T_x M\). Then there exists a unique geodesic \(\gamma\) defined on a maximal interval \([0, T)\) such that
+\[
+\gamma(0) = x, \quad \gamma'(0) = X.
+\]
+</p>
+
+</div>
+
+<p>
+Here it could be that \(T\) is finite or that \(T = \infty\). The uniqueness here refers to the maximal interval. That is, if \(\sigma\) is a geodesic with \(\sigma(0) = x\) and \(\sigma'(0) = X\) defined on \([0, S)\), then \(S \leq T\) and \(\sigma(t) = \gamma(t)\) for all \(t \in [0, S)\).
+</p>
+
+<p>
+The proof is about ODE's on manifolds which are typically done in local coordinates. A coordinate free proof can be given by considering the <i>geodesic flow</i> on the tangent bundle. This is quite an important perspective that we will consider in <a href="#orgbe1004f">Exponential Map</a> to obtain smooth dependence on \(x\) and \(X\). I don't know how to produce a coordinate free proof without working on the tangent bundle since the geodesic ODE is a second order system and to turn it into a system of first order ODE's in order to apply local existence and uniqueness theory, one defines variables \(V = &gamma;') which is in the tangent bundle. Let me know if there's another way to do it coordinate free!
+</p>
+
+<div class="proof">
+<p>
+In local coordinates, write \(\gamma(t) = (\gamma^1(t), \dots, \gamma^n(t))\) and
+\[
+\dot{\gamma} := \partial_t \gamma = \dot{\gamma}^i \partial_i
+\]
+where the Einstein summation convention is used. Here it's convenient to use a dot rather than a prime to denote derivatives because of the superscripted indices \(i\). Otherwise, it looks rather messy.
+</p>
+
+<p>
+Then
+</p>
+\begin{align*}
+\nabla_{\dot{\gamma}} \dot{\gamma} &= \partial_{\dot{\gamma}} (\dot{\gamma}^i) \partial_i + \dot{\gamma}^i \nabla_{\dot{\gamma}} \partial_i \\
+&= \ddot{\gamma}^i \partial_i + \dot{\gamma}^i \dot{\gamma}^j \nabla_{\partial_j} \partial_i \\
+&= \ddot{\gamma}^i \partial_i + \dot{\gamma}^i \dot{\gamma}^j \Gamma_{ij}^k \partial_k.
+\end{align*}
+<p>
+where \(\Gamma_{ij}^k = \nabla_{\partial_i} \partial_j\) are the Christoffel symbols of the connection. These are smooth, real valued functions indexed by \(1 \leq i,j,k \leq n\) defined on a coordinate patch <i>independently of \(\gamma\)</i>. But keep in mind that they vary from point to point and are evaluated here at \(\gamma(t)\).
+</p>
+
+<p>
+Also keep in mind that there are sums here in \(i, j, k\) whenever an index is repeated in a superscript and a subscript. Relabeling the indices (\(i \leftrightarrow k\) in the second sum) and grouping together the coefficients of \(\partial_i\) we get
+\[
+\nabla_{\dot{\gamma}} \dot{\gamma} = \left(\ddot{\gamma} + \dot{\gamma}^k \dot{\gamma}^j \Gamma_{kj}^i(\gamma^1, \dots, \gamma^n))\right) \partial_i.
+\]
+</p>
+
+<p>
+Thus \(\gamma = (\gamma^1, \dots, \gamma^n)\) is a geodesic if and only if it satisfies the second order, non-linear system of ODE's
+\[
+\ddot{\gamma}^i(t) + \Gamma_{kj}^i(\gamma^1(t), \dots, \gamma^n(t)) \dot{\gamma}^k(t) \dot{\gamma}^j(t) = 0.
+\]
+with \(1 \leq i \leq n\).
+</p>
+
+<p>
+The assertion of the lemma is then that given any \(x = (x^1, \cdots, x^n)\) in coordinates and \(X = X^i \partial_i\) there exists a unique solution to the initial value problem
+</p>
+\begin{cases}
+\ddot{\gamma}^i + \Gamma_{kj}^i(\gamma^1, \dots, \gamma^n) \dot{\gamma}^k \dot{\gamma}^j &= 0 \\
+\gamma^i(0) &= x^i \\
+\dot{\gamma}^i (0) &= X^i.
+\end{cases}
+
+<p>
+As a first order system of ODE's obtained by introducing \(V^i = \dot{\gamma}^i\) we have
+</p>
+\begin{cases}
+\begin{pmatrix}
+\dot{\gamma}^i \\
+\dot{V}^i
+\end{pmatrix}
+&=
+\begin{pmatrix}
+V^i \\
+- \Gamma_{kj}^i(\gamma^1, \dots, \gamma^n) V^k V^j
+\end{pmatrix}
+\\
+\gamma^i(0) &= x^i \\
+V^i (0) &= X^i.
+\end{cases}
+
+<p>
+Existence and uniqueness is now guaranteed by the <a href="https://en.wikipedia.org/wiki/Picard%E2%80%93Lindel%C3%B6f_theorem">Picard–Lindelöf theorem</a> which states that since the right hand side in parentheses is a smooth function of \(\gamma^i, V^j\) and is in particular Lipschitz, a unique solution exists on a maximal interval \([0, T)\).
+</p>
+
+<p>
+One issue is that the solution so obtained is defined in the chart and it may in fact leave the chart whence we can no longer use the inverse chart map to transfer the solution to \(M\). However, we simply use a new chart and existence and uniqueness ensures there exists a unique extension into this chart. Now one uses an open set/continuity argument to complete the details of the proof.
+</p>
+
+</div>
+
+<div class="ex">
+<p>
+Fill in the details of the open set/continuity argument.
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="panel panel-default notes-panel">
+<div class="panel-heading">
+<h3><a href="#notes-section-orgb5070c6" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Length Minimisation</a>
+</h3>
+</div>
+<div id="notes-section-orgb5070c6" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="outline-text-2" id="text-4">
+<p>
 We say that a curve \(\gamma\) is <i>length minimising</i> if
 \[
 L(\gamma) = d(\gamma(0), \gamma(1)).
@@ -141,7 +267,7 @@ Let us give the proof of the first part here since it involves calculating varia
 </p>
 
 <p>
-The proof of the second part is more delicate and will be discussed below in <a href="#org7e9020a">Exponential Map</a>.
+The proof of the second part is more delicate and will be discussed below in <a href="#orgbe1004f">Exponential Map</a>.
 </p>
 
 <div class="proof">
@@ -281,10 +407,10 @@ depends smoothly on \(t\) and each \(\alpha_t\) is defined for \(s \in (-\epsilo
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org7e9020a" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Exponential Map</a>
+<h3><a href="#notes-section-orgbe1004f" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Exponential Map</a>
 </h3>
 </div>
-<div id="notes-section-org7e9020a" class="panel-collapse collapse">
+<div id="notes-section-orgbe1004f" class="panel-collapse collapse">
 <div class="panel-body">
 
 </div>
@@ -292,10 +418,10 @@ depends smoothly on \(t\) and each \(\alpha_t\) is defined for \(s \in (-\epsilo
 </div>
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org1f1af4e" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Hopf-Rinow</a>
+<h3><a href="#notes-section-org79e0eaa" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Hopf-Rinow</a>
 </h3>
 </div>
-<div id="notes-section-org1f1af4e" class="panel-collapse collapse">
+<div id="notes-section-org79e0eaa" class="panel-collapse collapse">
 <div class="panel-body">
 
 </div>
@@ -303,10 +429,10 @@ depends smoothly on \(t\) and each \(\alpha_t\) is defined for \(s \in (-\epsilo
 </div>
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orga05d0a2" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Cut Locus</a>
+<h3><a href="#notes-section-orgf00e87b" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Cut Locus</a>
 </h3>
 </div>
-<div id="notes-section-orga05d0a2" class="panel-collapse collapse">
+<div id="notes-section-orgf00e87b" class="panel-collapse collapse">
 <div class="panel-body">
 
 </div>
