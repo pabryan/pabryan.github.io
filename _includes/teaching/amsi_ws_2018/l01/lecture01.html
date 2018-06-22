@@ -3,10 +3,10 @@
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org7d7e7bf" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>References</a>
+<h3><a href="#notes-section-org451f42e" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>References</a>
 </h3>
 </div>
-<div id="notes-section-org7d7e7bf" class="panel-collapse collapse">
+<div id="notes-section-org451f42e" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
@@ -22,10 +22,10 @@
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org0384019" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Metric Structure</a>
+<h3><a href="#notes-section-org9eda078" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Metric Structure</a>
 </h3>
 </div>
-<div id="notes-section-org0384019" class="panel-collapse collapse">
+<div id="notes-section-org9eda078" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-2">
 <div class="defn">
@@ -86,10 +86,10 @@ The Riemannian manifold \((M, g))\) is <i>complete</i> if the metric space \((M,
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orgf8507a5" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Geodesics</a>
+<h3><a href="#notes-section-orge81fdf5" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Geodesics</a>
 </h3>
 </div>
-<div id="notes-section-orgf8507a5" class="panel-collapse collapse">
+<div id="notes-section-orge81fdf5" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-3">
 <p>
@@ -147,7 +147,7 @@ Here it could be that \(T\) is finite or that \(T = \infty\). The uniqueness her
 </p>
 
 <p>
-The proof is about ODE's on manifolds which are typically done in local coordinates. A coordinate free proof can be given by considering the <i>geodesic flow</i> on the tangent bundle. This is quite an important perspective that we will consider in <a href="#orgbe1004f">Exponential Map</a> to obtain smooth dependence on \(x\) and \(X\). I don't know how to produce a coordinate free proof without working on the tangent bundle since the geodesic ODE is a second order system and to turn it into a system of first order ODE's in order to apply local existence and uniqueness theory, one defines variables \(V = &gamma;') which is in the tangent bundle. Let me know if there's another way to do it coordinate free!
+The proof is about ODE's on manifolds which are typically done in local coordinates. A coordinate free proof can be given by considering the <i>geodesic flow</i> on the tangent bundle. This is quite an important perspective that we will consider in <a href="#org2dc33f4">Exponential Map</a> to obtain smooth dependence on \(x\) and \(X\). I don't know how to produce a coordinate free proof without working on the tangent bundle since the geodesic ODE is a second order system and to turn it into a system of first order ODE's in order to apply local existence and uniqueness theory, one defines variables \(V = &gamma;') which is in the tangent bundle. Let me know if there's another way to do it coordinate free!
 </p>
 
 <div class="proof">
@@ -237,10 +237,10 @@ Fill in the details of the open set/continuity argument.
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orgb5070c6" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Length Minimisation</a>
+<h3><a href="#notes-section-org35e8720" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Geodesics are Critical Points for the Length Functional</a>
 </h3>
 </div>
-<div id="notes-section-orgb5070c6" class="panel-collapse collapse">
+<div id="notes-section-org35e8720" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-4">
 <p>
@@ -263,18 +263,25 @@ Suppose \(\gamma\) is length minimising. Then \(\gamma\) is a geodesic. Converse
 </div>
 
 <p>
-Let us give the proof of the first part here since it involves calculating variations of curves which will be important later so this is a good opportunity to get accustomed to such variations.
+For now we just give a proof of the first part since it involves calculating variations of curves which will be important later so this is a good opportunity to get accustomed to such variations.
 </p>
 
 <p>
-The proof of the second part is more delicate and will be discussed below in <a href="#orgbe1004f">Exponential Map</a>.
+The proof of the second part is more delicate and will be discussed below in <a href="#org2dc33f4">Exponential Map</a>.
 </p>
+
+<p>
+The first part follows immediately from the following:
+</p>
+
+<div class="lem">
+<p>
+The Euler-Lagrange equation for the length function with fixed end points is precisely the geodesic equation.
+</p>
+
+</div>
 
 <div class="proof">
-<p>
-<i>First part only</i>.
-</p>
-
 <p>
 A <i>variation</i> of \(\gamma\) is a map
 \[
@@ -295,18 +302,15 @@ Define
 \[
 \gamma_s(t) = F(t, s).
 \]
-Then \(\gamma_0 = \gamma\) and \(\gamma_s(0) = \gamma_0(0)\), \(\gamma_s(1) = \gamma_0(1)\). Since each \(\gamma_s\) has the same endpoints as \(\gamma\) and \(\gamma\) minimises length between these points, the function
-\[
-s \mapsto L_s := L(\gamma_s)
-\]
-has a minimum at \(s = 0\) hence
-\[
-\partial_s|_{t=0} L_s = 0.
-\]
+Then \(\gamma_0 = \gamma\) and \(\gamma_s(0) = \gamma_0(0)\), \(\gamma_s(1) = \gamma_0(1)\).
 </p>
 
 <p>
-That is, <i>the first variation of \(L\) vanishes at \(s = 0\)</i>. Now we compute this variation. For notation, let's write
+The curve \(\gamma\) is a <i>critical point</i> for \(L\) among variations with fixed endpoints precisely when
+\[
+\partial_s|_{s=0} L(\gamma_t) = 0
+\]
+for all variations with \(\gamma_0 = \gamma\). That is, precisely when <i>the first variation of \(L\) vanishes at \(s = 0\)</i>. Now we compute this variation. For notation, let's write
 \[
 T(s, t) = F_{\ast} \partial_t = \partial_t F (s, t), \quad S(s, t) = F_{\ast} \partial_s = \partial_s F.
 \]
@@ -330,20 +334,33 @@ to get
 
 <p>
 Notice that by commuting derivatives we may evaluate at \(s=0\) because now we are differentiating with respect to \(t\) and not \(s\). Then we use metric compatability once more to move the derivatives off the variation vector
+</p>
+\begin{align*}
+\partial_s L_s|_{s=0} &= \frac{1}{L(\gamma)} \int \partial_t [g(S_0, T_0)] dt - g(S_0, \nabla_{T_0} T_0) dt \\
+&= g(S_0, T_0)|_{t=0}^1 - \frac{1}{L(\gamma)} \int g(S_0, \nabla_{T_0} T_0) dt.
+\end{align*}
+
+<p>
+But notice that since our variation fixes the endpoints,
 \[
-\partial_s L_s|_{s=0} = \frac{1}{L(\gamma)} \int g(\nabla_{T_0} T_0, S) dt.
+S_0(0) = \partial_s|_{s=0} F(0, s) = \partial_s|_{s=0} \gamma(0) = 0
 \]
+and similarly \(S_0(1) = 0\).
 </p>
 
 <p>
+Therefore,
+\[
+\partial_s L_s|_{s=0} = - \frac{1}{L(\gamma)} \int g(S_0, \nabla_{T_0} T_0) dt.
+\]
 In other words,
 \[
-dL_{\gamma} (S) = \frac{1}{L(\gamma)} \int g(\nabla_{T_0} T_0, S) dt.
+dL_{\gamma} (S_0) = -\frac{1}{L(\gamma)} \int g(\nabla_{T_0} T_0, S_0) dt.
 \]
 </p>
 
 <p>
-Since this is true for every vector field \(S\) along \(\gamma\) with \(S(0) = 0, S(1) = 0\), we find that
+Since \(dL_{\gamma} (S_0) = 0\) for every vector field \(S_0\) along \(\gamma\) with \(S(0) = 0, S(1) = 0\), we find that
 \[
 \nabla_{\gamma'} \gamma' = \nabla_{T_0} T_0 = 0
 \]
@@ -352,16 +369,21 @@ and hence \(\gamma\) is a geodesic.
 
 </div>
 
-<div class="rem">
 <p>
-Another way of saying this is that Euler-Lagrange equation for the length functional of curves with fixed end points \(x, y \in M\) is precisely the geodesic equation. <b>The critical points of the length functional are geodesics</b>.
+The first part of the length minimisation theorem - that if a curve \(\gamma\) minimises length then it is a geodesic - follows since then for any variation fixing the endpoints, each \(\gamma_s\) has the same endpoints as \(\gamma\) which minimises length between these points. Thus the function
+\[
+s \mapsto L_s := L(\gamma_s)
+\]
+has a local minimum at \(s = 0\) and the first derivative test implies
+\[
+\partial_s|_{t=0} L_s = 0.
+\]
+The lemma now applies to conclude that \(\gamma\) is a geodesic.
 </p>
 
-</div>
-
-<p>
-A few of the steps above weren't fully justified so here are some exercises to justify them.
-</p>
+<ul class="org-ul">
+<li>A few of the steps above weren't fully justified so here are some exercises to justify them.</li>
+</ul>
 
 <p>
 First, given a \(\gamma\), variations may be constructed in several ways.
@@ -407,10 +429,10 @@ depends smoothly on \(t\) and each \(\alpha_t\) is defined for \(s \in (-\epsilo
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orgbe1004f" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Exponential Map</a>
+<h3><a href="#notes-section-org2dc33f4" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Exponential Map</a>
 </h3>
 </div>
-<div id="notes-section-orgbe1004f" class="panel-collapse collapse">
+<div id="notes-section-org2dc33f4" class="panel-collapse collapse">
 <div class="panel-body">
 
 </div>
@@ -418,10 +440,10 @@ depends smoothly on \(t\) and each \(\alpha_t\) is defined for \(s \in (-\epsilo
 </div>
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org79e0eaa" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Hopf-Rinow</a>
+<h3><a href="#notes-section-orgeed152a" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Hopf-Rinow</a>
 </h3>
 </div>
-<div id="notes-section-org79e0eaa" class="panel-collapse collapse">
+<div id="notes-section-orgeed152a" class="panel-collapse collapse">
 <div class="panel-body">
 
 </div>
@@ -429,10 +451,10 @@ depends smoothly on \(t\) and each \(\alpha_t\) is defined for \(s \in (-\epsilo
 </div>
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orgf00e87b" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Cut Locus</a>
+<h3><a href="#notes-section-orga2437d1" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Cut Locus</a>
 </h3>
 </div>
-<div id="notes-section-orgf00e87b" class="panel-collapse collapse">
+<div id="notes-section-orga2437d1" class="panel-collapse collapse">
 <div class="panel-body">
 
 </div>
