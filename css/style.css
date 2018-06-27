@@ -254,3 +254,45 @@ div.defn {
     padding: 1%;
     margin: 1%;
 }
+
+.eg:before {
+    content: 'Example';
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 1%;
+    border: solid;
+    border-width: 0 0 1px 0;
+    margin-bottom: 3%;
+    border-image: linear-gradient(to right, transparent, black, transparent) 100;
+}
+
+div.eg {
+    border-style: solid;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
+
+.rem:before {
+    content: 'Remark';
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 1%;
+    border: solid;
+    border-width: 0 0 1px 0;
+    margin-bottom: 3%;
+    border-image: linear-gradient(to right, transparent, black, transparent) 100;
+}
+
+div.rem {
+    border-style: solid;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
