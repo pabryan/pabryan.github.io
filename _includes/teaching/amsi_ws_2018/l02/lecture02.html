@@ -1,20 +1,383 @@
-<div id="content">
-<h1 class="title">Linearisation of Geodesic Equation and Jacobi Fields</h1>
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<a href="#notes-section-orga272515" data-toggle="collapse" class="notes-toggle"><h3>Variations of Geodesics and Jacobi Fields</h3>
-</a>
+<h3><a href="#notes-section-org948c733" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>References</a>
+</h3>
 </div>
-<div class="panel-body" class="collapse" id="notes-section-orga272515">
+<div id="notes-section-org948c733" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li><a href="http://myweb.rz.uni-augsburg.de/~eschenbu/comparison.pdf">Comparison Geometry</a> by Eschenburg, Section 2.</li>
+</ul>
+</div>
+
 </div>
 </div>
+</div>
+
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<a href="#notes-section-org61c33fc" data-toggle="collapse" class="notes-toggle"><h3>First Order System For Jacobi Fields and Riccati Equation</h3>
-</a>
+<h3><a href="#notes-section-org3bd398a" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Linearisation</a>
+</h3>
 </div>
-<div class="panel-body" class="collapse" id="notes-section-org61c33fc">
+<div id="notes-section-org3bd398a" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="outline-text-2" id="text-2">
+<p>
+For a nonlinear, equation \(F(u) = 0\) where \(u \in E = C^{\infty}(\mathbb{R}^n \to \mathbb{R})\) and \(F : \mathbb{R} \to \mathbb{R}\), we think of \(u \in E \mapsto F(u) \in E\) as map \(E \to E\). The linearisation of \(F\) around \(u_0\) is simply \(dF_{u_0}\). It is a linear map acting on tangent vectors to \(E\) based at \(u_0\). Since \(E\) is a (infinite dimensional) vector space, the tangent space \(T_{u_0} E\) may be identified with \(E\) itself via the linear isomorphism
+\[
+v \in E \mapsto \partial_s|_{s=0} (u_0 + sv).
+\]
+More generally, we replace the curve \(s \mapsto u_0 + sv\) with any curve \(r(s) \in E\) representing \(v\) (so that for each \(s\), \(r(s) \in E\) with \(r(0) = u_0\) and \(\partial_s|_{s=0} r(s) = v\)) and the result is independent of the chosen curve. Being able to use arbitrary curves rather than linear ones will be important when working with geodesics since the space of curves is not a linear space.
+</p>
+
+<p>
+Then we may compute
+\[
+dF_{u_0} (v) = \partial_s|_{s=0} F(u_0 + s v) = \partial_s|_{s=0} F(r(s)).
+\]
+</p>
+
+<div class="eg">
+<p>
+For example, if \(F(u) = u^2\), then for \(u_0(x) = \sin(x) \in E = C^{\infty}(\mathbb{R} \to \mathbb{R})\) and \(v(x) = e^x \in E = T_{u_0} E\) we have
+\[
+dF_{u_0} (v) = \partial_s|_{s=0} (u_0 + s v)^2 = 2u_0 v.
+\]
+That is, \(dF_{u_0} (v)\) is the function
+\[
+x \mapsto 2\sin(x) e^x.
+\]
+</p>
+
+<p>
+Notice here that we really interpret \(F : E \to E\) so that \(dF_{\sin(x)} : v \in T_{\sin(x)} E = E \mapsto 2\sin(x) v \in T_{\sin^2(x)} E = E\).
+</p>
+
+</div>
+
+<div class="eg">
+<p>
+An example closer to the geodesic equation is a non-linear differential operator. Let us define the Newtonian momentum,
+\[
+P(u) = \frac{1}{2} (u')^2.
+\]
+for \(u \in C^{\infty}(\mathbb{R} \to \mathbb{R})\). Then
+\[
+dP_{u_0} (v) = u_0' v'.
+\]
+So with \(u_0(x) = \sin(x)\) and \(v(x) = e^x\) as in the previous example,
+\[
+dP_{\sin(x)} (e^x) = \cos(x) e^x.
+\]
+</p>
+
+</div>
+
+<p>
+Notice that the function \(x \mapsto dP_{u_0(x)} (v(x))\) need not be a linear function of \(x\). The point is that \(dP_{u_0} (v)\) is linear in the tangent vector \(v\).
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="panel panel-default notes-panel">
+<div class="panel-heading">
+<h3><a href="#notes-section-org7ff9f72" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Variations of Geodesics and Jacobi Fields</a>
+</h3>
+</div>
+<div id="notes-section-org7ff9f72" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="outline-text-2" id="text-3">
+<p>
+Except in special cases (e.g. Euclidean space, the sphere), the non-linearity of the geodesic equation precludes us from solving it. Nevertheless, as is typical with non-linear ODE's, in order to obtain some understanding of the solutions, we linearise the equation.
+</p>
+
+<p>
+In the context of geodesics, regarding the linearisation above, there are two points to make here:
+</p>
+
+<ol class="org-ol">
+<li>The space of curves \(C^{\infty}([0, 1] \to M)\) is not a linear space so expressions like \(\gamma_s = \gamma_0 + s \mu\) do note make sense,</li>
+<li>The tangent space \(T_{u_0} E\) is infinite dimensional and that can cause some complications. We will discover below, for variations of geodesics, there is a very important finite dimensional subspace, the space of <i>Jacobi fields</i>.</li>
+</ol>
+
+<p>
+To overcome 1., we note that as remarked above, any curve \(r(s)\) can take the place of \(u_0 + s v\) so that our variations may be taken just as in deriving the geodesic equation, namely we consider maps \(\varphi(t, s)\) with \(\gamma_0(t) := \varphi(t, 0)\) satisfying \(\gamma_0 = \gamma\).
+</p>
+
+<p>
+Regarding point 2., instead of considering all possible variations of \(\gamma\), we consider only <i>geodesic variations</i>:
+</p>
+
+<div class="defn">
+<p>
+Let \(\gamma: [0, 1] \to M\) be a geodesic. A <i>geodesic variation</i> of \(\gamma\) is a map
+\[
+\varphi : [0, 1] \times (-\epsilon, \epsilon) \to M
+\]
+such that for each \(s \in (-\epsilon, \epsilon)\), the curve
+\[
+t \mapsto \gamma_s(t) := \varphi(t, s)
+\]
+is a geodesic.
+</p>
+
+</div>
+
+<ul class="org-ul">
+<li>Note that we make no restriction that our variations fix the end points.</li>
+</ul>
+
+<p>
+Now, rather than dealing with arbitrary variations of geodesics, we will work only with geodesic variations. Here's an unmotivated definition:
+</p>
+
+<div class="defn">
+<p>
+Let \(\gamma\) be a geodesic. A <i>Jacobi field</i> along \(\gamma\) is a vector field \(J\) along \(\gamma\) such that
+\[
+\nabla^2 J (\gamma', \gamma') + \operatorname{Rm}(J, \gamma') \gamma' = 0.
+\]
+</p>
+
+</div>
+
+<p>
+And here's the motivation.
+</p>
+
+<div class="lem">
+<p>
+Geodesic variations correspond to Jacobi fields.
+</p>
+
+<p>
+More precisely, if \(\varphi\) is a geodesic variation of a geodesic \(\gamma\), then the variation vector field
+\[
+J(t) = \varphi_{\ast} \partial_s (t, 0)
+\]
+is a Jacobi field along \(\gamma\).
+</p>
+
+<p>
+Conversely, if \(J\) is a Jacobi field along \(\gamma\), then there exists a geodesic variation, \(\varphi\) of \(\gamma\) with variation vector field equal to \(J\).
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+The proof is given in <a href="http://myweb.rz.uni-augsburg.de/~eschenbu/comparison.pdf">Comparison Geometry</a> by Eschenburg, Section 2, Remark 2.2.
+</p>
+
+</div>
+
+<p>
+A few remarks on the proof are in order.
+</p>
+
+<div class="rem">
+<p>
+<b>Remarks on the implication variation fields of geodesic variations are Jacobi fields.</b>
+</p>
+
+<p>
+Following Eschenburg, let us write \(\gamma(s, t)\) for the geodesic variation instead of \(\varphi\) as in the statement of the lemma above. Let \(J(t, s) = \gamma_{\ast} \partial_s\), be the variation field and \(J_s(t) = J(t, s)\). Let \(V = \gamma_{\ast} \partial_t\) and \(V_s(t) = V(t, s)\). Notice that each \(\gamma_s = \gamma(\cdot, s)\) is a geodesic with velocity field \(V_s\), and \(J_s\) is a vector field along the geodesic \(\gamma_s\). In fact, for each fixed \(s\), \(J_s\) is a Jacobi field along \(\gamma_s\) and not just for \(s = 0\). That is, the proof works for arbitrary \(s\) and not just \(s = 0\).
+</p>
+
+<p>
+Then
+\[
+\nabla^2 J(V, V) = \nabla_{V} (\nabla_{V} J) - \nabla_{\nabla_{V} V} J = \nabla_{V} (\nabla_{V} J)
+\]
+since each \(\gamma_s\) is a geodesic. Relating our notation to Eschenburg's, we have
+\[
+J'' = \nabla_{V} (\nabla_{V} J) = \nabla^2 J(V, V).
+\]
+Notice in particular, that the last equality is only true geodesics.
+</p>
+
+<p>
+In (2.1) there are two derivatives commuted. The first commutator of derivatives comes from:
+\[
+\nabla_{V} J = \nabla_J V + [V, J].
+\]
+But
+\[
+[V, J] = [\gamma_{\ast} \partial_t, \gamma_{\ast} \partial_s] = \gamma_{\ast} [\partial_t, \partial_s] = 0
+\]
+so that
+\[
+\nabla_{V} J = \nabla_J V.
+\]
+Compared with Eschenburg's notation then,
+\[
+\frac{D}{dt} J = \nabla_{V} J = \nabla_J V = \frac{D}{ds} \frac{\partial \gamma}{\partial t}.
+\]
+</p>
+
+<p>
+Therefore
+\[
+\nabla_V (\nabla_V J) = \nabla_V (\nabla_J V).
+\]
+</p>
+
+<p>
+Using \(\nabla_V V = 0\) and \([V, J] = 0\), the second commutator is
+\[
+\nabla_V (\nabla_J V) = \nabla_V (\nabla_J V) - \nabla_J (\nabla_V V) - \nabla_{[V, J]} V = \operatorname{Rm} (V, J) V = - \operatorname{Rm} (J, V) V.
+\]
+Therefore,
+\[
+\nabla^2 J(V, V) = \nabla_V (\nabla_V J) = \nabla_V (\nabla_J V) = - \operatorname{Rm} (J, V) V.
+\]
+That is, we obtain equation (2.1):
+\[
+J'' + R(J, V) V = \nabla^2 J(V, V) + \operatorname{Rm}(J, V) V = 0.
+\]
+</p>
+
+</div>
+
+<div class="rem">
+<p>
+<b>Remarks on the construction of a geodesic variation from a Jacobi field.</b>
+</p>
+
+<p>
+Now we just have a vector field \(J(t)\) along a geodesic \(\gamma\). Then somehow, we must construct a geodesic variation from \(J\). A naive attempt to try would be something like
+\[
+\varphi(t, s) = \exp_{\gamma(t)} s J(t).
+\]
+This variation satisfies,
+\[
+\varphi(t, 0) = \exp_{\gamma(t)} 0 = \gamma(t)
+\]
+and
+\[
+(\partial_s|_{s=0} \varphi) (t) = \gamma_{J(t)}'(s=0) = J(t)
+\]
+where recall that for any tangent vector \(X\) at \(x \in M\), \(\gamma_X (s) = \exp_x (s X)\) is the unique geodesic through \(x\) with \(\gamma_X'(0) = X\).
+</p>
+
+<p>
+In other words, we have indeed managed to construct a variation of \(\gamma\) with variation vector field \(J\). But how do we know it is a <i>geodesic variation</i>? This is rather tricky and would require that for each <i>fixed</i> \(s\), them map
+\[
+\gamma_s : t \mapsto \varphi(t, s) = \exp_{\gamma(t)} s J(t)
+\]
+is a geodesic. You might like to think about how you would prove \(\nabla_{\gamma_s'} \gamma_s' = 0\).
+</p>
+
+<p>
+Instead of this direct approach, something else is called for in order to obtain a geodesic variation. Then we will need to prove that the variation field is \(J\) which turns out to be easier than proving \(\gamma_s\) is a geodesic. The interesting thing about the construction is that it is obtained only from \(J(0)\) and \(J'(0)\)! The reason is that \(J\) satisfies the second order <i>linear</i> initial value problem:
+</p>
+\begin{cases}
+\tilde{J}'' + R(\tilde{J}, V) V &= 0 \\
+\tilde{J}(0) &= J(0) \\
+\tilde{J}'(0) &= J'(0).
+\end{cases}
+
+<p>
+Thus if we can construct a geodesic variation \(\varphi\) with \(\varphi_0 = \gamma\) such that
+\[
+\partial_s|_{s=0}(t=0) \varphi = J(0), \quad \partial_t|_{t=0} \partial_s|_{s=0} \varphi = J'(0),
+\]
+then the variation field \(\tilde{J}(t) = (\partial_s|_{s=0} \varphi) (t)\) will satisfy the same initial value problem and hence by uniqueness of solutions, must equal \(J\). In other words, we exploit the fact that Jacobi fields are completely determined by their initial value \(J(0)\) and initial first derivative \(J'(0) = \nabla_{\gamma'(0)} J|_{t=0}\).
+</p>
+
+<p>
+Now, in order that \(\tilde{J}(0) = J(0)\), we need to define \(\varphi(0, s)\) in such a way that \(\partial_s|_{s=0} \varphi(0, s) = J(0)\). That is we need to construct a curve \(\alpha\) (with parameter \(s\)) passing through \(\gamma(0)\) and with \(\partial_s \alpha(0) = J(0)\). Eschenburg defines
+\[
+\alpha(s) = \exp_{\gamma(0)} s J(0).
+\]
+That is \(\alpha\) is the unique geodesic passing through \(\gamma(0)\) and with velocity vector \(J(0)\). So we have the first condition \(\tilde{J}(0) = J(0)\).
+</p>
+
+<p>
+Now we need the \(t\) variable and the second condition that \(\tilde{J}'(0) = J(0)\). Notice that if \(X(s)\) is any vector field along \(\alpha\), then for each \(s\),
+\[
+\gamma_s(t) = \exp_{\alpha(s)} t X(s)
+\]
+is a geodesic. In terms of the geodesic flow \(\Phi_t\) on \(TM\),
+\[
+\gamma_s (t) = \pi \circ \Phi_t(X(s)))
+\]
+is smooth as a function of \(s\) and \(t\). Thus we have easily obtained a geodesic variation! Notice in particular that
+\[
+\partial_t \gamma_s|_{t=0} = X(s).
+\]
+</p>
+
+<p>
+What we need to do now is define a vector field \(X(s)\) along \(\alpha\) so that
+</p>
+<ol class="org-ol">
+<li>\(\gamma_0 = \gamma\),</li>
+<li>\(\tilde{J}'(0) = J'(0)\).</li>
+</ol>
+
+<p>
+For 1., we simply require that \(X(s=0) = \gamma'(t=0)\) for then
+\[
+\gamma_0(t) = \exp_{\alpha(s=0)} t X(s=0) = \exp_{\gamma(t=0)} t \gamma'(t=0) = \exp_{\gamma(0)} t\gamma'(0) = \gamma(t).
+\]
+</p>
+
+<p>
+For 2., we commute derivatives. Let \(V = \partial_t \gamma_s\) so that
+\[
+V(0, s) = \partial_t|_{t=0} \exp_{\alpha(s)} t X(s) = X(s).
+\]
+Then,
+\[
+\tilde{J}'(0) = \nabla_V \tilde{J}|_{t,s=0} = \nabla_{\tilde{J}(s=0)} V(t=0)|_{s=0} = \nabla_{\tilde{J}(s=0)} X|_{s=0} = X'(0).
+\]
+That is we require,
+\[
+X'(s=0) = J'(t=0).
+\]
+</p>
+
+<p>
+Finally then, we what need to do is show that there exists a vector field \(X\) along \(\alpha\) such that
+\[
+X(s=0) = \gamma'(t=0), \quad X'(s=0) = J'(t=0).
+\]
+One way to do that is to let \(X\) be the unique solution of the second order linear ODE,
+</p>
+\begin{cases}
+X'' &= 0 \\
+X(0) &= \gamma'(t=0) \\
+X'(0) &= J'(t=0).
+\end{cases}
+<p>
+Note here again that since \(\alpha\) is a geodesic,
+\[
+X'' = \nabla^2 X (\alpha', \alpha')
+\]
+so this really is a tensorial (and hence invariantly defined) ODE.
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="panel panel-default notes-panel">
+<div class="panel-heading">
+<h3><a href="#notes-section-org3c62737" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>First Order System For Jacobi Fields and Riccati Equation</a>
+</h3>
+</div>
+<div id="notes-section-org3c62737" class="panel-collapse collapse">
+<div class="panel-body">
+
 </div>
 </div>
 </div>
