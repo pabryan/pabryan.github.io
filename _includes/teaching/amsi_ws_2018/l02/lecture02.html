@@ -1,10 +1,10 @@
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org948c733" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>References</a>
+<h3><a href="#notes-section-org7c643b3" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>References</a>
 </h3>
 </div>
-<div id="notes-section-org948c733" class="panel-collapse collapse">
+<div id="notes-section-org7c643b3" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
@@ -18,10 +18,10 @@
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org3bd398a" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Linearisation</a>
+<h3><a href="#notes-section-org85d3591" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Linearisation</a>
 </h3>
 </div>
-<div id="notes-section-org3bd398a" class="panel-collapse collapse">
+<div id="notes-section-org85d3591" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-2">
 <p>
@@ -86,10 +86,10 @@ Notice that the function \(x \mapsto dP_{u_0(x)} (v(x))\) need not be a linear f
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org7ff9f72" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Variations of Geodesics and Jacobi Fields</a>
+<h3><a href="#notes-section-orgd01268c" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Variations of Geodesics and Jacobi Fields</a>
 </h3>
 </div>
-<div id="notes-section-org7ff9f72" class="panel-collapse collapse">
+<div id="notes-section-orgd01268c" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-3">
 <p>
@@ -372,11 +372,280 @@ so this really is a tensorial (and hence invariantly defined) ODE.
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org3c62737" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>First Order System For Jacobi Fields and Riccati Equation</a>
+<h3><a href="#notes-section-org70ac23f" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>The space of Jacobi Fields</a>
 </h3>
 </div>
-<div id="notes-section-org3c62737" class="panel-collapse collapse">
+<div id="notes-section-org70ac23f" class="panel-collapse collapse">
 <div class="panel-body">
+<div class="outline-text-2" id="text-4">
+<p>
+In the course of the proof in the previous section, we noted that Jacobi fields along a geodesic \(\gamma\) are completely determined by the following linear system of ODE's:
+</p>
+\begin{cases}
+J'' + R(J, \gamma') \gamma' &= 0 \\
+J(0) &= X \\
+J'(0) &= Y.
+\end{cases}
+<p>
+where \(X, Y \in T_{\gamma(0)} M\) are arbitrary tangent vectors.
+</p>
+
+<div class="defn">
+<p>
+Let us denote the set of Jacobi fields along \(\gamma\) by \(\mathcal{J}\).
+</p>
+
+</div>
+
+<div class="ex">
+<p>
+Show that \(\mathcal{J}\) is a vector space of dimension \(n^2\).
+</p>
+
+</div>
+
+<p>
+Notice that if \(X = \gamma'(0)\) and \(Y = 0\), then \(J = \gamma'\) is a solution! That is, the velocity vector of a geodesic satisfies the Jacobi equation with tangential initial condition and zero initial acceleration. The Jacobi equation in this case follows from
+\[
+J'' = \nabla_{\gamma'} (\nabla_{\gamma'} \gamma') = 0, \quad R(\gamma', \gamma') \gamma' = 0.
+\]
+</p>
+
+<div class="ex">
+<p>
+Show that
+\[
+J(t) = t \gamma'(t)
+\]
+satisfies the Jacobi equation with \(J(0) = 0\) and \(J'(0) = \gamma'(0)\).
+</p>
+
+<p>
+Conclude that by linearity that
+\[
+J(t) = (a + b t) \gamma'(t)
+\]
+is the unique Jacobi field satisfying
+\[
+J(0) = a \gamma'(0), \quad J'(0) = b \gamma'(0).
+\]
+</p>
+
+</div>
+
+<div class="defn">
+<p>
+The space of <i>orthogonal</i> Jacobi fields, \(\mathcal{J}^{\perp}\) is defined to be
+\[
+\mathcal{J}^{\perp} = \{J : g(J(t), \gamma'(t)) \equiv 0\}.
+\]
+</p>
+
+</div>
+
+<div class="lem">
+<p>
+The space \(\mathcal{J}^{\perp}\) is an \(n^2 - 2\) dimensional linear subspace of the \(n^2\) dimensional space of Jacobi fields along \(\gamma\). That is, \(\mathcal{J}^{\perp}\) is a co-dimension \(2\) subspace of \(\mathcal{J}\).
+</p>
+
+</div>
+
+
+<div class="proof">
+<p>
+Let \(J_1, J_2 \in \mathcal{J}\) be Jacobi fields. Then we claim that
+\[
+g(\nabla_{\gamma'} J_1, J_2) = g(J_1, \nabla_{\gamma'} J_2) + \text{const}.
+\]
+</p>
+
+<p>
+This follows by differentiating:
+</p>
+\begin{split}
+\partial_{\gamma'} [g(\nabla_{\gamma'} J_1, J_2) - g(J_1, \nabla_{\gamma'} J_2)] &= g(\nabla^2 J_1 (\gamma', \gamma'), J_2) - g(J_1, \nabla^2 J_2 (\gamma', \gamma')) \\
+&= \operatorname{Rm(J_1, \gamma', \gamma', J_2)} - \operatorname{Rm(J_2, \gamma', \gamma', J_1)} \\
+&= 0.
+\end{split}
+<p>
+Here in the first line we used metric compatibility and in the second the Jacobi equation. The last line follows from the curvature tensor symmetries.
+</p>
+
+<p>
+Next, let \(J\) be any Jacobi field and recall that \(\gamma'\) is also a Jacobi field. Then the claim implies that
+\[
+g(\nabla_{\gamma'} J, \gamma') = g(J, \nabla_{\gamma'} \gamma') + \text{const} = \text{const}.
+\]
+Therefore,
+\[
+\partial_{\gamma'} g(J, \gamma') = g(\nabla_{\gamma'} J, \gamma') + g(J, \nabla_{\gamma'} \gamma') = \text{const}
+\]
+and hence
+\[
+g(J, \gamma') = at + b
+\]
+for some constants \(a, b \in \mathbb{R}\).
+</p>
+
+<p>
+Finally then, the linear map
+\[
+J \in \mathcal{J} \mapsto (\partial_t g(J, \gamma'), g(J, \gamma')) = (a, b) \in \mathbb{R}^2
+\]
+is surjective (because \((a + b t) \gamma'\) is a Jacobi field) with kernel precisely \(\mathcal{J}^{\perp}\). Therefore by the rank-nullity theorem,
+\[
+\operatorname{dim} \mathcal{J}^{\perp} = \operatorname{dim} \mathcal{J} - 2 = n^2 - 2.
+\]
+</p>
+
+</div>
+
+<p>
+The following exercise gives some structure to Jacobi fields. It shows that the radial component is linear and that all the interesting behaviour is contained in \(\mathcal{J}^{\perp}\). This simply follows from \(\mathcal{R}_V (V) = 0\) so that radial Jacobi fields satisfy \(J'' = 0\).
+</p>
+
+
+<div class="ex">
+<p>
+Let \(X, Y \in T_{\gamma(0)} M\) and write uniquely
+\[
+X = a \gamma'(0) + X^{\perp}, \quad Y = b \gamma'(0) + Y^{\perp}
+\]
+where \(a = g(X, \gamma'(0))\) and \(X^{\perp}\) is the component of \(X\), \(g\)-orthogonal to \(\gamma'(0)\). Likewise for \(Y\).
+</p>
+
+<p>
+Show that the Jacobi field \(J\) determined by \(J(0) = X\), \(J'(0) = Y\) is
+\[
+J(t) = (a + b t) \gamma'(0) + J^{\perp}(t)
+\]
+where \(J^{\perp}\) is the Jacobi field determined by \(J^{\perp}(0) = X^{\perp}\), \((J^{\perp})'(0) = X^{\perp}\).
+</p>
+
+<p>
+Show moreover that \(J^{\perp} \in \mathcal{J}^{\perp}\). <i>Hint</i>: Evaluate a certain equation from the proof of the previous lemma at \(t = 0\).
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="panel panel-default notes-panel">
+<div class="panel-heading">
+<h3><a href="#notes-section-org21b318e" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>First Order System For Jacobi Fields and Riccati Equation</a>
+</h3>
+</div>
+<div id="notes-section-org21b318e" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="outline-text-2" id="text-5">
+<p>
+Now we split the Jacobi equation into a first order system. The interesting thing about the way we do it is that we <i>do not</i> do the obvious thing, introducing a new variable for the derivative of \(J\), say \(K = J'\) which satisfies \(K' = - \operatorname{R}(J, V) V\). Such a formulation is useful for proving existence and uniqueness of Jacobi fields but does not furnish us with a useful comparison theory.
+</p>
+
+<p>
+Rather, let us set
+\[
+A = \nabla V.
+\]
+where \(V = \gamma'\) as before. That is, \(A : \Gamma(\gamma, TM) \to \Gamma(\gamma, TM)\) is a \(C^{\infty}\) linear (tensorial) map taking vector fields \(X\) along \(\gamma\) to vector fields along \(\gamma\) defined as
+\[
+A(X) = \nabla V (X) = \nabla_X V.
+\]
+</p>
+
+<p>
+Given a Jacobi field, \(J\) along \(\gamma\) we have a geodesics variations \(\varphi : [0, 1] \times (-\epsilon, \epsilon) \to M\) such that \(\varphi_{\ast} \partial_s|_{s=0} = J\) and \(\varphi(t, 0) = \gamma(t)\) so that \(\varphi_{\ast} \partial_t |_{s=0} = \gamma'\). In particular, as already used
+\[
+[J, \gamma'] = 0.
+\]
+Therefore,
+\[
+A(J) = \nabla_J V = \nabla_V J = J'.
+\]
+This is the first of our equations. It is a first order linear equation in \(J\).
+</p>
+
+<p>
+For the second equation, we recall the derivative \(\nabla A\) obtained by requiring \(\nabla\) to commute with traces and satisfy the Leibniz rule with respect to tensor products is
+\[
+(\nabla_X A) (Y) = \nabla_X (A(Y)) - A(\nabla_X Y) = \nabla_X \nabla_Y V - \nabla_{\nabla_X Y} V.
+\]
+for vector fields \(X, Y\) along \(\gamma\). Or in other words, the last term on the right is a correction term accounting for the variation in \(Y\).
+</p>
+
+<p>
+So we compute the variation of \(A\) along \(\gamma\) (i.e. \(\nabla_V A\)) applied to a Jacobi field \(J\), and commute derivatives in order to obtain an equation for \(A\):
+</p>
+\begin{split}
+(\nabla_V A) (J) &= \nabla_V \nabla_J V - \nabla_{\nabla_V J} V \\
+&= \operatorname{Rm}(V, J) V + \nabla_J \nabla_V V + \nabla_{[V, J]} V - \nabla_{\nabla_J V + [V, J]} V \\
+&= -\operatorname{Rm}(J, V) V - \nabla V(\nabla V (J)).
+\end{split}
+<p>
+In the last line we recall the notation \(\nabla V(J) = \nabla_J V\), and use that each \(\gamma_s = \varphi(\cdot, s)\) is a geodesic so that \(\nabla_V V \equiv 0\).
+</p>
+
+<p>
+Notice that if we just took an arbitrary vector field \(X\) (i.e. \(X = \varphi_{\ast} \partial_s\) where \(\varphi\) is not necessarily arising from a geodesic variation), then although \(\nabla_V V = 0\) at \(s = 0\), it need not be true that \(\nabla_V V = 0\) for other \(s\). Then since \(X\) is the variation in the \(s\) direction, \(\nabla_X \nabla_V V\) may not be zero.
+</p>
+
+<p>
+Now, since \(A = \nabla V\), rearranging gives,
+\[
+\nabla_V A (J) + A^2 (J) + \operatorname{Rm}(J, V) V = 0.
+\]
+Writing \(\operatorname{R}_V (J) = \operatorname{Rm} (J, V) V\) and noting that the equality is true for all \(J\) we obtain our equation for \(A\):
+\[
+\nabla_V A + A^2 + \operatorname{R}_V = 0.
+\]
+Such an equation is an example of a non-homogeneous <a href="https://en.wikipedia.org/wiki/Riccati_equation">Riccati equation</a>.
+</p>
+
+<p>
+That is, the Jacobi equation is equivalent to
+</p>
+\begin{cases}
+\nabla_V J &= A (J) \\
+\nabla_V A + A^2 + \operatorname{R}_V &= 0.
+\end{cases}
+
+<p>
+The initial conditions specifying \(J(0)\) and \(J'(0)\) are now replaced by initial conditions specifying \(J(0)\) and \(A(0)\).
+</p>
+
+<div class="rem">
+<p>
+Note that while the equation for \(J\) is linear, the equation for \(A\) is nonlinear. This may seem like a step backward, but this formulation allows us to develop comparison theorems for \(A\) (and then in turn \(J\)) based on comparisons of the curvature \(\operatorname{R}_V\) along the geodesic \(\gamma\). What's more, the equation for \(A\) is completely decoupled from that of \(J\) so that we may solve for \(A\) independently of any Jacobi field \(J\). There is much geometric information contained in \(A\) and the equation is of the same form for all geodesics and all manifolds with the only difference occurring in the \(\operatorname{R}_V\). In other words, we may think of the geometry along \(\gamma\), expressed through \(\operatorname{R}_V\), as a forcing term in
+\[
+A' + A^2 = - \operatorname{R}_V.
+\]
+That is, all the varying behaviour for different manifolds and geodesics is contained only in the forcing term \(\operatorname{R}_V\)!
+</p>
+
+<p>
+Compare with the obvious idea mentioned at the start of this section which would give the coupled system \(J' = K\), \(K' = - \operatorname{R}_V (J)\).
+</p>
+
+</div>
+
+<div class="rem">
+<p>
+Note that
+\[
+\operatorname{R}_V (V) = \operatorname{Rm}(V, V) V = 0.
+\]
+Then \(A\) satisfies \(A' + A^2 = 0\) in the \(V\) direction. Notice that this equation is the same for all geodesics in all manifolds! As already noted: <i>there is no geometry in the radial direction</i>.
+</p>
+
+<p>
+In the previous section, we observed that the only interesting behaviour occurs along \(\mathcal{J}^{\perp}\). For this reason, sometimes only the restriction of \(A\) to \(\mathcal{J}^{\perp}\) is considered.
+</p>
+
+</div>
+</div>
 
 </div>
 </div>
