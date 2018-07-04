@@ -296,3 +296,24 @@ div.rem {
     padding: 1%;
     margin: 1%;
 }
+
+.cor:before {
+    content: 'Corollary';
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 1%;
+    border: solid;
+    border-width: 0 0 1px 0;
+    margin-bottom: 3%;
+    border-image: linear-gradient(to right, transparent, black, transparent) 100;
+}
+
+div.cor {
+    border-style: solid;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 1%;
+    margin: 1%;
+}
