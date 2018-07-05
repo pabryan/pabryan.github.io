@@ -1,40 +1,262 @@
-<div id="content">
-<h1 class="title">Applications of Comparison Theory</h1>
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<a href="#notes-section-org2d9af5f" data-toggle="collapse" class="notes-toggle"><h3>Myers Positive Curvature Diameter Theorem</h3>
-</a>
+<h3><a href="#notes-section-orgc1a6ad0" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Jacobi Fields and the Exponential Map</a>
+</h3>
 </div>
-<div class="panel-body" class="collapse" id="notes-section-org2d9af5f">
-</div>
-</div>
-<div class="panel panel-default notes-panel">
-<div class="panel-heading">
-<a href="#notes-section-org998a10e" data-toggle="collapse" class="notes-toggle"><h3>Finite Fundamental Group in Positive Curvature</h3>
-</a>
-</div>
-<div class="panel-body" class="collapse" id="notes-section-org998a10e">
-</div>
-</div>
-<div class="panel panel-default notes-panel">
-<div class="panel-heading">
-<a href="#notes-section-org1305241" data-toggle="collapse" class="notes-toggle"><h3>Bishop-Gromov Volume Comparison Theorem</h3>
-</a>
-</div>
-<div class="panel-body" class="collapse" id="notes-section-org1305241">
-</div>
-</div>
-<div class="panel panel-default notes-panel">
-<div class="panel-heading">
-<a href="#notes-section-org4a6e7fc" data-toggle="collapse" class="notes-toggle"><h3>Some remarks on Milnor conjecture and open manifolds</h3>
-</a>
-</div>
-<div class="panel-body" class="collapse" id="notes-section-org4a6e7fc"><div class="outline-text-2" id="text-4">
+<div id="notes-section-orgc1a6ad0" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="outline-text-2" id="text-1">
 <p>
-See <a href="https://arxiv.org/pdf/math/0606774.pdf">https://arxiv.org/pdf/math/0606774.pdf</a>
+Here we see how Jacobi fields arise as variations of the exponential map. This should be of no surprise since Jacobi fields are variations of geodesics and the exponential map is defined in terms of geodesics.
 </p>
+
+<p>
+Throughout we will assume that \((M, g)\) is complete so that \((M, d_g)\) is a complete metric space, or equivalently by the Hopf-Rinow theorem, \((M, g)\) is <i>geodesically complete</i> so that \(\exp_x\) is smoothly defined on all of \(T_x M\). In this case, for any \(x, y \in M\) there exists a shortest geodesic joining \(x\) to \(y\). That is, there exists a geodesic \(\gamma : [0, L] \to M\) such that
+\[
+\gamma(0) = x, \quad \gamma(L) = y, \quad d(x, y) = L(\gamma).
+\]
+No assumption about uniqueness of \(\gamma\) is made and in general this is false as in the examples below.
+</p>
+
+<p>
+Now, let \(x \in M\). We have
+\[
+\exp_x : T_x M \to M
+\]
+is a diffeomorphism on an open neighbourhood of the origin. Given \(X, Y \in T_x M\) we think of \(Y \in T_X(T_x M)\) via
+\[
+\rho_X: Y \in T_x M \mapsto \partial_t|_{t=0} (X + t Y)
+\]
+which defines a linear isomorphism \(T_x M \to T_X(T_x M)\).
+</p>
+
+<p>
+Then we define
+\[
+d(\exp_x)_X (Y) = \partial_s|_{s=0} \exp_x(X + s Y).
+\]
+Note that since \(M\) is assumed complete, such an expression is defined.
+</p>
+
+<p>
+As to Jacobi fields:
+</p>
+
+<div class="defn">
+<p>
+Let \(\gamma: [0, L] \to M\) be a geodesic. If there exists a Jacobi field along \(\gamma\) such that \(J(0) = 0\) and \(J(t_0) = 0\) for some \(t_0 \in (0, L]\), then \(y = \gamma(t_0)\) is called a <i>conjugate</i> point of \(x = \gamma(0)\).
+</p>
+
 </div>
+
+<div class="lemma">
+<p>
+Let \(X, Y \in T_x M\) and let \(\gamma_X\) be the unique geodesic with \(\gamma_X(0) = x\) and \(\gamma_X'(0) = X\). Let \(J(t)\) be the Jacobi field along \(\gamma_X\) with \(J(0) = 0\) and \(J'(0) = Y\). Then
+\[
+d(\exp_x)_{tX} \cdot tY = J(t).
+\]
+In particular, \(d(\exp_x)_{tX}\) is singular if and only if the point \(\exp_x(tX)\) is conjugate to \(x\).
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+We have
+\[
+d(\exp_x)_{tX} \cdot tY = \partial_s|_{s=0} \exp_x (tX + s t Y) = \partial_s|_{s=0} \gamma_{X + s Y} (t).
+\]
+On the other hand,
+\[
+\gamma_s(t) = \exp_x t(X + sY)
+\]
+is a geodesic for each hence, hence
+\[
+J(t) = \partial_s|_{s=0} \gamma_{X + s Y} (t)
+\]
+is a Jacobi field.
+</p>
+
+<p>
+Then
+\[
+J(0) = \partial_s|_{s=0} \gamma_{X + s Y} (0) = \partial_s|_{s=0} x = 0
+\]
+and
+\[
+J'(t) = \partial_t \partial_s|_{s=0} \gamma_{X + sY} (t) = \partial_s|_{s=0} \partial_t \gamma_{X + s Y} = \partial_s|_{s=0} (X + s Y) = Y.
+\]
+</p>
+
+<p>
+For the last part, \(d(\exp_x)_{tX}\) is singular precisely when it has a non-zero kernel. That is when there exists a non-zero \(Y\) such that
+\[
+d(\exp_x)_{tX} Y = 0.
+\]
+Since we know that \(d(\exp_x)_0\) is non-singular we must have \(t > 0\) and taking \(J(0) = 0\), \(J'(0) = \tfrac{1}{t} Y\) we get
+\[
+J(t) = d(\exp_x)_{tX} (t t^{-1} Y) = 0.
+\]
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="panel panel-default notes-panel">
+<div class="panel-heading">
+<h3><a href="#notes-section-org9e3192e" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Cheng-Bonnet-Myers Diameter Theorem in Positive Curvature</a>
+</h3>
+</div>
+<div id="notes-section-org9e3192e" class="panel-collapse collapse">
+<div class="panel-body">
+<div class="outline-text-2" id="text-2">
+<p>
+The Bonnet-Myers theorem says that if a complete Riemannian manifold has a positive lower bound, then there is a corresponding upper bound on diameter and hence the manifold is compact. Myers gave the first proof. Prior to that Bonnet proved the statement when the Ricci curvature bound is replaced by the stronger hypothesis that the sectional curvature is bounded. Cheng's contribution was to prove that the equality case is attained precisely on the sphere with it's standard "round" metric.
+</p>
+
+<p>
+Let \(k > 0\) and let \(\mathbb{S}^n (k)\) denote the sphere of constant sectional curvature \(k\).
+</p>
+
+<div class="thm">
+<p>
+Let \((M, g)\) be a Riemannian manifold such that
+\[
+\operatorname{Ric} \geq (n-1) k = \operatorname{Ric} (\mathbb{S}^n(k))
+\]
+for some \(k > 0\).
+</p>
+
+<p>
+Then
+\[
+\operatorname{diam} (M, g) := \sup\{d(x, y) : x, y \in M\} \leq \frac{\pi}{\sqrt{k}}.
+\]
+Moreover, equality is attained if and only if \((M, g)\) is isometric to \(\mathbb{S}^n(k)\).
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+Let \(\gamma\) be a geodesic with unit length tangent vector \(V = \gamma'\). The assumptions of the theorem imply that
+\[
+\operatorname{Tr} \operatorname{R}_V = \operatorname{Ric}(V) \geq (n-1) k.
+\]
+The average comparison theorem for the Riccati equation then implies that for any solution of the Riccati equation, the function \(a = \tfrac{1}{n-1} \operatorname{Tr} A\) satisfies
+\[
+a(t) \leq \bar{a}(t)
+\]
+where \(\bar{a}(t)\) satisfies \(a' + a^2 + k = 0\) and \(\bar{a}(0) = a(0)\).
+</p>
+
+<p>
+Here we need to take the extended version with \(A(t) \sim 1/t\) as \(t \to 0\) so that our Jacobi fields satisfying \(J(0) = 0\) solve \(J' = A J\).
+</p>
+
+<p>
+Then as in the discussion before the average Jacobi field comparison theorem, we take a basis \(\{J_1, \cdots, J_{n-1}\}\) of Jacobi fields solving \(J' = A J\) (equivalently a basis of Jacobi fields such that \(J_i(0) = 0\)). Then by the average Jacobi field comparison theorem, the function \(j = \det (J_1, \cdots, J_{n-1})\) satisfies
+\[
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">j'</td>
+<td class="org-left">&le;</td>
+<td class="org-left">\bar{j}</td>
+</tr>
+</tbody>
+</table>
+<p>
+\]
+where \(\bar{j}\) is formed from the corresponding fields for \(R = k \operatorname{Id}\) and satisfying \(\bar{j}' = \bar{a} \bar{j}\).
+</p>
+
+<p>
+Direct computation verifies that
+\[
+\bar{a}(t) = \sqrt{k} \cot(\sqrt{k} t)
+\]
+and
+\[
+\bar{J}_i(t) = \sin(\sqrt{k} t) e_i
+\]
+is a linearly independent set of solutions. Therefore, since each \(\bar{J}_i\) has a zero (in fact the first zero) at \(\pi/\sqrt{k}\) we have
+\[
+\bar{j}(\pi/\sqrt{k}) = 0.
+\]
+Since \(|j| \leq |\bar{j}|\), there exists a \(t_0 \leq \pi/\sqrt{k}\) with
+\[
+j(t_0) = 0.
+\]
+But \(j = \det(J_1, \cdots, J_{n-1})\) and \(J_i\) are a linearly independent set of solutions so that at least one of \(J_i\) must satisfy \(J_i(t_0) = 0\).
+</p>
+
+<p>
+Now let \(x, y \in M\) be arbitrary and let \(\gamma\) be a unit length, length minimising geodesic joining \(x\) to \(y\). We have just proven that there is a \(t_0 \leq \pi/\sqrt{k}\) such that \(\gamma(\pi/\sqrt{k})\) is conjugate to \(x\). Since geodesics do not minimise distance past their first conjugate point, we must have
+\[
+y = \gamma(t_1) \text{ for } t_1 \leq \pi/\sqrt{k}
+\]
+and
+\[
+d(x, y) = t_1 \leq \pi/\sqrt{k}.
+\]
+That is for all \(x, y \in M\),
+\[
+d(x, y) \leq \pi/\sqrt{k}
+\]
+and hence
+\[
+\operatorname{diam} (M, g) \leq \frac{\pi}{\sqrt{k}}.
+\]
+</p>
+
+<p>
+Note that if we have equality, then there is a geodesic realising the diameter and we must have equality in the average Riccati comparison theorem along that geodesic. This gives \(\operatorname{R}_V = (n-1)k \operatorname{Id}\) along the geodesic. One one needs to show that it in fact, the diameter equality on holds on all geodesics. For this see Eschenburg by applying the maximum principle to certain sub-harmonic functions. 
+</p>
+
+</div>
+
+<div class="cor">
+<p>
+With the same assumptions as in the theorem, \(M\) is compact and its universal cover is compact hence \(M\) has finite fundamental group.
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+The theorem implies that both \(M\) and its universal cover \(\hat{M}\) have finite diameter and hence are closed and bounded subsets of themselves. The Hopf-Rinow theorem then implies that both \(M\) and \(\hat{M}\) are compact. The fundamental group is finite, because \(\hat{M} \to M\) is a compact covering hence finite sheeted.
+</p>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+<div class="panel panel-default notes-panel">
+<div class="panel-heading">
+<h3><a href="#notes-section-orgcfd4e5b" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Bishop-Gromov Volume Comparison Theorem</a>
+</h3>
+</div>
+<div id="notes-section-orgcfd4e5b" class="panel-collapse collapse">
+<div class="panel-body">
 
 </div>
 </div>
