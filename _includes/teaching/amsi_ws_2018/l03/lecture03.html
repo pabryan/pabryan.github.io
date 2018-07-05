@@ -1,10 +1,10 @@
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org1cbf4ce" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Self Adjoint \(A\)</a>
+<h3><a href="#notes-section-orgeafe72c" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Self Adjoint \(A\)</a>
 </h3>
 </div>
-<div id="notes-section-org1cbf4ce" class="panel-collapse collapse">
+<div id="notes-section-orgeafe72c" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-1">
 <p>
@@ -128,10 +128,10 @@ for each \(1 \leq i,k \leq n\).
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org9ca23ad" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Comparison Theory for Riccati Equation</a>
+<h3><a href="#notes-section-org79159bf" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Comparison Theory for Riccati Equation</a>
 </h3>
 </div>
-<div id="notes-section-org9ca23ad" class="panel-collapse collapse">
+<div id="notes-section-org79159bf" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-2">
 <p>
@@ -390,10 +390,10 @@ is bounded above so the only way \(A_i\) can blow up is to \(-\infty\) and since
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orgafa2b9c" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Comparison Theory for Jacobi Fields</a>
+<h3><a href="#notes-section-orgc3baecd" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Comparison Theory for Jacobi Fields</a>
 </h3>
 </div>
-<div id="notes-section-orgafa2b9c" class="panel-collapse collapse">
+<div id="notes-section-orgc3baecd" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-3">
 <p>
@@ -582,7 +582,7 @@ Then \(\|J_1(t)\| \leq \|J_2(t)\|\) for all \(t \in [0, T)\) such that \(J_1(t) 
 
 <div class="proof">
 <p>
-As already noted, the assumptions on \(R_i\) imply that \(R_1 \geq R_2\). The trick here is to define initial conditions \(A_1(0), A_2(0)\). Suppose for the moment that we have those in hand with \(A_1(0) \leq A_2(0)\). Then the comparison theorem applies to give \(A_1 \leq A_2\). If we make the stronger initial assumption, \(\lambda_+(A(0)) \leq \lambda_-(A(0))\), then the stronger assumption \(\lambda_-(R_1) \geq \lambda_+(R_2)\) actually implies the stronger conclusion that \(\lambda_+(A_1) \leq \lambda_-(A_2)\).
+As already noted, the assumptions on \(R_i\) imply that \(R_1 \geq R_2\). The trick here is to define initial conditions \(A_1(0), A_2(0)\). Suppose for the moment that we have those in hand with \(A_1(0) \leq A_2(0)\). Then the comparison theorem applies to give \(A_1 \leq A_2\). If we make the stronger initial assumption, \(\lambda_+(A(0)) \leq \lambda_-(A(0))\), then the stronger assumption \(\lambda_-(R_1) \geq \lambda_+(R_2)\) actually implies the stronger conclusion that \(\lambda_+(A_1) \leq \lambda_-(A_2)\) (see exercise below).
 </p>
 
 <p>
@@ -609,15 +609,19 @@ as \(t \to 0\). Then we may apply the Riccati comparison to conclude \(A_1(t) \l
 
 <div class="ex">
 <p>
-Show that if we make the stronger initial assumption, \(\lambda_+(A_2(0)) \leq \lambda_-(A_1(0))\), then the stronger assumption \(\lambda_-(R_1) \geq \lambda_+(R_2)\) actually implies the stronger conclusion that \(\lambda_+(A_1) \leq \lambda_-(A_2)\).
+Show that if we make the stronger initial assumption, \(\lambda_+(A_1(0)) \leq \lambda_-(A_2(0))\) then the stronger assumption \(\lambda_-(R_1) \geq \lambda_+(R_2)\) actually implies the stronger conclusion that \(\lambda_+(A_1) \leq \lambda_-(A_2)\).
 </p>
 
 <p>
-<i>Hint</i>: The assumptions actually imply that for any \(X, Y\) with \(\|X\| = \|Y\| = 1\) we have
+<i>Hint</i>: Use the initial conditions,
 \[
-g(A_2(0) \cdot X, X) \leq g(A_1(0) \cdot Y, Y)
+A_1(0) \leq \lambda_+(A_1(0))\operatorname{Id} \leq \lambda_-(A_2(0)) \operatorname{Id} \leq A_2(0).
 \]
-and similar for \(R_1, R_2\).
+and the assumption \(\lambda_-(R_1) \geq \lambda_+(R_2)\). Show that
+\[
+\lambda_+(A_1(t)) \leq \lambda_+(\bar{A}_1(t))
+\]
+where \(\bar{A}_1(t)\) solves the Riccati equation with initial condition \(\lambda_+(A_1(0))\operatorname{Id}\) and \(\bar{R}_1 = \lambda_+(R_1) \operatorname{Id}\). Similar for \(A_2\).
 </p>
 
 </div>
@@ -636,7 +640,7 @@ as \(t \to 0\).
 </p>
 
 <p>
-See the Theorem on p. 210 and also Remark 2 in <a href="https://doi.org/10.1007/BF02568760">Comparison theory for Riccati equations by J.-H. Eschenburg and E. Heintze, Manuscripta Math. 68, 209 - 214 (1990)</a>
+See pp. 210-212 in <a href="https://doi.org/10.1007/BF02568760">Comparison theory for Riccati equations by J.-H. Eschenburg and E. Heintze, Manuscripta Math. 68, 209 - 214 (1990)</a>
 </p>
 
 </div>
@@ -677,10 +681,10 @@ This time we take the initial condition \(A_i(0) = 0\) and conclude that \(\lamb
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org29015bf" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Averaged Comparison Theory</a>
+<h3><a href="#notes-section-org344df08" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Averaged Comparison Theory</a>
 </h3>
 </div>
-<div id="notes-section-org29015bf" class="panel-collapse collapse">
+<div id="notes-section-org344df08" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-4">
 <p>
