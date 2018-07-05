@@ -1,10 +1,10 @@
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org025e05a" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Self Adjoint \(A\)</a>
+<h3><a href="#notes-section-orga71e7c0" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Self Adjoint \(A\)</a>
 </h3>
 </div>
-<div id="notes-section-org025e05a" class="panel-collapse collapse">
+<div id="notes-section-orga71e7c0" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-1">
 <p>
@@ -128,10 +128,10 @@ for each \(1 \leq i,k \leq n\).
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orge99033e" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Comparison Theory for Riccati Equation</a>
+<h3><a href="#notes-section-org7eeca92" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Comparison Theory for Riccati Equation</a>
 </h3>
 </div>
-<div id="notes-section-orge99033e" class="panel-collapse collapse">
+<div id="notes-section-org7eeca92" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-2">
 <p>
@@ -390,10 +390,10 @@ is bounded above so the only way \(A_i\) can blow up is to \(-\infty\) and since
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-orgfe22319" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Comparison Theory for Jacobi Fields</a>
+<h3><a href="#notes-section-org0983d9e" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Comparison Theory for Jacobi Fields</a>
 </h3>
 </div>
-<div id="notes-section-orgfe22319" class="panel-collapse collapse">
+<div id="notes-section-org0983d9e" class="panel-collapse collapse">
 <div class="panel-body">
 <div class="outline-text-2" id="text-3">
 <p>
@@ -677,11 +677,175 @@ This time we take the initial condition \(A_i(0) = 0\) and conclude that \(\lamb
 
 <div class="panel panel-default notes-panel">
 <div class="panel-heading">
-<h3><a href="#notes-section-org47535ee" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Averaged Comparison Theory</a>
+<h3><a href="#notes-section-org2e57bd2" data-toggle="collapse" class="notes-toggle"><i class="notes-arrow fa fa-caret-down px-1"></i>Averaged Comparison Theory</a>
 </h3>
 </div>
-<div id="notes-section-org47535ee" class="panel-collapse collapse">
+<div id="notes-section-org2e57bd2" class="panel-collapse collapse">
 <div class="panel-body">
+<div class="outline-text-2" id="text-4">
+<p>
+Recall that we are interested in solutions \(A\) of the Riccati equation when
+\[
+R(X) = \operatorname{R}_V(X) = \operatorname{Rm} (X, V) V.
+\]
+</p>
+
+<p>
+We already know precisely how \(A\) acts on the tangential directions to \(\gamma\) and so we restrict \(A\) to act only on \(\gamma'(0)^{\perp}\). Note also that in our formulation using parallel transport, since parallel transport is an isometry, the space of parallel fields orthogonal to \(\gamma'(t)\) is determined precisely by \(\gamma'(0)^{\perp}\). Equivalently, since \(A(\gamma') = \nabla_{\gamma'} \gamma' = 0\), when acting on all of \(T_{\gamma{0}} M\), here is always a zero in the tangential direction so we ignore that. Otherwise, below we would have to replace the \(n-1\) identity \operatorname{I} with the matrix that is zero in the top corner and the \(n-1\) identity in the bottom corner which is a little more messy. Since we are interested in taking traces here, it doesn't matter as either matrix has trace equal to \(n-1\) anyway.
+</p>
+
+<p>
+So taking the trace of \(\operatorname{R}_V\) we have,
+\[
+\opertaorname{Tr} R = \operatorname{Tr} \operatorname{Rm}(\cdot, V) V = \operatorname{Ric} (V, V).
+\]
+We abbreviate the last term as \(\operatorname{Ric}(V) := \operatornmame{Ric}(V, V)\). Then if
+\[
+A' + A^2 + \operatorname{R}_V = 0
+\]
+since the Trace is linear, we obtain
+\[
+(\operatorname{Tr} A)' + \operatorname{Tr} A^2 + \operatorname{Ric}(V) = 0.
+\]
+Now it is not true that \(\operatorname{Tr} A^2 = (\operatorname{Tr} A)^2\) but we only need a little rewriting to obtain an equation for \(\operatorname{Tr}(A)\).
+</p>
+
+<p>
+Let us set
+\[
+a = \frac{1}{n-1} \operatorname{Tr} A
+\]
+so that
+\[
+a'+ \frac{1}{n-1} \operatorname{Tr} A^2 + \frac{1}{n-1} \operatorname{Ric}(V) = 0.
+\]
+Now, let
+\[
+\overset{\circ}{A} = A - a \operatorname{Id}
+\]
+be the trace free part of \(A\). Then
+\[
+\operatorname{Tr} A^2 = \operatorname{Tr}(\overset{\circ}{A} + a \operatorname{Id})^2 = \operatorname{Tr}(\overset{\circ}{A}^2 + 2 \operatorname{Tr}(a \overset{\circ}{A}) + \operatorname{Tr} a^2 \operatorname{Id} = (n-1) a^2 + \operatorname{Tr}(\overset{\circ}{A}^2.
+\]
+Then letting
+\[
+r = \frac{1}{n-1}\left(\operatorname{Tr}(\overset{\circ}{A}^2 + \operatorname{Ric} (V)\right)
+\]
+we have
+\[
+r \geq \frac{1}{n-1} \operatorname{Ric}(V)
+\]
+and
+\[
+a' + a^2 + r = 0.
+\]
+</p>
+
+<p>
+An easy consequence of the Riccati comparison theorem is the <i>averaged Ricci comparison theorem</i>, so called because the Trace is an averaging operator (e.g. in terms of eigenvalues, the trace is the unnormalised average).
+</p>
+
+<div class="thm">
+<p>
+Suppose \(R_t\) is a smooth, one-parameter family of self adjoint endomorphisms such that
+\[
+\operatorname{Tr} R \geq (n-1) k
+\]
+for some \(k \in \mathbb{R}\).
+</p>
+
+<p>
+Let \(A\) be a solution of
+\[
+A' + A^2 + R = 0
+\]
+on a maximal time interval \([0, T)\) and let \(\bar{a}\) be the unique solution of
+\[
+\bar{a}' + \bar{a}^2 + k = 0, \quad \bar{a}(0) = \bar{a}_0 \geq \frac{1}{n-1} \operatorname{Tr} A(0)
+\]
+on the maximal interval \([0, \bar{T})\).
+</p>
+
+<p>
+Then \(T \leq \bar{T}\) and
+\[
+a := \frac{1}{n-1} \operatorname{Tr} A
+\]
+satisfies \(a(t) \leq \bar{a} (t)\) for all \(t \in [0, T)\).
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+This is just the one dimensional Riccati equation with
+\[
+a(0) \leq \bar{a}(0)
+\]
+and
+\[
+r \geq \frac{1}{n-1} \operatorname{Tr} R \geq k.
+\]
+</p>
+
+</div>
+
+<p>
+Next we have the averaged Jacobi equation comparison. To motive this, let \(J_1, \dots, J_{n-1}\) be a basis of solutions of
+\[
+J' = A \cdot J
+\]
+where \(A\) is a solution of the Riccati equation. Notice that this is a linear system of \(n-1\) equations so has a solution space of dimension \(n-1\). Now we let
+\[
+j = \det(J_1, \dots, J_{n-1}).
+\]
+Writing \(M = (J_1, \cdots, J_{n-1})\), then differentiating the determinant using <a href="https://en.wikipedia.org/wiki/Jacobi%27s_formula">Jacobi's Formula</a> gives
+\[
+j' = (\det M)' = \operatorname{Tr}(M^{\sharp} \cdot M')
+\]
+where \(M^{\sharp}\) is the <a href="https://en.wikipedia.org/wiki/Adjugate_matrix">Adjugate Matrix</a> of \(M\) which satisfies
+\[
+M M^{\sharp} = \det M \operatorname{Id}.
+\]
+Now since each \(J_i' = A J_i\) we have \(M' = A M\) and hence
+\[
+j' = \operatorname{Tr} (M^{\sharp} A M) = \operatorname{Tr} (A M M^{\sharp}) = \operatorname{Tr} (\det M \cdot A) = \operatorname{Tr} A \cdot \det M
+\]
+That is,
+\[
+j' = (n-1) a j.
+\]
+</p>
+
+<div class="thm">
+<p>
+Let \(A\) be a one-parameter family of self adjoint endomorphisms and let \(a = \tfrac{1}{n-1} \operatorname{Tr} A\). Suppose that \(\bar{a}\) satisfies \(a \leq \bar{a}\).
+</p>
+
+<p>
+Let \(j\) be any solution of
+\[
+j' = a j
+\]
+and let \(\bar{j}\) be any solution of
+\[
+\bar{j}' = \bar{a} \bar{j}.
+\]
+</p>
+
+<p>
+Then \(|j|/|\bar{j}|\) is montonically decreasing.
+</p>
+
+</div>
+
+<div class="proof">
+<p>
+This is just the one dimensional version of the Jacobi field comparison theorem.
+</p>
+
+</div>
+</div>
 
 </div>
 </div>
