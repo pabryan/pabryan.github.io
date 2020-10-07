@@ -1,0 +1,61 @@
+---
+layout: default
+title: Australian Geometric PDE Seminar
+category: seminar
+---
+
+<div class="panel panel-default content-panel">
+  <div class="panel-heading">
+    <h1 class="panel-title">Australian Geometric PDE Seminar</h1>
+  </div> 
+</div>
+
+{% assign posts = site.categories[page.category] | sort: 'date' %}
+{% for post in posts %}
+<div class="panel panel-default research-panel">
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-9">
+	<h1 class="panel-title" class="display-1">
+	  {{ post.title }}
+	</h1>
+      </div>
+      <div class="col-sm-3">
+	<p class="text-right"><a href="#details-{{ post.youtube-id }}" class="show-hide-abstract" data-toggle="collapse">Details<i class="fa fa-caret-down" class="abstract-arrow" alt="Show details" title="Show details"></i></a></p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+	<ul>
+	  <li><strong>Speaker</strong>: <a href="{{ post.speaker-url }}">{{ post.speaker }}</a>
+	    ({% for inst in post.speaker-inst %}
+	    {{ inst }}
+	    {% endfor %})
+	  </li>
+	  <li>
+	    <strong>Date</strong>: {{ post.date | date: "%-d %B %Y" }}
+	  </li>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12">
+	<h1 class="panel-title" class="display-3">Abstract</h1>
+	{{ post.abstract }}
+      </div>
+    </div>
+
+    <div id="details-{{ post.youtube-id }}" class="collapse">
+      <div class="row">
+	<div class="col-sm-12">
+	  <div class="embed-responsive embed-responsive-16by9"">
+	    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ post.youtube-id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	  </div>
+	</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
