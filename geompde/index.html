@@ -47,6 +47,14 @@ category: seminar
     </div>
 
     <div id="details-{{ post.youtube-id }}" class="collapse">
+      {% if post.slides %}
+      <div class="row">
+	<div class="col-sm-12">
+	  <a href="{ geompde/slides/{{ post.slides }}">Download lecture presentation (slides, notes etc.)</a>
+	</div>
+      </div>
+      {% endif %}
+
       <div class="row">
 	<div class="col-sm-12">
 	  <div class="embed-responsive embed-responsive-16by9">
@@ -54,6 +62,20 @@ category: seminar
 	  </div>
 	</div>
       </div>
+
+      {% if post.transcript %}
+      <div class="panel panel-default content-panel">
+	<div class="panel-body">
+	  <p>
+	    <b>What follows is a very rough transcript taken during the lecture</b>. It has only been edited to ensure the TeX compiles. No effort has been expended as yet to ensure accuracy. There are surely many errors. Please send any comments, suggestions, typos etc. to <a href="mailto:Paul%20Bryan%20%3Cpabryan@gmail.com%3E">Paul Bryan</a>
+	  </p>
+	  {% if post.transcript-pdf %}
+	  <a href="{ geompde/transcripts/{{ post.transcript-pdf }}">Download transcript PDF</a>
+	  {% endif %}
+	  {% include geompde/transcripts/{{ post.transcript }} %}
+	</div>
+      </div>
+      {% endif %}
     </div>
   </div>
 </div>
