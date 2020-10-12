@@ -214,7 +214,7 @@ div.ex {
     margin: 1%;
 }
 
-.thm:before {
+.thm,.theorem:before {
     content: 'Theorem';
     font-weight: bold;
     text-align: center;
@@ -227,7 +227,7 @@ div.ex {
     border-image: linear-gradient(to right, transparent, black, transparent) 100;
 }
 
-div.thm {
+div.thm,div.theorem {
     border-style: solid;
     background-color: whitesmoke;
     border-radius: 5px;
@@ -235,7 +235,7 @@ div.thm {
     margin: 1%;
 }
 
-.lem:before {
+.lem,.lemma:before {
     content: 'Lemma';
     font-weight: bold;
     text-align: center;
@@ -249,7 +249,7 @@ div.thm {
     border-image: linear-gradient(to right, transparent, black, transparent) 100;
 }
 
-div.lem {
+div.lem,div.lemma {
     border-style: solid;
     background-color: whitesmoke;
     border-radius: 5px;
