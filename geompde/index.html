@@ -20,7 +20,12 @@ category: seminar
     </div>
 
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-2">
+	<div class="speaker-profile-frame"> 
+	  <img class="img-responsive speaker-profile-img center-block" src="{{ "/img/speaker-profiles/" | append: post.profile-pic | prepend: site.baseurl }}"/>
+	</div>
+      </div>
+      <div class="col-sm-10">
 	<ul>
 	  <li><strong>Speaker</strong>: <a href="{{ post.speaker-url }}">{{ post.speaker }}</a>
 	    ({% for inst in post.speaker-inst %}
