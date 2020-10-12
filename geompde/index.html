@@ -34,21 +34,21 @@ category: seminar
     </div>
 
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-md-12">
 	<h1 class="panel-title" class="display-3">Abstract</h1>
 	{{ post.abstract }}
       </div>
     </div>
 
-    <div id="details-{{ post.youtube-id }}" class="collapse">
-      {% if post.slides %}
-      <div class="row">
-	<div class="col-sm-12">
-	  <a href="/pdf/geompde/slides/{{ post.slides }}">Download lecture presentation (slides, notes etc.)</a>
-	</div>
+    {% if post.slides %}
+    <div class="row">
+      <div class="col-md-12">
+	<p><a href="/pdf/geompde/slides/{{ post.slides }}">Download lecture presentation (slides, notes etc.)</a></p>
       </div>
-      {% endif %}
+    </div>
+    {% endif %}
 
+    <div id="details-{{ post.youtube-id }}" class="collapse">
       <div class="row">
 	<div class="col-sm-12">
 	  <div class="embed-responsive embed-responsive-16by9">
