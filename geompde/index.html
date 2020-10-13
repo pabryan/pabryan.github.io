@@ -6,6 +6,10 @@ category: seminar
 
 {% assign posts = site.categories[page.category] | sort: 'date' %}
 {% for post in posts %}
+
+{% assign postid = post.date | date: "%Y-%m-%d" | append: "-" | append: post.slug %}
+{% include geompde/filechecks.html %}
+
 <div class="panel panel-default research-panel">
   <div class="panel-body">
     <div class="row">
@@ -45,10 +49,10 @@ category: seminar
       </div>
     </div>
 
-    {% if post.slides %}
+    {% if has-slides %}
     <div class="row">
       <div class="col-md-12">
-	<p><a href="/pdf/geompde/slides/{{ post.slides }}">Download lecture presentation (slides, notes etc.)</a></p>
+	<p><a href="{{ slides-pdf }}">Download lecture presentation (slides, notes etc.)</a></p>
       </div>
     </div>
     {% endif %}
@@ -62,16 +66,18 @@ category: seminar
 	</div>
       </div>
 
-      {% if post.transcript %}
+
+      {% if has-transcript-pdf %}
       <div class="panel panel-default content-panel">
 	<div class="panel-body">
 	  <p>
 	    <b>What follows is a very rough transcript taken during the lecture</b>. It has only been edited to ensure the TeX compiles. No effort has been expended as yet to ensure accuracy. There are surely many errors. Please send any comments, suggestions, typos etc. to <a href="mailto:Paul%20Bryan%20%3Cpabryan@gmail.com%3E">Paul Bryan</a>
 	  </p>
-	  {% if post.transcript-pdf %}
-	  <a href="/pdf/geompde/transcripts/{{ post.transcript-pdf }}">Download transcript PDF</a>
+	  {% if has-transcript-pdf %}
+	  <a href="{{ transcript-pdf }}">Download transcript PDF</a>
 	  {% endif %}
-	  {% include geompde/transcripts/{{ post.transcript }} %}
+
+	  {% include {{ transcript-html }} %}
 	</div>
       </div>
       {% endif %}
