@@ -299,7 +299,7 @@ div.eg {
     margin: 1%;
 }
 
-.rem:before {
+.rem,.remark:before {
     content: 'Remark';
     font-weight: bold;
     text-align: center;
@@ -312,7 +312,7 @@ div.eg {
     border-image: linear-gradient(to right, transparent, black, transparent) 100;
 }
 
-div.rem {
+div.rem,div.remark {
     border-style: solid;
     background-color: whitesmoke;
     border-radius: 5px;
