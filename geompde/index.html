@@ -66,6 +66,16 @@ category: seminar
 	</div>
       </div>
 
+      <div class="row">
+	<div class="col-sm-12">
+	  <h1 class="panel-title" class="display-3">References</h1>
+	  <ul>
+	    {% for ref in post.references %}
+	    <li><a href="{{ ref.url }}">{{ ref.cite }}</a></li>
+	    {% endfor %}
+	  </ul>
+	</div>
+      </div>
 
       {% if has-transcript-pdf %}
       <div class="panel panel-default content-panel">
