@@ -118,6 +118,10 @@ img.speaker-profile-img {
     list-style-type: none;
 }
 
+ul.panel-bullet {
+    list-style-type: disc !important;
+}
+
 .research-panel .panel-footer {
    background-color: transparent !important;
    background: transparent !important;
