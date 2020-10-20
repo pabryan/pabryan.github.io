@@ -77,7 +77,7 @@ category: seminar
 	      <h1 class="panel-title" class="display-3">References</h1>
 	      <ol>
 		{% for ref in post.references %}
-		<li><a href="{{ ref.url }}">{{ ref.cite }}</a></li>
+		<li>{{ ref.cite }} <a href="{{ ref.url }}">{{ ref.id }}</a></li>
 		{% endfor %}
 	      </ol>
 	    </div>
