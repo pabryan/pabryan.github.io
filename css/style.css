@@ -1,8 +1,11 @@
 /* Custom CSS */
 
 .masthead {
-  height: 350px;
-  background: url('http://pabryan.github.io/img/banner.jpg') top center no-repeat;
+  height: 37.3vw;
+  width: 100%;
+  max-height: 450px;
+  max-width: 1200px;
+  background: url('/img/banner.jpg') top center no-repeat;
   margin: 0 auto;
   background-size: cover;
   -webkit-background-size: cover;
@@ -12,6 +15,10 @@
   background-repeat: no-repeat;
   position: relative;
 }
+
+/* @media (min-width: 1200px) { */
+/*     .masthead { height: 450px; } */
+/* } */
 
 .profile-frame {
     background: #FFF;
