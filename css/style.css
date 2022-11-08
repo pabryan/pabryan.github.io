@@ -347,3 +347,8 @@ div.cor {
     padding: 1%;
     margin: 1%;
 }
+
+i.show-hide-arrow {
+    padding-left: 5px;
+    padding-right: 5px;
+}
