@@ -110,16 +110,23 @@ img.speaker-profile-img {
 
 .research-panel .panel-title {
     font-weight: bold;
+    padding-top: 0.2em;
+    padding-bottom: 0.5em;
 }
 
 .research-panel .panel-heading-ul {
     list-style-type: none !important;
+    margin-bottom: 0px !important;
 }
 
 .research-panel .panel-body > ul {
     list-style-type: none;
 }
 
+.research-panel .abstract {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
 ul.panel-bullet {
     list-style-type: disc !important;
 }
