@@ -22,10 +22,11 @@
     border-radius: 12px;
     height: 200px;
     width: 200px;
-    box-shadow: 0 1px 1px rgba(136,153,166,0.15);    
+    box-shadow: 0 1px 1px rgba(136,153,166,0.15);
     position: absolute;
-    bottom: -70px;
+    bottom: -90px;
     z-index: 3;
+    margin-left: 3em;
 }
 
 img.profile-img {
@@ -61,19 +62,16 @@ img.speaker-profile-img {
    background-color: transparent;
    background: transparent;
    border-color: transparent;
-   
+   z-index: 4;
+   min-height: 20px !important;
+   margin-top: 1px !important;
+   margin-bottom: 1px !important;
 }
 
-.navbar-xs .navbar-nav > li > a, .navbar-brand {
-    margin-top: 5px !important; 
-    margin-bottom: 5px !important;
-    height: 30px;
-}
-
-.navbar-xs {
-    min-height: 30px !important;
-    margin-top: 5px !important;
-    margin-bottom: 5px !important;
+@media only screen and (max-width: 1000px) {
+    .navbar-collapse {
+	margin-top: 2em;
+    }
 }
 
 .main-container {
@@ -82,6 +80,7 @@ img.speaker-profile-img {
     border-top-style: solid;
     border-top-color: #D9EDF7;
     border-top-width: thin;
+    padding-top: 5em;
 }
 
 .right-sidebar .panel-heading {
@@ -98,7 +97,7 @@ img.speaker-profile-img {
 .social > ul {
     overflow: auto;
 }
- 
+
 .social > ul > li {
     list-style-type: none;
     float: left;
