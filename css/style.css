@@ -2,19 +2,22 @@
 
 body {
     color: #fff;
-    background-color: #26302b;
-}
-
-.hero-image {
-    background-image: linear-gradient(to bottom right, rgba(38, 48, 43, 0), rgba(38, 48, 43, 0.8)), url('/img/banner_blend.png');
+    /* background-color: #24302a; */
+    background-color: #5c6762;
+    background-image: url('/img/blackboard_blend.png');
     margin: 0 auto;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
     position: relative;
+}
+
+a:link, a:visited {
+    color: #9EB0FF;
+    text-decoration: none;
+}
+
+a:hover, a:active {
+    color: #C2CDFF;
+    text-decoration: none;
 }
 
 .masthead {
@@ -77,14 +80,35 @@ img.speaker-profile-img {
     border-color: transparent !important;
 }
 
+.navbar-nav  {
+    background-color: #16221C;
+    border: 1px, solid, #fff;
+    border-radius: 4px;
+}
+
 .navbar-nav li a {
     color: #fff !important;
+    font-size: larger;
+    font-weight: 400;
+    font-style: normal;
 }
 
 @media only screen and (max-width: 1000px) {
     .navbar-collapse {
 	margin-top: 2em;
     }
+}
+
+.navbar-default .navbar-toggle {
+    background-color: #16221C !important;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+    background-color: #294034 !important;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff !important;
 }
 
 .main-container {
@@ -97,7 +121,7 @@ img.speaker-profile-img {
 }
 
 .panel {
-    background-color: #303938 !important;
+    background-color: #16221C !important;
 }
 
 .panel .panel-title {
