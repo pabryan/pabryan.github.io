@@ -89,6 +89,7 @@ img.speaker-profile-img {
 .navbar-nav li a {
     color: #fff !important;
     font-size: larger;
+    font-family: "Walter Turncoat", serif;
     font-weight: 400;
     font-style: normal;
 }
