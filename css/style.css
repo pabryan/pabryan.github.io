@@ -6,7 +6,6 @@ body {
 }
 
 .hero-image {
-    /* background: url('/img/banner_blend.png') top center no-repeat; */
     background-image: linear-gradient(to bottom right, rgba(38, 48, 43, 0), rgba(38, 48, 43, 0.8)), url('/img/banner_blend.png');
     margin: 0 auto;
     background-size: cover;
@@ -22,15 +21,6 @@ body {
   height: 37.3vw;
   width: 100%;
   max-height: 200px;
-  /* max-width: 1200px; */
-  /* background: url('/img/banner.png') top center no-repeat; */
-  /* margin: 0 auto; */
-  /* background-size: cover; */
-  /* -webkit-background-size: cover; */
-  /* -moz-background-size: cover; */
-  /* -o-background-size: cover; */
-  /* background-position: center; */
-  /* background-repeat: no-repeat; */
   position: relative;
 }
 
@@ -62,7 +52,6 @@ img.profile-img {
     border-radius: 12px;
     height: 100px;
     width: 100px;
-    /* position: absolute; */
 }
 
 img.speaker-profile-img {
@@ -70,9 +59,7 @@ img.speaker-profile-img {
     width: auto;
     left: 0;
     top: 0;
-    /* position: absolute; */
     overflow: hidden;
-    /* padding: 5px 5px 5px 5px; */
 }
 
 .navbar {
@@ -101,11 +88,6 @@ img.speaker-profile-img {
 }
 
 .main-container {
-    /* background-color: #f5f8fa; */
-    /* padding-top: 10px; */
-    /* border-top-style: solid; */
-    /* border-top-color: #D9EDF7; */
-    /* border-top-width: thin; */
     padding-top: 5em;
 }
 
@@ -233,12 +215,10 @@ ul.panel-bullet {
     border: solid;
     border-width: 0 0 1px 0;
     margin-bottom: 3%;
-    /* border-image: linear-gradient(to right, transparent, black, transparent) 100; */
 }
 
 div.proof {
     border-style: solid;
-    /* background-color: whitesmoke; */
     border-radius: 5px;
     padding: 1%;
     margin: 1%;
@@ -254,12 +234,10 @@ div.proof {
     border: solid;
     border-width: 0 0 1px 0;
     margin-bottom: 3%;
-    /* border-image: linear-gradient(to right, transparent, black, transparent) 100; */
 }
 
 div.ex {
     border-style: solid;
-    /* background-color: whitesmoke; */
     border-radius: 5px;
     padding: 1%;
     margin: 1%;
@@ -275,12 +253,10 @@ div.ex {
     border: solid;
     border-width: 0 0 1px 0;
     margin-bottom: 3%;
-    /* border-image: linear-gradient(to right, transparent, black, transparent) 100; */
 }
 
 div.thm,div.theorem {
     border-style: solid;
-    /* background-color: whitesmoke; */
     border-radius: 5px;
     padding: 1%;
     margin: 1%;
@@ -297,12 +273,10 @@ div.thm,div.theorem {
     border: solid;
     border-width: 0 0 1px 0;
     margin-bottom: 3%;
-    /* border-image: linear-gradient(to right, transparent, black, transparent) 100; */
 }
 
 div.lem,div.lemma {
     border-style: solid;
-    /* background-color: whitesmoke; */
     border-radius: 5px;
     padding: 1%;
     margin: 1%;
@@ -318,12 +292,10 @@ div.lem,div.lemma {
     border: solid;
     border-width: 0 0 1px 0;
     margin-bottom: 3%;
-    /* border-image: linear-gradient(to right, transparent, black, transparent) 100; */
 }
 
 div.defn {
     border-style: solid;
-    /* background-color: whitesmoke; */
     border-radius: 5px;
     padding: 1%;
     margin: 1%;
@@ -344,7 +316,6 @@ div.defn {
 
 div.eg {
     border-style: solid;
-    /* background-color: whitesmoke; */
     border-radius: 5px;
     padding: 1%;
     margin: 1%;
@@ -360,12 +331,10 @@ div.eg {
     border: solid;
     border-width: 0 0 1px 0;
     margin-bottom: 3%;
-    /* border-image: linear-gradient(to right, transparent, black, transparent) 100; */
 }
 
 div.rem,div.remark {
     border-style: solid;
-    /* background-color: whitesmoke; */
     border-radius: 5px;
     padding: 1%;
     margin: 1%;
@@ -381,12 +350,10 @@ div.rem,div.remark {
     border: solid;
     border-width: 0 0 1px 0;
     margin-bottom: 3%;
-    /* border-image: linear-gradient(to right, transparent, black, transparent) 100; */
 }
 
 div.cor {
     border-style: solid;
-    /* background-color: whitesmoke; */
     border-radius: 5px;
     padding: 1%;
     margin: 1%;
