@@ -1,13 +1,25 @@
 /* Custom CSS */
 
+:root {
+    --bg-color: #0b120f;
+    /* --bg-color: #5c6762; */
+    --fg-color: #d6d2cd;
+}
+
 body {
-    color: #fff;
-    /* background-color: #24302a; */
-    background-color: #5c6762;
-    background-image: url('/img/blackboard_blend.png');
-    margin: 0 auto;
+    color: var(--fg-color);
+    background-color: var(--bg-color);
     background-repeat: no-repeat;
-    position: relative;
+    background-attachment: fixed;
+    background-size: cover;
+    background-image: url(img/blackboard.png);
+    font: 1.125rem/1.6 Georgia, "Times New Roman", serif;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+}
+
+p {
+    line-height: 1.5;
 }
 
 a:link, a:visited {
